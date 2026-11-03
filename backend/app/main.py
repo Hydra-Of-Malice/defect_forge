@@ -152,7 +152,8 @@ def export(rid: str):
     r = manager.get(rid)
     if r is None:
         raise HTTPException(404, "run not found")
-    return Response(export_run(r.dir, r.data), media_type="application/zip",
+    extra = [FIXTURES / "demo_run" / "samples"] if r.data.get("demo") else None
+    return Response(export_run(r.dir, r.data, extra), media_type="application/zip",
                     headers={"Content-Disposition": f'attachment; filename="defect-forge-{rid}.zip"'})
 
 
