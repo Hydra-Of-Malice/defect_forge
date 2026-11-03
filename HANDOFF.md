@@ -2,7 +2,15 @@
 
 Start here. This file is the plan as decided after two rounds of research. The full reasoning, sources and code patterns are in [`reports/`](reports/), and the raw research notes are in [`research_notes/`](research_notes/).
 
-**Status (Wed Nov 4, ~01:15 IST):** the research is finished and the idea is chosen. No product code exists yet. The next step is the six gate tests (T0–T5) below. They decide whether to build, narrow the scope or pivot.
+**Status (Wed Nov 4, 02:10 IST):** research done, idea chosen, **gate tests passed (GREEN), and the headline has changed.** Read [`docs/gate-results.md`](docs/gate-results.md) first.
+
+- Muse Image forges convincing holes and prints (cracks are plausible).
+- The deterministic compositor keeps every pixel outside the defect byte-identical.
+- SAM 3.1 box-prompt masks reach a median IoU of 0.867.
+- **Muse Spark already inspects hazelnuts perfectly zero-shot (20/20)**, so "forged examples improve recall" is dead.
+- The new headline is the **detection-threshold curve**: forge a defect, shrink or fade it with OpenCV, and find where the inspector stops seeing it. That curve already falls off cleanly (holes at 12% opacity: 0/5 detected).
+
+No product code yet; the next step is the build (Step 2). Test scripts are in [`spikes/`](spikes/).
 
 ## Deadlines
 
@@ -53,7 +61,9 @@ Verdicts on the three candidates (details in [`reports/Meta hackathon build feas
 - **Toolchain:** Python 3.12 and Node 20. On Windows, call `.venv\Scripts\python` directly to avoid PowerShell execution-policy issues.
 - **Phone camera:** it needs HTTPS. Use `cloudflared tunnel --url http://localhost:5173`. The laptop webcam works on `localhost` without HTTPS.
 
-## Step 1: gate tests (about 2 hours, both builders in parallel)
+## Step 1: gate tests (DONE, GREEN; see [`docs/gate-results.md`](docs/gate-results.md))
+
+These tests ran on Wed Nov 4, 01:20–02:10 IST, for about $1.27. The plan below is kept for reference; the results and plan changes are in the results doc.
 
 | # | Owner | Test | Pass | If it fails |
 |---|---|---|---|---|
@@ -107,6 +117,13 @@ scripts/     setup.ps1  setup.sh  dev.ps1  dev.sh  tunnel.ps1
 ```
 
 ## Step 3: prove it
+
+> **Updated after the gate tests:** the headline is now the **detection-threshold curve**, and the C0–C3 table below is only a supporting row, because zero-shot Spark was already 20/20.
+>
+> - For each defect type, sweep forged severity (size ×1.0/0.6/0.35/0.2, opacity 1.0/0.5/0.25/0.12) and report detection per cell with Wilson CIs, plus specificity on good parts.
+> - Validate the curve with **real drilled hazelnuts** at 2–3 bit sizes.
+>
+> See `spikes/t6_severity.py` and [`docs/gate-results.md`](docs/gate-results.md).
 
 **Pre-register the eval** in `EVAL.md` and commit it *before* running it. Use the full MVTec hazelnut test split, with four conditions run twice each:
 

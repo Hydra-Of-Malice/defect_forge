@@ -29,6 +29,12 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
   - Box prompts need a `<Nf>` frame header; build them with the parser's `build_object_prompt`.
   - Run `ImageOps.exif_transpose` and resize to 1280 px or less before calling it.
   - An empty result is valid and still billed.
+- **Measured in the gate tests (`docs/gate-results.md`):**
+  - Muse Image edits at `reasoning_strength="low"` with tools off take about 11 s, always return 1600×1600, and shift at most 3.4 px after ECC alignment.
+  - SAM concept prompts ("hazelnut", "nut") come back **empty** on MVTec scans, so get part masks from a **point prompt** at the Otsu centroid.
+  - SAM box prompts must be **tight**: padding by 20% drops the median IoU from 0.87 to 0.48.
+  - Spark inspector calls take 5–6 s (p50), and `prompt_cache_key` caching works.
+  - Working reference code is in `spikes/metaapi.py` and `spikes/forge_lib.py`.
 - **Retries:** retry 429, 5xx, timeouts and connection errors with exponential backoff plus jitter, and honour `Retry-After`. Never retry 400, 401 or 404.
 - **Logging:** log every call (model, latency, cost, cached flag) to a JSONL ledger; the UI's call-log drawer reads it.
 
