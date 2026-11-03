@@ -42,7 +42,7 @@ def _samples() -> dict:
     for p in sorted((FIXTURES / "parts").glob("*.jpg")):
         out[f"sample-{p.stem}"] = {"id": f"sample-{p.stem}", "name": p.stem.replace("_", " "), "path": str(p), "source": "sample"}
     mv = DATA / "mvtec" / "hazelnut" / "train" / "good"
-    for p in sorted(mv.glob("*.png"))[:8]:
+    for p in sorted(mv.glob("*.png"))[:16]:
         out[f"mvtec-hazelnut-{p.stem}"] = {"id": f"mvtec-hazelnut-{p.stem}", "name": f"MVTec hazelnut {p.stem} (local)",
                                            "path": str(p), "source": "sample"}
     return out

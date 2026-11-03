@@ -50,7 +50,7 @@ def composite(orig: np.ndarray, edited: np.ndarray, *, central_frac: float = 0.3
     lab_a = cv2.cvtColor(al, cv2.COLOR_RGB2LAB).astype(np.float32)
     d0 = np.abs(lab_o - lab_a).max(axis=2)
     drift = float(np.abs(orig.astype(np.float32) - al.astype(np.float32)).mean())
-    calm = d0 < np.percentile(d0, 50)
+    calm = d0 <= np.percentile(d0, 50)          # <= so an unchanged edit still has calm pixels
     lab_a = np.clip(lab_a - (lab_a[calm] - lab_o[calm]).mean(axis=0), 0, 255)
     al2 = cv2.cvtColor(lab_a.astype(np.uint8), cv2.COLOR_LAB2RGB)
 
