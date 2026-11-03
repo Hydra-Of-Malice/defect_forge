@@ -70,12 +70,28 @@ def get_mask(pid: str, run_id: str | None = None) -> np.ndarray:
     return m
 
 
+def _web_copy(pid: str, path: Path) -> Path:
+    """Large PNG sources get a cached JPEG for the UI; forging still reads the lossless original."""
+    if path.suffix.lower() != ".png":
+        return path
+    web = PARTS / "web" / f"{pid}.jpg"
+    if not web.exists():
+        web.parent.mkdir(exist_ok=True)
+        load_image(path).save(web, "JPEG", quality=88)
+    return web
+
+
 def describe(pid: str) -> dict:
     p = all_parts()[pid]
-    img = load_image(p["path"])
+    src = Path(p["path"])
+    with Image.open(src) as im:
+        w, h = im.size
+    if max(w, h) > 1280:
+        s = 1280 / max(w, h)
+        w, h = int(w * s), int(h * s)
     mp = mask_path(pid)
-    return {"id": pid, "name": p["name"], "url": _url(Path(p["path"])), "mask_url": _url(mp) if mp.exists() else None,
-            "width": img.size[0], "height": img.size[1], "source": p["source"]}
+    return {"id": pid, "name": p["name"], "url": _url(_web_copy(pid, src)), "mask_url": _url(mp) if mp.exists() else None,
+            "width": w, "height": h, "source": p["source"]}
 
 
 def list_parts() -> list[dict]:
