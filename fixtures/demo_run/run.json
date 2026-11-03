@@ -1,0 +1,2389 @@
+{
+ "id": "20261104-024207-d7d5",
+ "created": 1793740327.1659148,
+ "status": "completed",
+ "spec_text": "HAZELNUT VISUAL QA SPECIFICATION  HZ-QA-07 rev C\nPart: whole in-shell hazelnut, nominal width 20 mm, inspected top-down on a dark conveyor by a camera inspector.\n\n3. ACCEPTABLE (do not reject)\n3.1 Natural shell colour variation, longitudinal stripes and gloss.\n3.2 The rough, fuzzy cap (hilum) area and its natural boundary.\n3.3 Small natural specks, dust shadows and lighting gradients.\n\n4. REJECT\n4.1 Hole: any drilled, bored or insect hole through the shell, any diameter. Typically 0.5-2 mm, dark inside, with a rough or torn rim.\n4.2 Crack: any fracture of the shell, from a thin hairline split to a broken-away piece exposing the kernel.\n4.3 Cut: any knife cut, slice or notch in the shell surface, usually straight-edged and 2-8 mm long, showing paler material inside.\n4.4 Print: any ink, stamp, printed characters or marking on the shell, any size or colour.\n\n5. Inspection must catch every reject class above at the smallest size listed.",
+ "taxonomy": {
+  "defects": [
+   {
+    "clause": "4.1",
+    "defect_type": "hole",
+    "description": "a tiny circular dark brown-black hollow about one-fortieth to one-tenth of the part width with a rough torn light tan rim and dark shadowed interior",
+    "severity_note": "any diameter, typically 0.5-2 mm"
+   },
+   {
+    "clause": "4.2",
+    "defect_type": "crack",
+    "description": "a thin jagged dark brown split in the glossy tan shell running from a hairline to nearly the full part width with rough fractured edges exposing matte pale kernel where wide",
+    "severity_note": "any fracture, from thin hairline split to broken-away piece exposing the kernel"
+   },
+   {
+    "clause": "4.3",
+    "defect_type": "cut",
+    "description": "a straight-edged pale beige slice about one-tenth to nearly half the part width with clean sharp sides and smooth matte paler interior contrasting the glossy brown shell",
+    "severity_note": "any knife cut, slice or notch, usually 2-8 mm long"
+   },
+   {
+    "clause": "4.4",
+    "defect_type": "print",
+    "description": "a small flat matte black-blue stamped character mark about one-tenth of the part width on the glossy tan shell with crisp inky lettering texture",
+    "severity_note": "any size or colour"
+   }
+  ],
+  "part_name": "whole in-shell hazelnut",
+  "part_width_mm": 20
+ },
+ "part_ids": [
+  "sample-hazelnut_gen_01",
+  "sample-hazelnut_gen_02",
+  "sample-hazelnut_gen_04"
+ ],
+ "per_type": 3,
+ "samples": [
+  {
+   "id": "s000",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_01",
+   "defect_type": "hole",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a tiny circular dark brown-black hollow about one-fortieth to one-tenth of the part width with a rough torn light tan rim and dark shadowed interior exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_01.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s000_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s000_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s000_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s000_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s000_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s000_overlay.jpg",
+   "bbox": [
+    483,
+    331,
+    538,
+    396
+   ],
+   "area_px": 2600,
+   "size_mm": 1.66,
+   "sam_iou": 0.892,
+   "critic": {
+    "artifacts": "",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.99% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.89",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 1.0% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 29",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0151,
+   "ms": 20978
+  },
+  {
+   "id": "s001",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_02",
+   "defect_type": "crack",
+   "status": "accepted",
+   "attempt": 3,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a thin jagged dark brown split in the glossy tan shell running from a hairline to nearly the full part width with rough fractured edges exposing matte pale kernel where wide exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo. Replace the small round hole with a thin jagged dark-brown crack running horizontally across the glossy tan shell with rough fractured edges exposing matte pale kernel where wide.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_02.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s001_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s001_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s001_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s001_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s001_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s001_overlay.jpg",
+   "bbox": [
+    509,
+    618,
+    726,
+    671
+   ],
+   "area_px": 4381,
+   "size_mm": 1.8,
+   "sam_iou": 0.815,
+   "critic": {
+    "artifacts": "minor softness in exposed kernel, otherwise consistent focus, texture and lighting with glossy shell",
+    "matches_type": true,
+    "realism": 4,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "1.67% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.81 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 1.7% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 4/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 27",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0504,
+   "ms": 71224
+  },
+  {
+   "id": "s003",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_01",
+   "defect_type": "print",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a small flat matte black-blue stamped character mark about one-tenth of the part width on the glossy tan shell with crisp inky lettering texture exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_01.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s003_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s003_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s003_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s003_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s003_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s003_overlay.jpg",
+   "bbox": [
+    453,
+    605,
+    534,
+    656
+   ],
+   "area_px": 2384,
+   "size_mm": 1.59,
+   "sam_iou": 0.811,
+   "critic": {
+    "artifacts": "No pasting, lighting or blur artifacts; stamped ink follows shell curvature and gloss",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.91% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.81",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 0.9% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 25",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0147,
+   "ms": 22277
+  },
+  {
+   "id": "s002",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_04",
+   "defect_type": "cut",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a straight-edged pale beige slice about one-tenth to nearly half the part width with clean sharp sides and smooth matte paler interior contrasting the glossy brown shell exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_04.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s002_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s002_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s002_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s002_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s002_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s002_overlay.jpg",
+   "bbox": [
+    703,
+    388,
+    759,
+    445
+   ],
+   "area_px": 2485,
+   "size_mm": 1.38,
+   "sam_iou": 0.79,
+   "critic": {
+    "artifacts": "none, cut edges and lighting match surrounding glossy shell",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.95% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.79 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 0.9% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 64",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0153,
+   "ms": 20308
+  },
+  {
+   "id": "s004",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_02",
+   "defect_type": "hole",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a tiny circular dark brown-black hollow about one-fortieth to one-tenth of the part width with a rough torn light tan rim and dark shadowed interior exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_02.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s004_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s004_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s004_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s004_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s004_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s004_overlay.jpg",
+   "bbox": [
+    431,
+    528,
+    501,
+    596
+   ],
+   "area_px": 2523,
+   "size_mm": 1.37,
+   "sam_iou": 0.866,
+   "critic": {
+    "artifacts": "none visible",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.96% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.87",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 1.0% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 29",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.015,
+   "ms": 15685
+  },
+  {
+   "id": "s005",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_04",
+   "defect_type": "crack",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a thin jagged dark brown split in the glossy tan shell running from a hairline to nearly the full part width with rough fractured edges exposing matte pale kernel where wide exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_04.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s005_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s005_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s005_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s005_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s005_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s005_overlay.jpg",
+   "bbox": [
+    447,
+    459,
+    519,
+    737
+   ],
+   "area_px": 5375,
+   "size_mm": 2.03,
+   "sam_iou": 0.71,
+   "critic": {
+    "artifacts": "",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "2.05% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.71 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 2.1% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 24",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0153,
+   "ms": 21469
+  },
+  {
+   "id": "s006",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_01",
+   "defect_type": "cut",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a straight-edged pale beige slice about one-tenth to nearly half the part width with clean sharp sides and smooth matte paler interior contrasting the glossy brown shell exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_01.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s006_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s006_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s006_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s006_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s006_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s006_overlay.jpg",
+   "bbox": [
+    343,
+    441,
+    441,
+    566
+   ],
+   "area_px": 3441,
+   "size_mm": 1.9,
+   "sam_iou": 0.402,
+   "critic": {
+    "artifacts": "No compositing artifacts visible; cut edges sharp with consistent focus, lighting and texture matching glossy shell",
+    "matches_type": true,
+    "realism": 4,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "1.31% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.40 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "3 region(s); 2.2% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 4/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 27",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0156,
+   "ms": 19036
+  },
+  {
+   "id": "s007",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_02",
+   "defect_type": "print",
+   "status": "accepted",
+   "attempt": 3,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a small flat matte black-blue stamped character mark about one-tenth of the part width on the glossy tan shell with crisp inky lettering texture exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_02.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s007_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s007_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s007_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s007_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s007_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s007_overlay.jpg",
+   "bbox": [
+    320,
+    451,
+    389,
+    527
+   ],
+   "area_px": 2320,
+   "size_mm": 1.31,
+   "sam_iou": 0.876,
+   "critic": {
+    "artifacts": "No pasted edges or lighting mismatch; ink follows shell striations and gloss with natural sharpness.",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.89% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.88",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "2 region(s); 1.0% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 28",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0452,
+   "ms": 58838
+  },
+  {
+   "id": "s008",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_04",
+   "defect_type": "hole",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a tiny circular dark brown-black hollow about one-fortieth to one-tenth of the part width with a rough torn light tan rim and dark shadowed interior exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_04.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s008_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s008_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s008_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s008_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s008_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s008_overlay.jpg",
+   "bbox": [
+    508,
+    253,
+    566,
+    317
+   ],
+   "area_px": 2668,
+   "size_mm": 1.43,
+   "sam_iou": 0.916,
+   "critic": {
+    "artifacts": "",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "1.02% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.92",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 1.0% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 24",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0148,
+   "ms": 17538
+  },
+  {
+   "id": "s009",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_01",
+   "defect_type": "crack",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a thin jagged dark brown split in the glossy tan shell running from a hairline to nearly the full part width with rough fractured edges exposing matte pale kernel where wide exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_01.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s009_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s009_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s009_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s009_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s009_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s009_overlay.jpg",
+   "bbox": [
+    564,
+    298,
+    631,
+    531
+   ],
+   "area_px": 3993,
+   "size_mm": 2.05,
+   "sam_iou": 0.793,
+   "critic": {
+    "artifacts": "",
+    "matches_type": true,
+    "realism": 5,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "1.52% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.79 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "2 region(s); 1.5% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 5/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 28",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0147,
+   "ms": 17364
+  },
+  {
+   "id": "s010",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_02",
+   "defect_type": "cut",
+   "status": "accepted",
+   "attempt": 3,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a straight-edged pale beige slice about one-tenth to nearly half the part width with clean sharp sides and smooth matte paler interior contrasting the glossy brown shell exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo. Recreate the pale beige mark as a shallow straight-edged incised cut into the shell showing slight depth, shell thickness, and matte interior with lighting and focus matching the glossy hazelnut.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_02.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s010_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s010_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s010_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s010_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s010_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s010_overlay.jpg",
+   "bbox": [
+    587,
+    440,
+    673,
+    473
+   ],
+   "area_px": 1641,
+   "size_mm": 1.1,
+   "sam_iou": 0.748,
+   "critic": {
+    "artifacts": "small straight-edged pale beige notch with sharp sides and matte interior, lighting focus and gloss consistent with surrounding shell, no pasted edges or blur mismatch",
+    "matches_type": true,
+    "realism": 4,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.63% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.75 (thin defect: lower bar)",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "1 region(s); 0.6% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 4/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 27",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0505,
+   "ms": 73355
+  },
+  {
+   "id": "s011",
+   "run_id": "20261104-024207-d7d5",
+   "part_id": "sample-hazelnut_gen_04",
+   "defect_type": "print",
+   "status": "accepted",
+   "attempt": 1,
+   "prompt": "Edit this close-up photo of a whole in-shell hazelnut. Add a small flat matte black-blue stamped character mark about one-tenth of the part width on the glossy tan shell with crisp inky lettering texture exactly at the center of the image. The defect must be small and local, covering well under a tenth of this image, with the rest of the part intact. Keep the same lighting, focus, texture and camera angle. Do not change anything else in the photo.",
+   "original_url": "/files/fixtures/parts/hazelnut_gen_04.jpg",
+   "crop_original_url": "/files/fixtures/demo_run/samples/s011_crop_original.jpg",
+   "crop_raw_url": "/files/fixtures/demo_run/samples/s011_crop_raw.jpg",
+   "crop_composite_url": "/files/fixtures/demo_run/samples/s011_crop_composite.jpg",
+   "composite_url": "/files/fixtures/demo_run/samples/s011_composite.jpg",
+   "mask_url": "/files/fixtures/demo_run/samples/s011_mask.png",
+   "overlay_url": "/files/fixtures/demo_run/samples/s011_overlay.jpg",
+   "bbox": [
+    355,
+    476,
+    431,
+    513
+   ],
+   "area_px": 1348,
+   "size_mm": 1.01,
+   "sam_iou": 0.805,
+   "critic": {
+    "artifacts": "none visible - matte black-blue ink sits naturally on glossy shell texture with consistent lighting and focus",
+    "matches_type": true,
+    "realism": 4,
+    "revised_prompt": "",
+    "verdict": "accept"
+   },
+   "validators": [
+    {
+     "id": "V1",
+     "name": "Pixels outside the defect are byte-identical",
+     "passed": true,
+     "detail": "every pixel with alpha 0 equals the original",
+     "hard": true
+    },
+    {
+     "id": "V2",
+     "name": "Defect lies on the part",
+     "passed": true,
+     "detail": "100% of defect pixels inside the part mask",
+     "hard": true
+    },
+    {
+     "id": "V3",
+     "name": "Defect size is plausible",
+     "passed": true,
+     "detail": "0.51% of the crop",
+     "hard": true
+    },
+    {
+     "id": "V4",
+     "name": "SAM 3.1 agrees with the diff mask",
+     "passed": true,
+     "detail": "IoU 0.81",
+     "hard": false
+    },
+    {
+     "id": "V5",
+     "name": "Edit stayed local",
+     "passed": true,
+     "detail": "2 region(s); 0.5% of crop changed before masking",
+     "hard": true
+    },
+    {
+     "id": "V6",
+     "name": "Muse Spark critic accepts realism",
+     "passed": true,
+     "detail": "realism 4/5, type matches",
+     "hard": true
+    },
+    {
+     "id": "V7",
+     "name": "Not a near-duplicate",
+     "passed": true,
+     "detail": "min dHash distance 27",
+     "hard": true
+    },
+    {
+     "id": "V8",
+     "name": "Provenance complete",
+     "passed": true,
+     "detail": "all fields present",
+     "hard": true
+    }
+   ],
+   "cost_usd": 0.0154,
+   "ms": 20712
+  }
+ ],
+ "severity": [
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s000_size_0.6.jpg",
+   "size_mm": 1.0,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s000_opacity_0.12.jpg",
+   "size_mm": 1.66,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s000_opacity_0.25.jpg",
+   "size_mm": 1.66,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s000_opacity_0.5.jpg",
+   "size_mm": 1.66,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s000_opacity_1.0.jpg",
+   "size_mm": 1.66,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s000_size_0.2.jpg",
+   "size_mm": 0.33,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s000_size_0.35.jpg",
+   "size_mm": 0.58,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s001_opacity_1.0.jpg",
+   "size_mm": 1.8,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s001_opacity_0.25.jpg",
+   "size_mm": 1.8,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s001_opacity_0.12.jpg",
+   "size_mm": 1.8,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s003_opacity_1.0.jpg",
+   "size_mm": 1.59,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s003_opacity_0.12.jpg",
+   "size_mm": 1.59,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s001_size_0.35.jpg",
+   "size_mm": 0.63,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s001_size_0.2.jpg",
+   "size_mm": 0.36,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s003_opacity_0.5.jpg",
+   "size_mm": 1.59,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s001_size_0.6.jpg",
+   "size_mm": 1.08,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s003_size_0.6.jpg",
+   "size_mm": 0.95,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s003_opacity_0.25.jpg",
+   "size_mm": 1.59,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s001",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s001_opacity_0.5.jpg",
+   "size_mm": 1.8,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s002_opacity_1.0.jpg",
+   "size_mm": 1.38,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s003_size_0.35.jpg",
+   "size_mm": 0.56,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s002_opacity_0.5.jpg",
+   "size_mm": 1.38,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s003",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s003_size_0.2.jpg",
+   "size_mm": 0.32,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s002_opacity_0.25.jpg",
+   "size_mm": 1.38,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s002_opacity_0.12.jpg",
+   "size_mm": 1.38,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s004_opacity_1.0.jpg",
+   "size_mm": 1.37,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s002_size_0.2.jpg",
+   "size_mm": 0.28,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s002_size_0.35.jpg",
+   "size_mm": 0.48,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s004_opacity_0.12.jpg",
+   "size_mm": 1.37,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s004_opacity_0.5.jpg",
+   "size_mm": 1.37,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s002_size_0.6.jpg",
+   "size_mm": 0.83,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s004_size_0.6.jpg",
+   "size_mm": 0.82,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s005_opacity_1.0.jpg",
+   "size_mm": 2.03,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s005_opacity_0.12.jpg",
+   "size_mm": 2.03,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s004_opacity_0.25.jpg",
+   "size_mm": 1.37,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s005_opacity_0.25.jpg",
+   "size_mm": 2.03,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s004_size_0.35.jpg",
+   "size_mm": 0.48,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s004",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s004_size_0.2.jpg",
+   "size_mm": 0.27,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s006_opacity_0.25.jpg",
+   "size_mm": 1.9,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s005_size_0.6.jpg",
+   "size_mm": 1.22,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s006_opacity_0.12.jpg",
+   "size_mm": 1.9,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s006_opacity_1.0.jpg",
+   "size_mm": 1.9,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s005_opacity_0.5.jpg",
+   "size_mm": 2.03,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s005_size_0.2.jpg",
+   "size_mm": 0.41,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s006_opacity_0.5.jpg",
+   "size_mm": 1.9,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s007_opacity_1.0.jpg",
+   "size_mm": 1.31,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s005_size_0.35.jpg",
+   "size_mm": 0.71,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s006_size_0.2.jpg",
+   "size_mm": 0.38,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s006_size_0.6.jpg",
+   "size_mm": 1.14,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s007_opacity_0.5.jpg",
+   "size_mm": 1.31,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s007_opacity_0.12.jpg",
+   "size_mm": 1.31,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s007_size_0.35.jpg",
+   "size_mm": 0.46,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s007_size_0.2.jpg",
+   "size_mm": 0.26,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s007_size_0.6.jpg",
+   "size_mm": 0.79,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s007_opacity_0.25.jpg",
+   "size_mm": 1.31,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s006_size_0.35.jpg",
+   "size_mm": 0.66,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s008_opacity_0.12.jpg",
+   "size_mm": 1.43,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s008_opacity_1.0.jpg",
+   "size_mm": 1.43,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s008_opacity_0.25.jpg",
+   "size_mm": 1.43,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s008_size_0.6.jpg",
+   "size_mm": 0.86,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s008_size_0.35.jpg",
+   "size_mm": 0.5,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s009_opacity_1.0.jpg",
+   "size_mm": 2.05,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s008_size_0.2.jpg",
+   "size_mm": 0.29,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s009_opacity_0.12.jpg",
+   "size_mm": 2.05,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s009_opacity_0.25.jpg",
+   "size_mm": 2.05,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s009_opacity_0.5.jpg",
+   "size_mm": 2.05,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s009_size_0.2.jpg",
+   "size_mm": 0.41,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s009_size_0.6.jpg",
+   "size_mm": 1.23,
+   "detected": true,
+   "pred_type": "crack",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s008_opacity_0.5.jpg",
+   "size_mm": 1.43,
+   "detected": true,
+   "pred_type": "hole",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s010_opacity_0.5.jpg",
+   "size_mm": 1.1,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s010_opacity_0.12.jpg",
+   "size_mm": 1.1,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s010_opacity_1.0.jpg",
+   "size_mm": 1.1,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s010_opacity_0.25.jpg",
+   "size_mm": 1.1,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s009_size_0.35.jpg",
+   "size_mm": 0.72,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s010_size_0.6.jpg",
+   "size_mm": 0.66,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "/files/fixtures/demo_run/severity/s011_opacity_0.12.jpg",
+   "size_mm": 1.01,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "/files/fixtures/demo_run/severity/s011_opacity_1.0.jpg",
+   "size_mm": 1.01,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s010_size_0.2.jpg",
+   "size_mm": 0.22,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "/files/fixtures/demo_run/severity/s011_opacity_0.5.jpg",
+   "size_mm": 1.01,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "/files/fixtures/demo_run/severity/s011_size_0.6.jpg",
+   "size_mm": 0.61,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s010_size_0.35.jpg",
+   "size_mm": 0.39,
+   "detected": true,
+   "pred_type": "cut",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "/files/fixtures/demo_run/severity/s011_opacity_0.25.jpg",
+   "size_mm": 1.01,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "/files/fixtures/demo_run/severity/s011_size_0.2.jpg",
+   "size_mm": 0.2,
+   "detected": false,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "/files/fixtures/demo_run/severity/s011_size_0.35.jpg",
+   "size_mm": 0.35,
+   "detected": true,
+   "pred_type": "print",
+   "confidence": 0.9
+  }
+ ],
+ "curves": [
+  {
+   "defect_type": "crack",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.96
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 3,
+     "detected": 2,
+     "rate": 0.667,
+     "ci_low": 0.208,
+     "ci_high": 0.939,
+     "mean_size_mm": 1.96
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.96
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.96
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.18
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 3,
+     "detected": 1,
+     "rate": 0.333,
+     "ci_low": 0.061,
+     "ci_high": 0.792,
+     "mean_size_mm": 0.69
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 0.39
+    }
+   ],
+   "threshold_note": "crack: size: holds to 0.6x (~1.18 mm), missed at 0.35x (~0.69 mm) (1/3); contrast: holds to 1x, missed at 0.25x (0/3)"
+  },
+  {
+   "defect_type": "cut",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.46
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.46
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.46
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.46
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.88
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 3,
+     "detected": 2,
+     "rate": 0.667,
+     "ci_low": 0.208,
+     "ci_high": 0.939,
+     "mean_size_mm": 0.51
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 0.29
+    }
+   ],
+   "threshold_note": "cut: size: holds to 0.6x (~0.88 mm), missed at 0.2x (~0.29 mm) (0/3); contrast: holds to 0.5x, missed at 0.25x (0/3)"
+  },
+  {
+   "defect_type": "hole",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.49
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.49
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.49
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.49
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.89
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.52
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 3,
+     "detected": 2,
+     "rate": 0.667,
+     "ci_low": 0.208,
+     "ci_high": 0.939,
+     "mean_size_mm": 0.3
+    }
+   ],
+   "threshold_note": "hole: caught at every size tested (down to 0.2x (~0.3 mm)); contrast: holds to 0.5x, missed at 0.25x (0/3)"
+  },
+  {
+   "defect_type": "print",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.3
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.3
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.3
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 3,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.562,
+     "mean_size_mm": 1.3
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.78
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 3,
+     "detected": 3,
+     "rate": 1.0,
+     "ci_low": 0.438,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.46
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 3,
+     "detected": 1,
+     "rate": 0.333,
+     "ci_low": 0.061,
+     "ci_high": 0.792,
+     "mean_size_mm": 0.26
+    }
+   ],
+   "threshold_note": "print: size: holds to 0.35x (~0.46 mm), missed at 0.2x (~0.26 mm) (1/3); contrast: holds to 0.25x, missed at 0.12x (0/3)"
+  }
+ ],
+ "summary": {
+  "accepted": 12,
+  "rejected": 0,
+  "failed": 0,
+  "cost_usd": 0.5716,
+  "seconds": 226.8,
+  "mean_sam_iou": 0.785
+ },
+ "demo": true
+}
