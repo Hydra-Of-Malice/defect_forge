@@ -1,12 +1,22 @@
 # Instructions for coding agents
 
-This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Developer Hackathon. The deadline is Thu Nov 5 2026, 07:30 IST (02:00 UTC). Read [`HANDOFF.md`](HANDOFF.md) first for the plan, rules and current status. The build plan, exact API call patterns and gotchas are in [`reports/Meta hackathon build feasibility.md`](reports/Meta%20hackathon%20build%20feasibility.md).
+This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Developer Hackathon. The deadline is Thu Nov 5 2026, 07:30 IST (02:00 UTC). The product is built. Read [`HANDOFF.md`](HANDOFF.md) for its status and the remaining human tasks, and [`README.md`](README.md) for the architecture.
+
+## Commands
+
+- Setup: `.\scripts\setup.ps1` (Windows) or `./scripts/setup.sh`.
+- Run: `.\scripts\dev.ps1` serves the API and built UI on **http://localhost:8765**. **Port 8000 is taken on the dev machine; never use it.**
+- Tests: `.venv\Scripts\python -m pytest -q tests`. They run offline on a fake Meta transport and must stay green.
+- Frontend: `cd frontend; npm run build` (needs zero TS errors). Mock UI: `$env:VITE_MOCK='1'; npm run dev`.
+- Eval: `python eval/run_eval.py` is resumable and cached in `docs/results/raw/`; re-running it costs $0 unless you delete raw files.
+- Live smoke test: `python scripts/smoke_run.py --per-type 1` (about $0.20). Every call lands in `var/ledger.jsonl`; `BUDGET_USD` is a hard stop.
+- The HTTP contract between backend and frontend is `docs/api-contract.md`. Keep both sides in sync.
 
 ## Hard rules
 
 - **Only Meta models at runtime:** `muse-spark-1.3`, `muse-image-1.0` and `sam-3.1` through the Meta Model API. Never add a call to, or a dependency on, any other learned model: OpenAI, Anthropic, Gemini, Llama, Whisper, any TTS, embeddings, CLIP, LPIPS, rembg, MediaPipe, YOLO or torchvision models. OpenCV, NumPy, SciPy and Pillow are fine.
 - **Never train a model on Muse Image outputs.** Forged images are evaluation data and in-context examples only (Model API Terms §10.1(ix)).
-- **Never commit `.env`, API keys, or MVTec AD images** (CC BY-NC-SA). Fixtures come from the team's own photos only.
+- **Never commit `.env`, API keys, or MVTec AD images** (CC BY-NC-SA). Fixtures come only from the team's own photos or Muse Image generations (`fixtures/parts/`). `scripts/record_demo.py` refuses runs that use non-fixture parts.
 - **No Streamlit.** The frontend is Vite + React + TypeScript + Tailwind; the backend is FastAPI + asyncio. State lives on disk as JSON: no database, no auth.
 - **The live path is the default.** `DEMO_MODE=1` replays recorded runs with a visible badge.
 
