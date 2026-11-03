@@ -7,6 +7,28 @@ Defect Forge reads your QA spec, forges realistic defects onto photos of **good*
 *Meta Global AI Developer Hackathon: Indie track, Push the Frontier.*
 
 <!-- RESULTS:START -->
+![Forged defects with masks](docs/assets/forged_grid.jpg)
+
+*Every defect above was forged by Muse Image onto a Muse-Image-generated good hazelnut, labeled to the pixel and accepted by 8 deterministic validators.*
+
+## Results
+
+These come from the evaluation protocol written in [EVAL.md](EVAL.md) before the run. Full tables are in [docs/results/eval.md](docs/results/eval.md).
+
+**Where the Muse Spark inspector goes blind.** Detection rate on forged hazelnut defects as we shrink them (the inspector sees only the spec):
+
+| Defect | Full size | 60% | 35% | 20% | Threshold |
+|---|---|---|---|---|---|
+| Hole | 14/14 | 14/14 | 14/14 | 14/14 | caught down to ≈0.46 mm; missed when faded to 12% contrast (4/14) |
+| Crack | 12/12 | 11/12 | 9/12 | 4/12 | drops to 75% at ≈0.7 mm and 33% at ≈0.4 mm |
+| Cut | 11/15 | 10/15 | 2/15 | 0/15 | **weakest**: only 73% at full size, mostly missed below ≈0.5 mm |
+| Print (dark ink) | 14/14 | 14/14 | 14/14 | 12/14 | robust down to ≈0.4 mm |
+
+- **Real benchmark** (MVTec AD hazelnut test split, spec-only inspector): **95.5% recall** (95% CI 87.5–98.4) on 66 defective images and **100% specificity** (CI 91.2–100) on 40 good ones. All 3 misses were **white print** read as "specular gloss".
+- **The blind spot, fixed** (exploratory, `eval/blind_spot.py`): two forged **white-print** examples in context took real print recall from **12/17 to 17/17**, with **0 errors** on all 110 real test images and 0/40 false alarms. A one-clause spec amendment also fixed it, with 1/40 false alarms.
+- **The trap, measured:** *generic* forged examples made the inspector **worse** on faint defects (72 → 59 of 141 detected, exact McNemar p = 0.011). In-context examples are not free; Defect Forge lets you measure their effect before deploying.
+- **Labels:** SAM 3.1 tight-box masks reach a median IoU of **0.84** against ground truth on 70 real defects. Forged masks agree with SAM at a mean IoU of 0.82.
+- **Cost:** 55/60 forgeries accepted (92%) after critic-driven retries, at **$0.020 and 25 s per pixel-labeled defect**. The whole evaluation cost $4.85 of Meta API spend.
 <!-- RESULTS:END -->
 
 ## Why
