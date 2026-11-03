@@ -27,3 +27,8 @@ runs/
 Thumbs.db
 .vscode/
 .idea/
+
+# Runtime data (runs, uploads, ledger) and frontend build output
+var/
+frontend/node_modules/
+frontend/dist/
