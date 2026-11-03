@@ -24,6 +24,7 @@ from . import ledger
 _spark = OpenAI(base_url=BASE_URL, api_key=API_KEY or "demo", max_retries=4, timeout=180)
 _sam = OpenAI(base_url=BASE_URL, api_key=API_KEY or "demo", max_retries=2, timeout=90)
 RETRYABLE = {429, 500, 502, 503, 504}
+TRANSIENT = {404, 429}   # the Model API intermittently answers 404 "model not found" for valid models; retry it
 
 
 class MetaAPIError(RuntimeError):
@@ -60,14 +61,19 @@ def spark_json(messages: list, schema: dict, name: str, *, effort: str = "low", 
     model = model or MODELS["spark"]
     ledger.check_budget()
     kw = {"extra_body": {"prompt_cache_key": cache_key}} if cache_key else {}
-    t = time.time()
-    try:
-        r = _spark.chat.completions.create(
-            model=model, reasoning_effort=effort, max_tokens=max_tokens, messages=messages,
-            response_format={"type": "json_schema", "json_schema": {"name": name, "schema": schema, "strict": True}}, **kw)
-    except Exception as e:
-        ledger.record(model, name, (time.time() - t) * 1000, getattr(e, "status_code", "error"), 0.0, run_id, err=str(e)[:200])
-        raise
+    for attempt in range(3):
+        t = time.time()
+        try:
+            r = _spark.chat.completions.create(
+                model=model, reasoning_effort=effort, max_tokens=max_tokens, messages=messages,
+                response_format={"type": "json_schema", "json_schema": {"name": name, "schema": schema, "strict": True}}, **kw)
+            break
+        except Exception as e:
+            code = getattr(e, "status_code", "error")
+            ledger.record(model, name, (time.time() - t) * 1000, code, 0.0, run_id, err=str(e)[:200])
+            if code not in TRANSIENT or attempt == 2:
+                raise
+            time.sleep(1.5 * (attempt + 1))
     ms = (time.time() - t) * 1000
     u = r.usage
     cached = getattr(getattr(u, "prompt_tokens_details", None), "cached_tokens", 0) or 0
@@ -172,12 +178,14 @@ def sam_segment(img: Image.Image, *, text: str | None = None, boxes: list | None
                     {"type": "input_text", "text": prompt},
                     {"type": "input_image", "image_url": data_url(to_jpeg(img))}]}])
             break
-        except Exception as e:  # SDK already retried transport errors; one more manual pass for 5xx
+        except Exception as e:  # SDK already retried transport errors; manual passes for 5xx and the API's transient 404s
             last_err = e
-            ledger.record(MODELS["sam"], op, (time.time() - t) * 1000, getattr(e, "status_code", "error"), 0.0, run_id, err=str(e)[:200])
-            if getattr(e, "status_code", 500) < 500:
+            code = getattr(e, "status_code", 500)
+            ledger.record(MODELS["sam"], op, (time.time() - t) * 1000, code, 0.0, run_id, err=str(e)[:200])
+            if code < 500 and code not in TRANSIENT:
                 raise
             time.sleep(1.5 * (attempt + 1))
+            t = time.time()
     else:
         raise MetaAPIError("gave_up", str(last_err)[:200])
     ms = (time.time() - t) * 1000

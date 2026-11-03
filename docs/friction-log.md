@@ -1,0 +1,17 @@
+# Meta Model API friction log
+
+These are observations from building Defect Forge (Nov 3–4 2026), with the workaround we shipped for each. They're written for the "Feedback on Meta products" form field and for anyone building on the same APIs.
+
+| # | Product | What happened | Workaround in this repo |
+|---|---|---|---|
+| 1 | SAM 3.1 | Concept (noun-phrase) prompts returned an **empty result** on studio scans of hazelnuts. "hazelnut", "nut", "object", "food", "egg" and "ball" all came back empty; only "shell" matched, and only sometimes. Empty results are still billed. | `forge/locate.py` gets the part mask from a **single point prompt** at an Otsu centroid (IoU 0.80–0.87 against a threshold mask) |
+| 2 | SAM 3.1 | Box prompts are excellent when **tight** (median IoU 0.87 on real MVTec defects), but padding the box by 20% drops the median to 0.48, because SAM switches to the whole object. | Tight boxes from the diff mask; no padding |
+| 3 | SAM 3.1, Spark | About 4% of SAM calls in a burst returned **404 "The requested model was not found"** for `sam-3.1`, and the immediate retry succeeded. The SDK doesn't retry 404. | `meta/client.py` treats 404 as transient (3 attempts with backoff), and the SAM cross-check never fails a sample |
+| 4 | Muse Image | `/v1/images/edits` has no `mask` parameter (`mask`, `seed`, `input_fidelity` and `partial_images` all return 400). Edits return **1600×1600** whatever the input size, with 0.1–3.4 px of shift and slight global colour drift (MAE about 2.5). | Crop 512 px → edit → resize → ECC align (affine with a translation-only fallback and a sanity check) → colour-match on unchanged pixels → LAB diff → paste only the changed region. Pixels outside the mask are byte-identical (validator V1) |
+| 5 | Muse Image | Edits near the edge of an object can turn "add a cut" into "slice the tip off" (about 46% of the crop changed). | Defect centres are sampled in the inner part of the object (distance transform), the prompt asks for a small, local defect, and validators V3 and V5 reject oversized edits |
+| 6 | Muse Image | The OpenAI SDK sends multipart for edits; the JSON `images` array needs raw HTTP or you get a 415. | `httpx.post(json=...)` |
+| 7 | Muse Spark | Strict `json_schema` with arrays of objects works well (taxonomy extraction). Reasoning tokens count against `max_tokens`, so we always set 4000+. | `max_tokens=4000`, `reasoning_effort="low"` |
+| 8 | Muse Spark | As a realism critic, Spark accepted our forgeries at about the same rate as it accepted real defects. It is a useful type and sanity filter, **not** a realism oracle. | The headline metric never depends on the critic; its ground truth comes from construction |
+| 9 | Muse Spark | Zero-shot inspection of MVTec hazelnut is already at or near ceiling, so in-context examples have little room to help on full-strength defects. | We measure **detection thresholds** on a deterministic severity ladder instead |
+| 10 | Model API | `x-ratelimit-*` headers appear on chat completions but not on `GET /v1/models`. | Read limits from a 1-token Spark call |
+| 11 | Model API | Rate limits are per team, so the image batch and the eval share one 150 RPM image budget. | A shared limiter of 2 image calls/s across threads |

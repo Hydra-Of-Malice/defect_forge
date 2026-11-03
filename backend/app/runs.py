@@ -241,10 +241,15 @@ class Manager:
                 yy, xx = np.nonzero(cmask)
                 cb = (int(xx.min()), int(yy.min()), int(xx.max()) + 1, int(yy.max()) + 1)
                 bbox = [cb[0] + box[0], cb[1] + box[1], cb[2] + box[0], cb[3] + box[1]]
-                s = sam_segment(Image.fromarray(comp["composite"]), boxes=[cb], run_id=run.id, op="label")
-                cost += s["cost_usd"]
-                sm = next((o["mask"] for o in s["objects"] if o["mask"] is not None), None)
-                sam_iou = round(iou(sm, cmask), 3) if sm is not None else 0.0
+                try:   # independent cross-check only (V4 is advisory); never fail a sample on it
+                    s = sam_segment(Image.fromarray(comp["composite"]), boxes=[cb], run_id=run.id, op="label")
+                    cost += s["cost_usd"]
+                    sm = next((o["mask"] for o in s["objects"] if o["mask"] is not None), None)
+                    sam_iou = round(iou(sm, cmask), 3) if sm is not None else 0.0
+                except ledger.BudgetExceeded:
+                    raise
+                except Exception:
+                    sam_iou = None
             run.emit("stage", {"stage": "critic", "status": "start", "sample_id": sid})
             cr = critic(Image.fromarray(comp["composite"]), tax["part_name"], d["defect_type"], d["description"], run_id=run.id) if cmask.any() else None
             if cr:
@@ -329,8 +334,17 @@ class Manager:
             run.emit("severity", pt)
             return pt
 
+        def safe(job):
+            try:
+                return one(job)
+            except ledger.BudgetExceeded:
+                raise
+            except Exception:
+                traceback.print_exc()
+                return None
+
         with ThreadPoolExecutor(8) as ex:
-            pts = list(ex.map(one, jobs))
+            pts = [p for p in ex.map(safe, jobs) if p is not None]
         cv = sev.curves(pts)
         run.emit("curves", {"curves": cv})
         run.emit("stage", {"stage": "stress", "status": "done"})
