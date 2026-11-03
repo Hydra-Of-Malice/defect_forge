@@ -183,6 +183,56 @@ def faint_lift(run: dict, ex_forged) -> list[dict]:
     return pmap(one, pts)
 
 
+def total_spend(new: float) -> float:
+    p = RAW / "spend.json"
+    prev = json.loads(p.read_text())["usd"] if p.exists() else 0.0
+    p.write_text(json.dumps({"usd": round(prev + new, 4)}))
+    return prev + new
+
+
+def direction(before: int, after: int, p: float) -> str:
+    if p >= 0.05:
+        return "no significant change."
+    if after < before:
+        return ("a significant DROP. Full-strength examples raised the inspector's bar, so it dismissed more faint defects. "
+                "In-context exemplars are not free; measure them before deploying.")
+    return "a significant lift."
+
+
+def blind_spot_summary():
+    p = RESULTS / "blind_spot.json"
+    if not p.exists():
+        return None
+    b = json.loads(p.read_text())
+    o, a = b["original_spec"], b["amended_spec"]
+    rows = [
+        {"label": "Real white print, original spec", "tone": "signal", **{k: o["real_print"][k] for k in ("detected", "n")}},
+        {"label": "Forged white print, original spec (reproduces the blind spot?)", "tone": "signal",
+         **{k: o["forged_white_print"][k] for k in ("detected", "n")}},
+        {"label": "Forged white print, amended spec", "tone": "pass", **{k: a["forged_white_print"][k] for k in ("detected", "n")}},
+        {"label": "Real white print, amended spec (fix transfers to real parts?)", "tone": "pass", **{k: a["real_print"][k] for k in ("detected", "n")}},
+        {"label": "False alarms on real good parts, amended spec", "tone": "signal",
+         **{k: a["real_good_false_alarms"][k] for k in ("detected", "n")}},
+    ]
+    if b.get("forged_white_exemplars"):
+        fx = b["forged_white_exemplars"]
+        rows.append({"label": "Real white print, original spec + 2 forged white-print examples", "tone": "pass",
+                     **{k: fx["real_print"][k] for k in ("detected", "n")}})
+    from math import comb
+    miss = len(o["misses_real"])
+    fx_err = [e for e in (b.get("forged_white_exemplars") or {}).get("errors", []) if e[0] == "print"]
+    p_fx = round(min(1.0, 2 * sum(comb(miss, i) for i in range(len(fx_err) + 1)) / 2 ** miss), 4) if miss else 1.0
+    return {"finding": ("Exploratory (not pre-registered). On the real benchmark, every spec-only miss was WHITE print mistaken for "
+                        "gloss. Bold forged white print was caught 12/12, so forging alone did not reproduce the subtle real misses. "
+                        "But two forged white-print EXAMPLES in context fixed the real blind spot "
+                        f"(real print {o['real_print']['detected']}/{o['real_print']['n']} -> "
+                        f"{b['forged_white_exemplars']['real_print']['detected']}/{b['forged_white_exemplars']['real_print']['n']}, "
+                        f"paired exact p = {p_fx}; 0/40 false alarms), while generic black-ink examples (C2) made it worse. "
+                        "A one-clause spec amendment also fixed it, with 1/40 false alarms.") if b.get("forged_white_exemplars") else
+                       "Exploratory: white print was the real blind spot; a one-clause spec amendment fixed it on real parts.",
+            "amendment": b["amendment"], "rows": rows, "cost_usd": b.get("cost_usd")}
+
+
 # ---------------------------------------------------------------- report
 
 def main():
@@ -241,12 +291,13 @@ def main():
         "notes": [
             f"Benchmark: MVTec AD hazelnut test split, {score(conds['C0'])['n_defect']} defective + 40 good scored (4 oracle images held out).",
             f"In-context C2 vs C1: exact McNemar p = {p_c2_c1}.",
-            f"Faint-defect lift (hardest 3 severity levels, {len(faint)} images): {fz} -> {fw} detected, exact McNemar p = {p_faint}"
-            + (" (significant)." if p_faint < 0.05 else " (no significant lift)."),
+            f"Faint-defect test (hardest 3 severity levels, {len(faint)} images): spec only {fz} vs with 8 forged examples {fw} detected, "
+            f"exact McNemar p = {p_faint}: " + direction(fz, fw, p_faint),
             "Equivalent diameters in mm assume the spec's 20 mm nominal hazelnut width.",
-            f"Total Meta API spend for this evaluation: ${ledger.spent() - spend0:.2f} (wall time {time.time() - t0:.0f} s for cached+new stages).",
+            f"Total Meta API spend for this evaluation (all stages, cumulative across resumed runs): ${total_spend(ledger.spent() - spend0):.2f}.",
         ],
     }
+    report["blind_spot"] = blind_spot_summary()
     (RESULTS / "eval.json").write_text(json.dumps(report, indent=1))
     write_md(report)
     print(json.dumps({k: report[k] for k in ("real_benchmark", "in_context", "faint_lift", "sam_real", "forge_stats", "stats")}, indent=1))
@@ -279,14 +330,23 @@ def write_md(r: dict) -> None:
     fs = r["forge_stats"]
     L += ["", f"Exact McNemar C2 vs C1: p = {r['stats']['mcnemar_C2_vs_C1']}.", "",
           "## Faint-defect lift (hardest three severity levels)", "",
-          f"- Spec only: {f[0]['detected']}/{f[0]['n']} detected; with 8 forged examples: {f[1]['detected']}/{f[1]['n']} (exact McNemar p = {r['stats']['mcnemar_faint']})",
+          f"- Spec only: {f[0]['detected']}/{f[0]['n']} detected; with 8 forged examples: {f[1]['detected']}/{f[1]['n']} (exact McNemar p = {r['stats']['mcnemar_faint']}): "
+          + direction(f[0]['detected'], f[1]['detected'], r['stats']['mcnemar_faint']),
           "", "## SAM 3.1 on real defects (tight ground-truth box prompts)", "",
           f"- Median IoU {s['median_iou']} (mean {s['mean_iou']}) over {s['n']} real defects; by type: " + ", ".join(f"{k} {v}" for k, v in s["by_type"].items()),
           "", "## Forge statistics", "",
           f"- {fs['accepted']}/{fs['attempted']} samples accepted ({fs['acceptance_rate']:.0%}) after {fs['edit_attempts']} Muse Image edits (critic-driven retries)",
           f"- Mean SAM-vs-diff IoU {fs['mean_sam_iou']}; validator pass rate {fs['validator_pass_rate']:.0%}",
           f"- ${fs['cost_per_accepted_usd']} and {fs['seconds_per_accepted']} s per accepted, pixel-labeled sample; whole forge+stress run ${fs['run_cost_usd']}",
-          "", "## Notes", ""] + [f"- {n}" for n in r["notes"]] + ["", "## Deviations from EVAL.md", "", "- None."]
+          ""]
+    if r.get("blind_spot"):
+        b = r["blind_spot"]
+        L += ["## Blind spot found and fixed: white print (eval/blind_spot.py, not pre-registered)", "", b["finding"], "",
+              "| Measurement | Detected |", "|---|---|"] + [f"| {x['label']} | {x['detected']}/{x['n']} |" for x in b["rows"]] + [
+              "", f"Spec amendment tested: \"{b['amendment']}\"", ""]
+    L += ["## Notes", ""] + [f"- {n}" for n in r["notes"]] + ["", "## Deviations from EVAL.md", "",
+          "- None for measurements 1-6. The blind-spot experiment was added after seeing the real-benchmark misses and is "
+          "reported separately as exploratory."]
     (RESULTS / "eval.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
 

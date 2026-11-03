@@ -1,0 +1,1130 @@
+[
+ {
+  "sample_id": "s010",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s010",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s010",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s012",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s012",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s012",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s013",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s013",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s013",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s014",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s014",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s014",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s015",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s015",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s016",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s016",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s016",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s015",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s018",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s018",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s018",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s019",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s019",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s020",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s019",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s020",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s020",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s021",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s021",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s022",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s021",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s022",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s022",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s023",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s023",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s023",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s024",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s024",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s024",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s026",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s026",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s027",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s027",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s027",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s026",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s028",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s028",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s029",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s028",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s029",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s030",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s030",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s029",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s030",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s031",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s031",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s031",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s032",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s032",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s033",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s032",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s033",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s034",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s034",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s034",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s033",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s035",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s035",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s036",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s036",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s035",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s037",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s037",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s036",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s038",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s038",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s037",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s038",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s039",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s039",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s040",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s039",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s041",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s040",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s041",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s040",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s042",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s042",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s041",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s042",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s043",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s043",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s044",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s044",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s044",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s045",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s043",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s046",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s045",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s046",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s045",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s046",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s047",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s047",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s048",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s048",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s047",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s048",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s049",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s049",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s050",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s050",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s049",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s050",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s051",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s051",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s052",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s051",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s052",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s052",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s053",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s053",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s054",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s053",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s054",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s054",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s055",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s055",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s055",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s056",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s056",
+  "defect_type": "hole",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s057",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s056",
+  "defect_type": "hole",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s057",
+  "defect_type": "crack",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s057",
+  "defect_type": "crack",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s058",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s058",
+  "defect_type": "cut",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s059",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.25,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s058",
+  "defect_type": "cut",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": false,
+  "with_forged": false
+ },
+ {
+  "sample_id": "s059",
+  "defect_type": "print",
+  "kind": "opacity",
+  "level": 0.12,
+  "zero_shot": true,
+  "with_forged": true
+ },
+ {
+  "sample_id": "s059",
+  "defect_type": "print",
+  "kind": "size",
+  "level": 0.2,
+  "zero_shot": true,
+  "with_forged": true
+ }
+]

@@ -224,6 +224,30 @@ export function ResultsScreen() {
             </Panel>
           </div>
 
+          {data.blind_spot ? (
+            <Panel title="Blind spot found and fixed: white print" sub={data.blind_spot.finding}>
+              <ul className="grid gap-3 max-w-[90ch]">
+                {data.blind_spot.rows.map((r) => (
+                  <li key={r.label}>
+                    <div className="flex items-baseline justify-between gap-2 text-[12.5px]">
+                      <span className="text-fg-2">{r.label}</span>
+                      <span className="num shrink-0">
+                        {r.detected}/{r.n}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Bar value={r.n ? r.detected / r.n : 0} tone={r.tone} />
+                      <span className="num text-[11.5px] text-fg-3 w-10 text-right">{pct(r.n ? r.detected / r.n : 0)}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-[12.5px] text-fg-3 max-w-[90ch]">
+                <span className="text-fg-2">Spec amendment tested:</span> {data.blind_spot.amendment}
+              </p>
+            </Panel>
+          ) : null}
+
           <Panel title="Notes">
             {data.notes.length ? (
               <ul className="grid gap-1.5 text-[13.5px] text-fg-2 max-w-[90ch] list-disc pl-5 marker:text-fg-3">

@@ -1,0 +1,1352 @@
+[
+ {
+  "truth": "good",
+  "id": 0,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows only natural shell color variation, longitudinal stripes, and fuzzy hilum cap. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 1,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.95,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour variation, longitudinal stripes and rough fuzzy hilum cap on right. Only tiny pale speck at cap edge consistent with acceptable natural specks/dust pe"
+ },
+ {
+  "truth": "good",
+  "id": 2,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows only natural shell color variation, longitudinal stripes, and the rough fuzzy hilum cap on left. No hole, crack, cut, or print visible."
+ },
+ {
+  "truth": "good",
+  "id": 3,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows only natural shell color, longitudinal stripes, and fuzzy hilum cap on right. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 4,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Shell intact with natural colour variation, stripes and hilum; no hole, crack, cut or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 5,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.96,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural colour variation, longitudinal stripes, and fuzzy hilum cap on left. Light surface scuffs are small natural marks per 3.3, no hole, crack, straight-edged cut, or p"
+ },
+ {
+  "truth": "good",
+  "id": 6,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut showing natural brown shell with longitudinal stripes and rough fuzzy hilum cap; no holes, cracks, cuts or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 7,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with smooth intact shell, natural colour variation and stripes, and natural rough hilum cap on left. No holes, cracks, cuts, or print markings observed."
+ },
+ {
+  "truth": "good",
+  "id": 8,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.96,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour variation, longitudinal stripes, and rough fuzzy hilum on left. No hole, crack, cut, or print observed. Small mark on hilum is part of natural cap te"
+ },
+ {
+  "truth": "good",
+  "id": 9,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural brown shell color, longitudinal stripes and rough fuzzy hilum cap on top. No hole, crack, cut or print observed. Surface intact."
+ },
+ {
+  "truth": "good",
+  "id": 10,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Shell is intact with natural longitudinal stripes and rough hilum cap. No holes, cracks, cuts, or print markings visible."
+ },
+ {
+  "truth": "good",
+  "id": 11,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour variation, longitudinal stripes, and rough fuzzy hilum cap; no hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 12,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell color variation, longitudinal stripes, and rough fuzzy cap area with natural boundary. No hole, crack, cut, or print visible; small specks are acceptable pe"
+ },
+ {
+  "truth": "good",
+  "id": 13,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural brown shell with longitudinal stripes, fuzzy hilum cap and natural boundary. No hole, crack, cut, or print observed. Small light speck is within acceptable natura"
+ },
+ {
+  "truth": "good",
+  "id": 14,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour variation, longitudinal stripes, and rough fuzzy hilum cap. No hole, crack, cut, or print observed. Small specks are within acceptable natural variati"
+ },
+ {
+  "truth": "good",
+  "id": 15,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Intact in-shell hazelnut with natural shell colour, longitudinal stripes and rough fuzzy hilum cap; no hole, crack, cut or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 16,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural brown colour, longitudinal stripes and fuzzy hilum cap on left. No dark hole, no fracture/crack, no straight-edged knife cut, no ink/print. Small pale specks and f"
+ },
+ {
+  "truth": "good",
+  "id": 17,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Shell shows only natural colour variation, longitudinal stripes and hilum area; no hole, crack, cut or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 18,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural brown shell with longitudinal stripes, large rough fuzzy hilum cap, and minor natural specks. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 19,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell color variation, longitudinal stripes and fuzzy hilum cap. No hole, crack, cut, or print visible."
+ },
+ {
+  "truth": "good",
+  "id": 20,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Shell surface is intact with natural longitudinal stripes and gloss. The large fuzzy brown cap is the hilum area, explicitly acceptable per 3.2. No dark bored hole, no fracture/crack, no straight-edge"
+ },
+ {
+  "truth": "good",
+  "id": 21,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell color, longitudinal stripes, and fuzzy cap hilum area. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 22,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour variation, longitudinal stripes and fuzzy hilum cap. No hole, crack, cut or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 23,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour, longitudinal stripes and rough hilum cap on right. No hole, crack, cut, or print observed; surface is intact."
+ },
+ {
+  "truth": "good",
+  "id": 24,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Intact in-shell hazelnut with natural brown colour, longitudinal stripes, and fuzzy cap area. No holes, cracks, cuts, or print markings visible."
+ },
+ {
+  "truth": "good",
+  "id": 25,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with intact shell, natural longitudinal stripes and colour variation, and natural fuzzy hilum cap on left. No holes, cracks, cuts, or print markings observed."
+ },
+ {
+  "truth": "good",
+  "id": 26,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour variation, longitudinal stripes, and rough fuzzy hilum cap with natural boundary. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 27,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural brown shell, longitudinal stripes, and rough fuzzy hilum cap on left. No holes, cracks, cuts, or print markings visible. Surface variations are within acceptable n"
+ },
+ {
+  "truth": "good",
+  "id": 28,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural brown shell with longitudinal stripes, fuzzy hilum cap and natural boundary. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 29,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour, longitudinal stripes and fuzzy hilum cap. No hole, crack, cut, or print observed on visible shell surface."
+ },
+ {
+  "truth": "good",
+  "id": 30,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural brown shell with longitudinal stripes, gloss, and rough hilum cap on left. No hole, crack, cut, or print observed. Small central speck is natural, not a bored hol"
+ },
+ {
+  "truth": "good",
+  "id": 31,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour variation, longitudinal stripes, gloss and rough hilum cap at bottom. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 32,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour, longitudinal stripes, and rough hilum cap. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 33,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.99,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural brown colour, longitudinal stripes and fuzzy hilum cap. No holes, cracks, cuts, or print observed; only minor natural specks per 3.3."
+ },
+ {
+  "truth": "good",
+  "id": 34,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.97,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour, longitudinal stripes and fuzzy hilum cap on left. No hole, crack, cut or print observed; minor surface scuffs are natural variation per 3.3."
+ },
+ {
+  "truth": "good",
+  "id": 35,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural brown colour with longitudinal stripes and fuzzy hilum cap at bottom. No holes, cracks, cuts, or print observed; only tiny light speck which is acceptable natural"
+ },
+ {
+  "truth": "good",
+  "id": 36,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Shell shows natural colour variation, stripes and rough hilum cap only; no hole, crack, cut or print visible."
+ },
+ {
+  "truth": "good",
+  "id": 37,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows only natural shell colour variation, longitudinal stripes, and rough fuzzy hilum cap. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "good",
+  "id": 38,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut with natural shell colour variation, longitudinal stripes, and rough hilum cap on left. Minor surface scuffs/specks are acceptable per 3.1/3.3. No hole, crack, cut, or print ob"
+ },
+ {
+  "truth": "good",
+  "id": 39,
+  "defect": false,
+  "type": "good",
+  "confidence": 0.98,
+  "box": null,
+  "rationale": "Whole in-shell hazelnut shows natural shell colour variation, longitudinal stripes and rough fuzzy hilum cap on right. No hole, crack, cut, or print observed."
+ },
+ {
+  "truth": "crack",
+  "id": 0,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   256,
+   302,
+   783,
+   537
+  ],
+  "rationale": "Large fracture with broken-away shell exposing kernel plus hairline split extending left, matches Crack reject 4.2.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 1,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.98,
+  "box": [
+   532,
+   368,
+   824,
+   716
+  ],
+  "rationale": "large shell fracture with broken-away piece exposing kernel on right side",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 2,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.97,
+  "box": [
+   315,
+   430,
+   583,
+   849
+  ],
+  "rationale": "Visible fracture of the shell below the hilum with hairline splits and a wider gap, matching Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 3,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.97,
+  "box": [
+   276,
+   317,
+   752,
+   783
+  ],
+  "rationale": "Diagonal fracture of the shell running from lower-left across to upper-right, consistent with Crack reject class 4.2.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 4,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.97,
+  "box": [
+   527,
+   643,
+   771,
+   821
+  ],
+  "rationale": "Broken-away piece of shell on lower side exposing kernel/interior, which meets REJECT 4.2 Crack definition.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 5,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.98,
+  "box": [
+   302,
+   261,
+   721,
+   783
+  ],
+  "rationale": "Long thin dark fracture of the shell running from hilum to tip, consistent with crack reject class 4.2, not natural striping.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 6,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.96,
+  "box": [
+   588,
+   419,
+   870,
+   831
+  ],
+  "rationale": "Fracture with split and broken shell at pointed end exposing interior, matching crack definition.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 7,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   235,
+   312,
+   808,
+   875
+  ],
+  "rationale": "Large fracture with broken-away shell piece exposing the kernel, matching Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 8,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   302,
+   450,
+   829,
+   819
+  ],
+  "rationale": "Large fracture with broken-away shell piece exposing the kernel, matching Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 9,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   235,
+   225,
+   803,
+   752
+  ],
+  "rationale": "Large fracture with broken-away shell piece exposing the kernel, matches Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 10,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   225,
+   189,
+   783,
+   793
+  ],
+  "rationale": "Large fracture with broken-away shell piece exposing the kernel in center, matches Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 11,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.99,
+  "box": [
+   209,
+   276,
+   798,
+   665
+  ],
+  "rationale": "Large fracture with broken-away shell exposing kernel on left side plus thin hairline extending right, matches 4.2 Crack.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 12,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.96,
+  "box": [
+   332,
+   225,
+   660,
+   762
+  ],
+  "rationale": "Long fracture of the shell running from the cap down the side, consistent with crack reject class 4.2.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 13,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.96,
+  "box": [
+   310,
+   486,
+   600,
+   731
+  ],
+  "rationale": "Thin dark fracture line crossing the shell from the hilum boundary diagonally, consistent with crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 14,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.92,
+  "box": [
+   593,
+   489,
+   729,
+   686
+  ],
+  "rationale": "Dark opening through shell on right side with rough torn rim, consistent with Hole reject per 4.1.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 15,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.98,
+  "box": [
+   552,
+   363,
+   762,
+   793
+  ],
+  "rationale": "Large fracture of the shell with broken-away piece exposing the kernel on right side, matches REJECT Crack 4.2.",
+  "box_hit": true
+ },
+ {
+  "truth": "crack",
+  "id": 16,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.96,
+  "box": [
+   614,
+   158,
+   793,
+   788
+  ],
+  "rationale": "Longitudinal fracture/split of shell along right side exposing dark interior, matches Crack reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 0,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.85,
+  "box": [
+   394,
+   607,
+   555,
+   702
+  ],
+  "rationale": "small straight-edged linear mark showing paler inner material, consistent with knife cut per 4.3, not natural stripe or speck",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 1,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.95,
+  "box": [
+   506,
+   394,
+   788,
+   706
+  ],
+  "rationale": "Two straight-edged linear marks 2-8mm showing paler material inside, consistent with knife cut per 4.3, not natural stripes or cap.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 2,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.88,
+  "box": [
+   581,
+   364,
+   747,
+   578
+  ],
+  "rationale": "straight-edged pale slice on right side of shell showing paler material inside, consistent with knife cut per 4.3, not natural stripe or speck",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 3,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.95,
+  "box": [
+   460,
+   552,
+   583,
+   747
+  ],
+  "rationale": "Straight-edged linear slice 2-8mm showing paler material inside, matching Cut reject 4.3, distinct from natural stripes.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 4,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.96,
+  "box": [
+   527,
+   332,
+   732,
+   530
+  ],
+  "rationale": "Two straight-edged pale slash marks on shell surface showing paler material inside, matching Cut reject definition.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 5,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.95,
+  "box": [
+   291,
+   478,
+   555,
+   608
+  ],
+  "rationale": "Straight-edged linear slice 2-8mm with paler material inside on shell surface, matching Cut definition, not natural striping or speck.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 6,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.94,
+  "box": [
+   278,
+   415,
+   573,
+   502
+  ],
+  "rationale": "Straight-edged linear slice on shell showing paler material inside, matching Cut definition (2-8mm knife cut).",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 7,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.96,
+  "box": [
+   476,
+   544,
+   783,
+   606
+  ],
+  "rationale": "Horizontal straight-edged slit on shell showing paler/dark interior, matching knife cut/slice definition 4.3, distinct from natural stripes and specks.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 8,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.98,
+  "box": [
+   384,
+   209,
+   727,
+   834
+  ],
+  "rationale": "Thin to wide fracture line running across shell from top to lower side near hilum, exposing interior, matches Crack reject 4.2",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 9,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.93,
+  "box": [
+   464,
+   477,
+   780,
+   632
+  ],
+  "rationale": "Elongated straight-edged slice on shell surface showing paler material inside, matching Cut definition 4.3, distinct from natural stripes and cap.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 10,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.96,
+  "box": [
+   373,
+   399,
+   430,
+   645
+  ],
+  "rationale": "straight-edged light-colored slit on shell surface consistent with knife cut per 4.3, distinct from natural stripes",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 11,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.95,
+  "box": [
+   327,
+   435,
+   537,
+   614
+  ],
+  "rationale": "Diagonal straight-edged slit showing paler material inside, matches Cut reject 4.3, not natural striping or hilum.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 12,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.95,
+  "box": [
+   517,
+   476,
+   573,
+   721
+  ],
+  "rationale": "straight-edged vertical slit showing paler material inside, matching knife cut definition 4.3",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 13,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.92,
+  "box": [
+   286,
+   317,
+   527,
+   670
+  ],
+  "rationale": "Straight-edged linear mark 2-8mm+ showing paler material inside, consistent with knife cut/slice per 4.3, distinct from natural stripes/specks.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 14,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.96,
+  "box": [
+   479,
+   616,
+   724,
+   650
+  ],
+  "rationale": "Straight-edged light-colored slit on shell surface showing paler material inside, matching Cut definition 4.3.",
+  "box_hit": true
+ },
+ {
+  "truth": "cut",
+  "id": 15,
+  "defect": true,
+  "type": "cut",
+  "confidence": 0.97,
+  "box": [
+   278,
+   529,
+   557,
+   570
+  ],
+  "rationale": "Straight-edged pale horizontal mark on shell showing lighter material inside, consistent with knife cut per 4.3, not natural stripe or speck.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 0,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.97,
+  "box": [
+   436,
+   351,
+   611,
+   481
+  ],
+  "rationale": "small dark round hole through the shell with pale torn rim near center, matches Hole reject class",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 1,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.97,
+  "box": [
+   468,
+   555,
+   550,
+   629
+  ],
+  "rationale": "small dark bored hole through the shell with pale torn rim on the mid-shell, matches Hole reject 4.1, not natural speck or hilum.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 2,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.97,
+  "box": [
+   580,
+   595,
+   647,
+   678
+  ],
+  "rationale": "Small dark round hole through shell with pale torn rim, consistent with insect/bored hole per 4.1; distinct from natural specks and hilum area.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 3,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   424,
+   579,
+   530,
+   678
+  ],
+  "rationale": "small dark circular through-hole in shell side with pale torn rim, matches Hole 4.1 reject (0.5-2mm dark inside).",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 4,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   473,
+   397,
+   602,
+   509
+  ],
+  "rationale": "Dark bored hole through shell with rough torn rim, dark interior, matching Hole reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 5,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   358,
+   512,
+   483,
+   643
+  ],
+  "rationale": "Dark through-shell hole with rough torn pale rim on side of nut, matches Hole reject 4.1, distinct from natural hilum and stripes.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 6,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.93,
+  "box": [
+   319,
+   524,
+   423,
+   649
+  ],
+  "rationale": "small dark bored hole through shell with pale torn rim, consistent with insect/drill hole per 4.1. A thin hairline crack also crosses the hole, but hole is the distinct reject.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 7,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   501,
+   501,
+   557,
+   555
+  ],
+  "rationale": "Small round drilled/insect hole through shell with dark interior and pale rim in center of shell, matches REJECT 4.1 Hole.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 8,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.97,
+  "box": [
+   270,
+   337,
+   339,
+   439
+  ],
+  "rationale": "Small dark bored hole through shell with torn pale rim on left side, matches Hole reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 9,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   596,
+   468,
+   694,
+   573
+  ],
+  "rationale": "Dark bored hole through shell with rough torn rim, right-center of nut, matches Hole reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 10,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.96,
+  "box": [
+   430,
+   345,
+   574,
+   440
+  ],
+  "rationale": "Dark bored hole through shell with pale torn rim, consistent with REJECT class Hole; thin hairline fracture extends from it.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 11,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.96,
+  "box": [
+   599,
+   457,
+   684,
+   541
+  ],
+  "rationale": "Dark through-shell hole with pale torn rim visible on shell, with associated hairline crack extending from hilum through hole. Matches 4.1 Hole reject.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 12,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   517,
+   385,
+   640,
+   525
+  ],
+  "rationale": "Dark circular through-shell hole with torn pale rim in center of shell, matches 4.1 Hole reject.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 13,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.97,
+  "box": [
+   440,
+   302,
+   658,
+   506
+  ],
+  "rationale": "Dark through-shell opening with torn rough rim exposing interior void, matching Hole reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 14,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   645,
+   384,
+   778,
+   558
+  ],
+  "rationale": "Dark through-shell hole with torn pale rim on right side of nut, matching Hole reject definition. Horizontal hairline crack also extends from it but hole is primary defect.",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 15,
+  "defect": true,
+  "type": "hole",
+  "confidence": 0.98,
+  "box": [
+   438,
+   454,
+   525,
+   546
+  ],
+  "rationale": "Small dark through-hole in shell at the cap boundary with dark interior and rough torn rim, matching Hole reject 4.1",
+  "box_hit": true
+ },
+ {
+  "truth": "hole",
+  "id": 16,
+  "defect": true,
+  "type": "crack",
+  "confidence": 0.97,
+  "box": [
+   158,
+   404,
+   588,
+   773
+  ],
+  "rationale": "Left side shell fracture with broken-away piece exposing kernel plus hairline splits extending up and down, matches REJECT 4.2 Crack.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 0,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.98,
+  "box": [
+   501,
+   291,
+   776,
+   642
+  ],
+  "rationale": "White ink printed characters/marking on the shell surface, REJECT per 4.4 Print.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 1,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.99,
+  "box": [
+   225,
+   286,
+   614,
+   430
+  ],
+  "rationale": "White ink printed characters on the shell surface, matching Print reject class 4.4, not natural color variation.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 2,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.97,
+  "box": [
+   460,
+   327,
+   665,
+   706
+  ],
+  "rationale": "White ink printed characters/marking on shell surface, matching Print reject class 4.4, not natural color or hilum.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 3,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.96,
+  "box": [
+   716,
+   399,
+   844,
+   650
+  ],
+  "rationale": "White ink/marking on right side of shell, consistent with Print reject class, similar to print reference example. Not natural color variation or dust.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 4,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.96,
+  "box": [
+   278,
+   278,
+   419,
+   616
+  ],
+  "rationale": "white ink / printed marking on shell adjacent to hilum, matching print reject class, not natural color variation",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 5,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.96,
+  "box": [
+   317,
+   201,
+   634,
+   327
+  ],
+  "rationale": "white ink/marking on shell surface, matches Print reject class; not natural cap, stripe or speck",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 6,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.98,
+  "box": [
+   363,
+   512,
+   563,
+   803
+  ],
+  "rationale": "White ink printed characters/marking on shell surface, matching REJECT class Print 4.4, not natural color variation.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 7,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.95,
+  "box": [
+   394,
+   432,
+   816,
+   631
+  ],
+  "rationale": "Bright white irregular marking on shell surface matches print/ink defect, larger and brighter than natural specks, similar to print reference.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 8,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.99,
+  "box": [
+   343,
+   317,
+   747,
+   537
+  ],
+  "rationale": "White printed characters/stamp marking on shell center, REJECT per 4.4 Print.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 9,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.92,
+  "box": [
+   658,
+   472,
+   844,
+   789
+  ],
+  "rationale": "White ink-like marking on the cap/hilum area of the shell, matching Print reject class (any ink/marking). Not natural color variation or dust.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 10,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.98,
+  "box": [
+   563,
+   317,
+   742,
+   650
+  ],
+  "rationale": "White ink printed characters/marking on shell surface, matching Print reject class 4.4",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 11,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.96,
+  "box": [
+   258,
+   318,
+   575,
+   610
+  ],
+  "rationale": "White ink/marking on shell surface, matching Print reject class, not natural color variation.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 12,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.97,
+  "box": [
+   527,
+   245,
+   747,
+   506
+  ],
+  "rationale": "White ink/printed marking including circular 'O' shape on shell surface, matches Print reject class 4.4",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 13,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.96,
+  "box": [
+   708,
+   429,
+   844,
+   637
+  ],
+  "rationale": "White ink/marking on right side of shell, distinct from natural color variation and specks, matches Print reject class.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 14,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.95,
+  "box": [
+   163,
+   353,
+   455,
+   563
+  ],
+  "rationale": "White ink/print marking on shell near hilum boundary, matches Print reject class, not natural speck or dust.",
+  "box_hit": true
+ },
+ {
+  "truth": "print",
+  "id": 15,
+  "defect": true,
+  "type": "print",
+  "confidence": 0.95,
+  "box": [
+   146,
+   291,
+   331,
+   461
+  ],
+  "rationale": "White ink/marking on upper-left shell surface, matching Print reject class, not natural color variation.",
+  "box_hit": true
+ }
+]

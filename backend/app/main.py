@@ -219,4 +219,5 @@ if _dist.exists():
         f = _dist / path
         if path and f.is_file():
             return FileResponse(f)
-        return FileResponse(_dist / "index.html")
+        # index.html must never be cached: it points at the current hashed bundle
+        return FileResponse(_dist / "index.html", headers={"Cache-Control": "no-cache"})

@@ -1,0 +1,471 @@
+{
+ "generated": 1793741435.4565434,
+ "real_benchmark": {
+  "n_good": 40,
+  "n_defect": 66,
+  "recall": 0.955,
+  "recall_ci": [
+   0.875,
+   0.984
+  ],
+  "specificity": 1.0,
+  "specificity_ci": [
+   0.912,
+   1.0
+  ],
+  "type_accuracy": 0.937,
+  "box_hit": 0.939,
+  "by_type": {
+   "crack": {
+    "n": 17,
+    "detected": 17
+   },
+   "cut": {
+    "n": 16,
+    "detected": 16
+   },
+   "hole": {
+    "n": 17,
+    "detected": 17
+   },
+   "print": {
+    "n": 16,
+    "detected": 13
+   }
+  }
+ },
+ "in_context": [
+  {
+   "condition": "C0",
+   "label": "spec only",
+   "recall": 0.955,
+   "specificity": 1.0,
+   "n": 106,
+   "type_accuracy": 0.937,
+   "box_hit": 0.939
+  },
+  {
+   "condition": "C1",
+   "label": "+2 good examples",
+   "recall": 1.0,
+   "specificity": 0.975,
+   "n": 106,
+   "type_accuracy": 0.939,
+   "box_hit": 1.0
+  },
+  {
+   "condition": "C2",
+   "label": "+8 forged defects",
+   "recall": 0.924,
+   "specificity": 1.0,
+   "n": 106,
+   "type_accuracy": 0.951,
+   "box_hit": 0.924
+  },
+  {
+   "condition": "C3",
+   "label": "+4 real defects (oracle)",
+   "recall": 1.0,
+   "specificity": 1.0,
+   "n": 106,
+   "type_accuracy": 0.955,
+   "box_hit": 1.0
+  }
+ ],
+ "faint_lift": [
+  {
+   "condition": "C0",
+   "label": "spec only",
+   "detected": 72,
+   "n": 141
+  },
+  {
+   "condition": "C2",
+   "label": "+8 forged defects",
+   "detected": 59,
+   "n": 141
+  }
+ ],
+ "sam_real": {
+  "n": 70,
+  "median_iou": 0.84,
+  "mean_iou": 0.731,
+  "by_type": {
+   "crack": 0.487,
+   "cut": 0.845,
+   "hole": 0.881,
+   "print": 0.834
+  }
+ },
+ "forge_stats": {
+  "attempted": 60,
+  "accepted": 55,
+  "acceptance_rate": 0.917,
+  "edit_attempts": 73,
+  "mean_sam_iou": 0.821,
+  "cost_per_accepted_usd": 0.0202,
+  "seconds_per_accepted": 24.8,
+  "validator_pass_rate": 0.991,
+  "run_cost_usd": 2.51
+ },
+ "curves": [
+  {
+   "defect_type": "crack",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 12,
+     "detected": 12,
+     "rate": 1.0,
+     "ci_low": 0.757,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.95
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 12,
+     "detected": 11,
+     "rate": 0.917,
+     "ci_low": 0.646,
+     "ci_high": 0.985,
+     "mean_size_mm": 1.95
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 12,
+     "detected": 7,
+     "rate": 0.583,
+     "ci_low": 0.32,
+     "ci_high": 0.807,
+     "mean_size_mm": 1.95
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 12,
+     "detected": 1,
+     "rate": 0.083,
+     "ci_low": 0.015,
+     "ci_high": 0.354,
+     "mean_size_mm": 1.95
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 12,
+     "detected": 11,
+     "rate": 0.917,
+     "ci_low": 0.646,
+     "ci_high": 0.985,
+     "mean_size_mm": 1.17
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 12,
+     "detected": 9,
+     "rate": 0.75,
+     "ci_low": 0.468,
+     "ci_high": 0.911,
+     "mean_size_mm": 0.68
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 12,
+     "detected": 4,
+     "rate": 0.333,
+     "ci_low": 0.138,
+     "ci_high": 0.609,
+     "mean_size_mm": 0.39
+    }
+   ],
+   "threshold_note": "crack: size: holds to 0.6x (~1.17 mm), missed at 0.2x (~0.39 mm) (4/12); contrast: holds to 0.5x, missed at 0.12x (1/12)"
+  },
+  {
+   "defect_type": "cut",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 15,
+     "detected": 11,
+     "rate": 0.733,
+     "ci_low": 0.48,
+     "ci_high": 0.891,
+     "mean_size_mm": 1.47
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 15,
+     "detected": 5,
+     "rate": 0.333,
+     "ci_low": 0.152,
+     "ci_high": 0.583,
+     "mean_size_mm": 1.47
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 15,
+     "detected": 3,
+     "rate": 0.2,
+     "ci_low": 0.07,
+     "ci_high": 0.452,
+     "mean_size_mm": 1.47
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 15,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.204,
+     "mean_size_mm": 1.47
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 15,
+     "detected": 10,
+     "rate": 0.667,
+     "ci_low": 0.417,
+     "ci_high": 0.848,
+     "mean_size_mm": 0.88
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 15,
+     "detected": 2,
+     "rate": 0.133,
+     "ci_low": 0.037,
+     "ci_high": 0.379,
+     "mean_size_mm": 0.51
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 15,
+     "detected": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.204,
+     "mean_size_mm": 0.29
+    }
+   ],
+   "threshold_note": "cut: size: missed at 0.35x (~0.51 mm) (2/15); contrast: missed at 0.5x (5/15)"
+  },
+  {
+   "defect_type": "hole",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.31
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.31
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 14,
+     "detected": 13,
+     "rate": 0.929,
+     "ci_low": 0.685,
+     "ci_high": 0.987,
+     "mean_size_mm": 2.31
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 14,
+     "detected": 4,
+     "rate": 0.286,
+     "ci_low": 0.117,
+     "ci_high": 0.546,
+     "mean_size_mm": 2.31
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.39
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.81
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.46
+    }
+   ],
+   "threshold_note": "hole: caught at every size tested (down to 0.2x (~0.46 mm)); contrast: holds to 0.25x, missed at 0.12x (4/14)"
+  },
+  {
+   "defect_type": "print",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 14,
+     "detected": 11,
+     "rate": 0.786,
+     "ci_low": 0.524,
+     "ci_high": 0.924,
+     "mean_size_mm": 2.11
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 1.26
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 14,
+     "detected": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 0.74
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 14,
+     "detected": 12,
+     "rate": 0.857,
+     "ci_low": 0.601,
+     "ci_high": 0.96,
+     "mean_size_mm": 0.42
+    }
+   ],
+   "threshold_note": "print: caught at every size tested (down to 0.2x (~0.42 mm)); caught at every contrast tested (down to 0.12x)"
+  }
+ ],
+ "stats": {
+  "mcnemar_C2_vs_C1": 0.2188,
+  "mcnemar_faint": 0.0106
+ },
+ "notes": [
+  "Benchmark: MVTec AD hazelnut test split, 66 defective + 40 good scored (4 oracle images held out).",
+  "In-context C2 vs C1: exact McNemar p = 0.2188.",
+  "Faint-defect test (hardest 3 severity levels, 141 images): spec only 72 vs with 8 forged examples 59 detected, exact McNemar p = 0.0106: a significant DROP. Full-strength examples raised the inspector's bar, so it dismissed more faint defects. In-context exemplars are not free; measure them before deploying.",
+  "Equivalent diameters in mm assume the spec's 20 mm nominal hazelnut width.",
+  "Total Meta API spend for this evaluation (all stages, cumulative across resumed runs): $4.85."
+ ],
+ "blind_spot": {
+  "finding": "Exploratory (not pre-registered). On the real benchmark, every spec-only miss was WHITE print mistaken for gloss. Bold forged white print was caught 12/12, so forging alone did not reproduce the subtle real misses. But two forged white-print EXAMPLES in context fixed the real blind spot (real print 12/17 -> 17/17, paired exact p = 0.0625; 0/40 false alarms), while generic black-ink examples (C2) made it worse. A one-clause spec amendment also fixed it, with 1/40 false alarms.",
+  "amendment": "4.5 Clarification: bright white or light-coloured characters, letters, digits or ink smudges on the shell are PRINT (4.4) and must be rejected. Do not dismiss them as gloss or specular highlights: natural gloss is a smooth soft highlight that follows the shell curvature and never forms characters or sharp-edged marks.",
+  "rows": [
+   {
+    "label": "Real white print, original spec",
+    "tone": "signal",
+    "detected": 12,
+    "n": 17
+   },
+   {
+    "label": "Forged white print, original spec (reproduces the blind spot?)",
+    "tone": "signal",
+    "detected": 12,
+    "n": 12
+   },
+   {
+    "label": "Forged white print, amended spec",
+    "tone": "pass",
+    "detected": 12,
+    "n": 12
+   },
+   {
+    "label": "Real white print, amended spec (fix transfers to real parts?)",
+    "tone": "pass",
+    "detected": 17,
+    "n": 17
+   },
+   {
+    "label": "False alarms on real good parts, amended spec",
+    "tone": "signal",
+    "detected": 1,
+    "n": 40
+   },
+   {
+    "label": "Real white print, original spec + 2 forged white-print examples",
+    "tone": "pass",
+    "detected": 17,
+    "n": 17
+   }
+  ],
+  "cost_usd": 0.997
+ }
+}

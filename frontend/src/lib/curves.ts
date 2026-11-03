@@ -52,7 +52,14 @@ export function headline(curve: Curve, kind: SeverityKind): string {
   const name = plural(curve.defect_type)
   const cells = orderedCells(curve, kind)
   if (!cells.length) return `${name}: no ${kind} variants inspected yet.`
-  if (!t.caught && t.missed) return `${name}: missed even at ${at(t.missed, kind)}.`
+  if (!t.caught && t.missed) {
+    // weak at full strength: say how many were caught, then where detection falls below half
+    const half = cells.find((c) => c.n > 0 && c.rate < 0.5)
+    const lead = `${name}: only ${Math.round(t.missed.rate * 100)}% caught at ${at(t.missed, kind)}`
+    if (!half || half === t.missed) return `${lead}.`
+    const miss = kind === 'size' && half.mean_size_mm != null ? `${level(half.level)} (≈${mm(half.mean_size_mm)})` : level(half.level)
+    return `${lead}; mostly missed at ${miss}.`
+  }
   if (t.caught && !t.missed) return `${name}: caught at every ${kind} tested, down to ${at(t.caught, kind)}.`
   if (t.caught && t.missed) {
     const miss = kind === 'size' && t.missed.mean_size_mm != null ? `${level(t.missed.level)} (≈${mm(t.missed.mean_size_mm)})` : level(t.missed.level)

@@ -1,0 +1,30 @@
+{
+ "defects": [
+  {
+   "clause": "4.1",
+   "defect_type": "hole",
+   "description": "a tiny round pitch-dark hollow pit about one-fortieth to one-tenth as wide as the shell with a rough torn light-tan crumbly rim and matte black interior",
+   "severity_note": "any diameter; typically 0.5-2 mm"
+  },
+  {
+   "clause": "4.2",
+   "defect_type": "crack",
+   "description": "a thin jagged dark-brown hairline fracture about half as long as the shell width with rough uneven split edges exposing pale creamy kernel beneath",
+   "severity_note": "any fracture, from thin hairline split to broken-away piece exposing kernel"
+  },
+  {
+   "clause": "4.3",
+   "defect_type": "cut",
+   "description": "a straight-edged pale beige slit about one-tenth to two-fifths as long as the shell width with smooth clean sides revealing lighter fibrous inner material",
+   "severity_note": "any knife cut, slice or notch; usually 2-8 mm long"
+  },
+  {
+   "clause": "4.4",
+   "defect_type": "print",
+   "description": "a small flat dark-blue ink stamp lettering patch about one-fifth as wide as the shell with smooth matte printed texture contrasting the natural brown shell",
+   "severity_note": "any size or colour"
+  }
+ ],
+ "part_name": "whole in-shell hazelnut",
+ "part_width_mm": 20
+}

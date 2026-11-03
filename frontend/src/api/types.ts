@@ -205,6 +205,12 @@ export interface EvalReport {
   } | null
   curves: Curve[]
   notes: string[]
+  /** Targeted blind-spot experiment (eval/blind_spot.py); optional, added after the core eval. */
+  blind_spot?: {
+    finding: string
+    amendment: string
+    rows: { label: string; detected: number; n: number; tone: 'pass' | 'signal' }[]
+  } | null
 }
 
 // ---- SSE ----
