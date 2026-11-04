@@ -48,8 +48,8 @@ To forge and inspect your own parts, run the app locally:
 1. **Get the code.**
 
    ```bash
-   git clone https://github.com/Hydra-Of-Malice/meta-ai-hackathon.git
-   cd meta-ai-hackathon
+   git clone https://github.com/Hydra-Of-Malice/defect_forge.git
+   cd defect_forge
    ```
 
 2. **Run setup.** It creates a Python environment, builds the interface and copies `.env.example` to `.env`.
