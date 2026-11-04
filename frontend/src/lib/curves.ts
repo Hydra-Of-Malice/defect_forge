@@ -63,6 +63,7 @@ export function headline(curve: Curve, kind: SeverityKind): string {
   if (t.caught && !t.missed) return `${name}: caught at every ${kind} tested, down to ${at(t.caught, kind)}.`
   if (t.caught && t.missed) {
     const miss = kind === 'size' && t.missed.mean_size_mm != null ? `${level(t.missed.level)} (≈${mm(t.missed.mean_size_mm)})` : level(t.missed.level)
+    if (t.missed.rate >= 0.5) return `${name}: caught down to ${at(t.caught, kind)}. Drops to ${Math.round(t.missed.rate * 100)}% at ${miss}.`
     return `${name}: caught down to ${at(t.caught, kind)}. Missed at ${miss}.`
   }
   return `${name}: not enough data.`
