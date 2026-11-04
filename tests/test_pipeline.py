@@ -40,6 +40,10 @@ def fake_edit(png, prompt, **kw):
     return {"images": [buf.getvalue()], "ms": 1, "cost_usd": 0.0}
 
 
+def fake_spark_box(*a, **k):
+    return None
+
+
 def fake_critic(*a, **k):
     return {"realism": 5, "matches_type": True, "artifacts": "", "verdict": "accept", "revised_prompt": "", "cost_usd": 0.0, "ms": 1}
 
@@ -67,6 +71,7 @@ def test_full_forge_run_on_fake_transport(monkeypatch):
     monkeypatch.setattr(runs, "sam_segment", fake_sam)
     monkeypatch.setattr(runs, "critic", fake_critic)
     monkeypatch.setattr(locate, "sam_segment", fake_sam)
+    monkeypatch.setattr(locate, "spark_box", fake_spark_box)
     monkeypatch.setattr(inspector, "spark_json", fake_spark)
     monkeypatch.setattr(runs, "DEMO_MODE", False)
     pid = "sample-hazelnut_gen_01"
@@ -110,6 +115,7 @@ def _finished_run(monkeypatch):
     monkeypatch.setattr(runs, "sam_segment", fake_sam)
     monkeypatch.setattr(runs, "critic", fake_critic)
     monkeypatch.setattr(locate, "sam_segment", fake_sam)
+    monkeypatch.setattr(locate, "spark_box", fake_spark_box)
     monkeypatch.setattr(inspector, "spark_json", fake_spark)
     monkeypatch.setattr(runs, "DEMO_MODE", False)
     rid = runs.manager.create(DEFAULT_SPEC, TAX, ["sample-hazelnut_gen_02"], per_type=1, stress=True)
@@ -170,5 +176,27 @@ def test_part_mask_rejects_a_background_mask(monkeypatch):
         return {"objects": [{"mask": m}], "cost_usd": 0.0}
 
     monkeypatch.setattr(locate, "sam_segment", background_sam)
+    monkeypatch.setattr(locate, "spark_box", lambda *a, **k: (100, 100, 300, 300))
     m, how = locate.part_mask(img)
     assert how == "otsu fallback" and 0.1 < m.mean() < 0.2 and m[200, 200] and not m[5, 5]
+
+
+def test_part_mask_prefers_the_spark_box(monkeypatch):
+    img = Image.new("RGB", (400, 400), (240, 240, 235))     # a nut on white paper on a dark desk
+    a = np.array(img)
+    a[:, :40] = (40, 30, 25)
+    a[:, 360:] = (40, 30, 25)
+    cv2.circle(a, (200, 200), 40, (110, 60, 30), -1)
+    img = Image.fromarray(a)
+    monkeypatch.setattr(locate, "spark_box", lambda *a, **k: (160, 160, 240, 240))
+    monkeypatch.setattr(locate, "sam_segment", fake_sam)
+    m, how = locate.part_mask(img)
+    assert how.startswith("muse-spark") and m[200, 200] and not m[100, 100]
+
+
+def test_crop_tightens_around_a_small_part():
+    img = Image.new("RGB", (1024, 1024))
+    assert locate.crop_size(img) == 512
+    assert locate.crop_size(img, 700) == 512
+    assert locate.crop_size(img, 300) == 300
+    assert locate.crop_size(img, 60) == 192

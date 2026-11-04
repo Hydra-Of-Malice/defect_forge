@@ -19,7 +19,7 @@ from . import parts as parts_mod
 from .config import DEMO_MODE, FIXTURES, FORGE_WORKERS, MODELS, VAR
 from .forge import severity as sev
 from .forge.composite import composite, dhash, iou, overlay
-from .forge.locate import crop_box, crop_size, load_image, sample_centres
+from .forge.locate import crop_box, crop_size, load_image, part_width, sample_centres
 from .forge.spec import critic, forge_prompt
 from .forge.validators import accepted as is_accepted
 from .forge.validators import run_validators
@@ -177,7 +177,8 @@ class Manager:
         centres = {}
         for pid in pids:
             img = load_image(parts_mod.all_parts()[pid]["path"])
-            centres[pid] = sample_centres(parts_mod.get_mask(pid, run_id=run.id), per_part, crop_size(img), rng)
+            mask = parts_mod.get_mask(pid, run_id=run.id)
+            centres[pid] = sample_centres(mask, per_part, crop_size(img, part_width(mask)), rng)
         k = 0
         for i in range(run.data["per_type"]):
             for d in tax["defects"]:
@@ -209,9 +210,8 @@ class Manager:
         img = load_image(part["path"])
         pmask = parts_mod.get_mask(pid, run_id=run.id)
         W, H = img.size
-        ys, xs = np.nonzero(pmask)
-        part_w_px = float(xs.max() - xs.min()) if len(xs) else float(W)
-        cs = crop_size(img)
+        part_w_px = part_width(pmask) or float(W)
+        cs = crop_size(img, part_w_px)
         box = crop_box(img.size, centre[0], centre[1], cs)
         crop_img = img.crop(box)
         orig = np.array(crop_img)

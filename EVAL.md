@@ -46,3 +46,44 @@ Can Defect Forge, given only a text QA spec and photos of **good** parts, produc
 
 - Forged severity is synthetic. Physical validation with drilled and marked real hazelnuts is a separate, smaller check (`eval/home_set/`).
 - The inspector and the critic are both Muse Spark. The headline (5) does **not** depend on the critic's judgment, because ground truth comes from construction.
+
+## Addendum: revalidation (committed before these runs, Nov 4)
+
+An audit of the first results found four problems. This addendum was written before any of the runs below, and `eval/revalidate.py` implements it.
+
+1. A "caught" defect only meant the inspector claimed a defect somewhere in the image.
+2. Every number came from a single pass, yet two spec-only passes missed 3 and then 5 real print images.
+3. The conclusion that forged white-print examples fixed the blind spot was confounded: the run also contained 2 good photos, and 2 good photos alone (C1) already scored 16/16.
+4. Forged and real results disagree by defect type, and forged defects are much smaller than MVTec's.
+
+### R1. Located detection, repeated, with controls
+
+- Same accepted forgeries and the same 7 severity levels, inspected in **3 independent passes**.
+- A variant counts as **caught** only if the inspector's box overlaps the defect mask in at least 2 of the 3 passes. Any defect claim is reported separately as **flagged**.
+- **Controls:** the unedited source part of every forgery, inspected in each pass, gives the false-alarm rate.
+- Report per cell: caught, flagged, Wilson 95% CI, and the count from each pass. Also report the share of variants on which all 3 passes agree.
+- These curves replace the single-pass curves as the headline.
+
+### R2. White-print attribution
+
+| Condition | Inspector input |
+|---|---|
+| W0 | Spec only |
+| W1 | + 2 good photos |
+| W2 | + 2 forged white prints |
+| W3 | + 2 good photos + 2 forged white prints |
+
+- Images: all 17 real print defects and all 40 real good parts, 3 passes per condition. Each image's outcome is its majority over the passes.
+- **Credit rule, fixed in advance:** forged white-print examples get credit only if W2 beats W0 on print (exact McNemar p < 0.05 on majority outcomes) **and** W3 has at least W1's print recall with no more false alarms. Otherwise we report that the forged examples showed no proven benefit.
+
+### R3. Real-benchmark stability
+
+Two more full passes of C0 over the 106 scored images. Report the range of recall and specificity next to the original figures.
+
+### R4. Real and forged at matched size
+
+No API cost. For each defect type, compare real and forged detection inside the size band where both exist, using equivalent diameter at the spec's 20 mm width. If the band is empty or tiny, say so.
+
+### Limits that stay
+
+None of this replaces the physical check on real damaged parts (`eval/home_check.py`). Below the smallest real defect in MVTec, the curves have no real-world validation until that check is done.
