@@ -43,7 +43,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   try {
     res = await fetch(path, init)
   } catch {
-    throw new ApiError(0, 'Backend unreachable. Is the API running on :8000?')
+    throw new ApiError(0, 'Backend unreachable. Is the API running on :8765?')
   }
   if (!res.ok) throw new ApiError(res.status, `${res.status}: ${await readError(res)}`)
   return (await res.json()) as T
