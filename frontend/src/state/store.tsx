@@ -183,6 +183,18 @@ function applyEvents(s: State, events: RunEvent[]): State {
         const i = run.samples.findIndex((x) => x.id === e.data.id)
         if (i >= 0) run.samples[i] = e.data as Sample
         else run.samples.push(e.data)
+        if (e.data.status !== 'forging') {
+          // a finished sample has been through every per-sample stage, so count it in the timeline
+          for (const { stage } of PIPELINE) {
+            if (stage === 'taxonomy' || stage === 'locate' || stage === 'stress') continue
+            const prev = stages[stage] ?? { active: [], done: [] }
+            stages[stage] = {
+              ...prev,
+              active: prev.active.filter((k) => k !== e.data.id),
+              done: prev.done.includes(e.data.id) ? prev.done : [...prev.done, e.data.id],
+            }
+          }
+        }
         break
       }
       case 'severity': {
