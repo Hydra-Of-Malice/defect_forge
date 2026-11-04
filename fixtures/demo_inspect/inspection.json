@@ -1,17 +1,17 @@
 {
  "verdict": "defect",
  "defect": true,
- "type": "hole",
- "confidence": 0.97,
- "rationale": "Small dark through-hole in upper shell with rough torn rim and dark interior, matching 4.1 Hole definition; distinct from natural color variation and fuzzy cap.",
+ "type": "crack",
+ "confidence": 0.96,
+ "rationale": "vertical shell fracture with split open exposing kernel, matches crack reject class",
  "box_px": [
-  484,
-  332,
-  537,
-  391
+  384,
+  460,
+  445,
+  688
  ],
- "ms": 6264,
- "cost_usd": 0.005897100000000001,
+ "ms": 5249,
+ "cost_usd": 0.0057547499999999994,
  "image_url": "/files/fixtures/demo_inspect/image.jpg",
  "overlay_url": "/files/fixtures/demo_inspect/overlay.jpg",
  "mask_url": null

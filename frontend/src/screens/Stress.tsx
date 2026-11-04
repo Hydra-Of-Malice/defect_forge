@@ -54,7 +54,7 @@ function Variant({ p, kind, lv, sample, size }: { p?: SeverityPoint; kind: Sever
             <svg viewBox="0 0 12 12" className="size-2.5" aria-hidden>
               {p.detected ? <path d="M2.5 6.2l2.2 2.2L9.5 3.6" fill="none" stroke="currentColor" strokeWidth="1.8" /> : <path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" strokeWidth="1.8" />}
             </svg>
-            <span className="max-sm:sr-only">{p.detected ? 'caught' : elsewhere ? 'wrong spot' : 'missed'}</span>
+            <span className="max-sm:sr-only">{p.detected ? 'caught' : elsewhere ? 'box off' : 'missed'}</span>
           </span>
         ) : (
           <span className="text-fg-3/60">…</span>
@@ -135,7 +135,7 @@ export function StressScreen() {
         <div className="max-w-[68ch]">
           <h1 className="text-[24px] font-bold tracking-[-0.015em] leading-tight">How small and how faint before the inspector misses it</h1>
           <p className="text-[14px] text-fg-2 mt-1.5">
-            Every accepted forgery is faded and shrunk by deterministic OpenCV code, and each variant is shown to the Muse Spark inspector. The ground truth is known by construction.
+            Every accepted forgery is faded and shrunk by deterministic OpenCV code, and each variant is shown to the Muse Spark inspector. A defect counts as caught when the inspector's box overlaps it. The ground truth is known by construction.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 min-w-0 max-w-full">
@@ -209,7 +209,7 @@ export function StressScreen() {
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
                 <h2 className="text-[15px] font-bold">Every variant the inspector saw</h2>
                 <span className="text-[12px] text-fg-3">
-                  <span className="num text-fg-2">{done}</span> of <span className="num text-fg-2">{expected}</span> inspected, <span className="num text-pass">{(run.severity ?? []).filter((p) => p.detected).length}</span> caught, <span className="num text-signal">{(run.severity ?? []).filter((p) => !p.detected && p.flagged).length}</span> flagged in the wrong spot, <span className="num text-miss">{(run.severity ?? []).filter((p) => !p.detected && !p.flagged).length}</span> missed
+                  <span className="num text-fg-2">{done}</span> of <span className="num text-fg-2">{expected}</span> inspected, <span className="num text-pass">{(run.severity ?? []).filter((p) => p.detected).length}</span> caught, <span className="num text-signal">{(run.severity ?? []).filter((p) => !p.detected && p.flagged).length}</span> flagged with the box off the defect, <span className="num text-miss">{(run.severity ?? []).filter((p) => !p.detected && !p.flagged).length}</span> missed
                   {run.controls ? (
                     <>
                       . False alarms on unedited parts: <span className="num text-fg-2">{run.controls.flagged}/{run.controls.n}</span>

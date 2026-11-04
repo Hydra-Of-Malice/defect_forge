@@ -1,0 +1,6487 @@
+{
+ "points": [
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.53,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    460,
+    558,
+    532,
+    622
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.53,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    423,
+    568,
+    492,
+    625
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.53,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.53,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.92,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    473,
+    570,
+    517,
+    609
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.54,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    517,
+    575,
+    546,
+    602
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s000",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.31,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    520,
+    578,
+    544,
+    602
+   ],
+   "pred_type": "hole",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.86,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    433,
+    506,
+    503,
+    619
+   ],
+   "pred_type": "crack",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.86,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    363,
+    471,
+    435,
+    583
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.86,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    353,
+    445,
+    465,
+    558
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.86,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.12,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    413,
+    494,
+    451,
+    563
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.65,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.94
+  },
+  {
+   "sample_id": "s002",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.37,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.66,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    307,
+    394,
+    578,
+    527
+   ],
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.66,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    307,
+    394,
+    506,
+    527
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.66,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    348,
+    389,
+    496,
+    491
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.66,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    757,
+    396,
+    780,
+    417
+   ],
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.6,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    307,
+    414,
+    462,
+    496
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.93,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    370,
+    438,
+    476,
+    481
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s005",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.53,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.57,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    440,
+    509,
+    506,
+    599
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.57,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.57,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.57,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.94,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    490,
+    604,
+    531,
+    655
+   ],
+   "pred_type": "crack",
+   "confidence": 0.86
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.55,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s006",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.31,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 3.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    499,
+    509,
+    557
+   ],
+   "pred_type": "print",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 3.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    501,
+    508,
+    555
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 3.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    361,
+    500,
+    472,
+    556
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 3.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    307,
+    460,
+    440,
+    522
+   ],
+   "pred_type": "print",
+   "confidence": 0.75
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 2.24,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    373,
+    502,
+    443,
+    537
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 1.31,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    486,
+    463,
+    534
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s007",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.75,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    373,
+    496,
+    414,
+    517
+   ],
+   "pred_type": "print",
+   "confidence": 0.7
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    425,
+    394,
+    547,
+    497
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    404,
+    394,
+    506,
+    496
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    394,
+    399,
+    527,
+    494
+   ],
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    430,
+    397,
+    568,
+    491
+   ],
+   "pred_type": "print",
+   "confidence": 0.68
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    453,
+    415,
+    523,
+    476
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 1.01,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    501,
+    428,
+    547,
+    462
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s008",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.58,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    509,
+    397,
+    537,
+    420
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.12,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    599,
+    232,
+    747,
+    404
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.12,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    599,
+    268,
+    698,
+    368
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.12,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.12,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.27,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    629,
+    296,
+    752,
+    373
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    645,
+    312,
+    675,
+    348
+   ],
+   "pred_type": "crack",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s009",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.42,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    691,
+    319,
+    727,
+    348
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    302,
+    473,
+    419,
+    640
+   ],
+   "pred_type": "cut",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    302,
+    476,
+    419,
+    645
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    291,
+    424,
+    389,
+    640
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.88,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s010",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.5,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    580,
+    507,
+    652,
+    552
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    542,
+    507,
+    615,
+    552
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    505,
+    472,
+    579,
+    517
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    428,
+    626,
+    483
+   ],
+   "pred_type": "print",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.01,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    591,
+    443,
+    637,
+    472
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.59,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    600,
+    483,
+    627,
+    502
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s011",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.34,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    605,
+    487,
+    626,
+    499
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.47,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    514,
+    491,
+    640,
+    602
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.47,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    544,
+    514,
+    629,
+    602
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.47,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    544,
+    530,
+    632,
+    604
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.47,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.48,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    563,
+    517,
+    593,
+    578
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.86,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    539,
+    530,
+    575,
+    567
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s012",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.49,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    577,
+    536,
+    606,
+    562
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    296,
+    445,
+    421,
+    520
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    307,
+    450,
+    435,
+    512
+   ],
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.06,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    322,
+    532,
+    399,
+    573
+   ],
+   "pred_type": "crack",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.62,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    655,
+    486,
+    684,
+    581
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s013",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    649,
+    414,
+    721,
+    509
+   ],
+   "pred_type": "cut",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    684,
+    380,
+    754,
+    506
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.8,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.94
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.47,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s014",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.27,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.7,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    340,
+    372,
+    463,
+    443
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.7,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    342,
+    373,
+    425,
+    442
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.7,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    340,
+    374,
+    428,
+    444
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.7,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    343,
+    384,
+    424,
+    440
+   ],
+   "pred_type": "print",
+   "confidence": 0.68
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.02,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    358,
+    389,
+    410,
+    429
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.59,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    368,
+    395,
+    402,
+    419
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s015",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.34,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    372,
+    396,
+    395,
+    416
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    527,
+    329,
+    643,
+    435
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    528,
+    329,
+    643,
+    437
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    530,
+    335,
+    634,
+    435
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.51,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.51,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    514,
+    351,
+    579,
+    413
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.88,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    564,
+    365,
+    602,
+    403
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s016",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.5,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    567,
+    369,
+    596,
+    396
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.13,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.13,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.13,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.13,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.68,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.4,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s018",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.23,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    425,
+    434,
+    492,
+    502
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    391,
+    434,
+    453,
+    501
+   ],
+   "pred_type": "print",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    387,
+    397,
+    490,
+    500
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.85,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    401,
+    447,
+    442,
+    488
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.65,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    442,
+    453,
+    472,
+    482
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s019",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.37,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    416,
+    686,
+    524,
+    777
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    378,
+    686,
+    524,
+    778
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    379,
+    686,
+    480,
+    774
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.74,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.64,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    435,
+    701,
+    503,
+    758
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.96,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    485,
+    713,
+    527,
+    747
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s020",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.55,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    527,
+    716,
+    558,
+    742
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.64,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    602,
+    620,
+    685,
+    696
+   ],
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.64,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    602,
+    583,
+    727,
+    694
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.64,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    599,
+    588,
+    706,
+    691
+   ],
+   "pred_type": "crack",
+   "confidence": 0.87
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.64,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    583,
+    604,
+    665,
+    675
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.57,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    634,
+    655,
+    686,
+    696
+   ],
+   "pred_type": "crack",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s021",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.33,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.43,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    335,
+    647,
+    428
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.43,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    575,
+    344,
+    645,
+    445
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.43,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.43,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.86,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.5,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s022",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.29,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.22,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    602,
+    534,
+    696,
+    601
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.22,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    563,
+    496,
+    658,
+    565
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.22,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    567,
+    534,
+    657,
+    599
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.22,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    570,
+    496,
+    657,
+    563
+   ],
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.33,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    582,
+    547,
+    637,
+    588
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.78,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    559,
+    519,
+    592,
+    541
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s023",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.44,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    635,
+    629,
+    660,
+    650
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.46,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    537,
+    512,
+    629,
+    593
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.46,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    512,
+    626,
+    593
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.46,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    509,
+    611,
+    594
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.46,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    507,
+    650,
+    592
+   ],
+   "pred_type": "print",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.48,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    555,
+    527,
+    614,
+    580
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.86,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    604,
+    537,
+    637,
+    569
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s024",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.49,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    543,
+    595,
+    565
+   ],
+   "pred_type": "hole",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    497,
+    593,
+    599,
+    722
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    419,
+    629,
+    593,
+    727
+   ],
+   "pred_type": "crack",
+   "confidence": 0.86
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    528,
+    685,
+    606,
+    741
+   ],
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.49,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s026",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.28,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.18,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    448,
+    557,
+    530,
+    634
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.18,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    448,
+    558,
+    532,
+    634
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.18,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    412,
+    522,
+    532,
+    596
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.18,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    409,
+    520,
+    525,
+    598
+   ],
+   "pred_type": "print",
+   "confidence": 0.86
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.31,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    464,
+    534,
+    515,
+    582
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.76,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    507,
+    543,
+    544,
+    573
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s027",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.44,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    516,
+    550,
+    535,
+    568
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    432,
+    387,
+    503,
+    462
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    432,
+    387,
+    515,
+    464
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    432,
+    388,
+    515,
+    462
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.98,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    680,
+    322,
+    737,
+    450
+   ],
+   "pred_type": "cut",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.19,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    448,
+    402,
+    495,
+    449
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.69,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    493,
+    409,
+    527,
+    440
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s028",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.4,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    494,
+    376,
+    520,
+    401
+   ],
+   "pred_type": "hole",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.42,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    563,
+    282,
+    655,
+    593
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.42,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    567,
+    283,
+    648,
+    613
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.42,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    563,
+    286,
+    645,
+    655
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.42,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.45,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    619,
+    337,
+    675,
+    542
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    593,
+    373,
+    629,
+    465
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s029",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.48,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    586,
+    392,
+    621,
+    579
+   ],
+   "pred_type": "cut",
+   "confidence": 0.68
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 0.99,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 0.99,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 0.99,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 0.99,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.59,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s030",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.2,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    510,
+    550,
+    621,
+    616
+   ],
+   "pred_type": "print",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    473,
+    514,
+    584,
+    582
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    438,
+    514,
+    585,
+    580
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    435,
+    517,
+    547,
+    578
+   ],
+   "pred_type": "print",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.39,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    496,
+    527,
+    563,
+    568
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.81,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    546,
+    533,
+    587,
+    560
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s031",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.46,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    592,
+    540,
+    616,
+    556
+   ],
+   "pred_type": "print",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.17,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    614,
+    460,
+    698,
+    546
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.17,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    616,
+    460,
+    700,
+    547
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.17,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    616,
+    461,
+    699,
+    545
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.17,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    650,
+    428,
+    724,
+    506
+   ],
+   "pred_type": "hole",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.3,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    667,
+    513,
+    718,
+    566
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    641,
+    485,
+    672,
+    519
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s032",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.43,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    680,
+    527,
+    706,
+    552
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.0,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    446,
+    684,
+    606
+   ],
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.0,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    445,
+    686,
+    645
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.0,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    419,
+    691,
+    640
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.0,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.2,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    568,
+    489,
+    657,
+    602
+   ],
+   "pred_type": "crack",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.7,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    547,
+    512,
+    604,
+    578
+   ],
+   "pred_type": "crack",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s033",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.4,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    588,
+    563,
+    629,
+    604
+   ],
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.29,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    323,
+    404,
+    405,
+    442
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.29,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    322,
+    404,
+    404,
+    445
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.29,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    317,
+    399,
+    409,
+    445
+   ],
+   "pred_type": "cut",
+   "confidence": 0.75
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.29,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.77,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    337,
+    409,
+    389,
+    435
+   ],
+   "pred_type": "cut",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.45,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s034",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.26,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    534,
+    423,
+    614,
+    477
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    498,
+    425,
+    577,
+    476
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    534,
+    424,
+    619,
+    476
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.74,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    535,
+    428,
+    640,
+    509
+   ],
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.04,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    549,
+    434,
+    598,
+    465
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    558,
+    442,
+    590,
+    459
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s035",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    563,
+    440,
+    588,
+    458
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.77,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    307,
+    506,
+    366,
+    583
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.77,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    343,
+    514,
+    404,
+    578
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.77,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    312,
+    517,
+    356,
+    568
+   ],
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.77,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.06,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    348,
+    522,
+    394,
+    573
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.62,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    353,
+    532,
+    384,
+    563
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s036",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    350,
+    534,
+    382,
+    565
+   ],
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.81,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    315,
+    499,
+    380,
+    590
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.81,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.81,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.81,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.09,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.63,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s037",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.36,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.58,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    593,
+    430,
+    729,
+    491
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.58,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    583,
+    496,
+    732,
+    573
+   ],
+   "pred_type": "cut",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.58,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.58,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.95,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    549,
+    485,
+    658,
+    520
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.55,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s038",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.32,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    404,
+    369,
+    487,
+    416
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    406,
+    368,
+    488,
+    419
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    370,
+    369,
+    487,
+    418
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.76,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.06,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    421,
+    377,
+    474,
+    407
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.62,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    430,
+    382,
+    462,
+    402
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s039",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    399,
+    384,
+    424,
+    399
+   ],
+   "pred_type": "print",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.81,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    501,
+    654,
+    609,
+    742
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.81,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    501,
+    654,
+    588,
+    742
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.81,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    501,
+    696,
+    578,
+    757
+   ],
+   "pred_type": "hole",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.81,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    430,
+    675,
+    491,
+    732
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    499,
+    689,
+    540,
+    723
+   ],
+   "pred_type": "hole",
+   "confidence": 0.94
+  },
+  {
+   "sample_id": "s040",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.56,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    496,
+    696,
+    524,
+    718
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.6,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    414,
+    317,
+    640,
+    358
+   ],
+   "pred_type": "cut",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.6,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    416,
+    326,
+    621,
+    358
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.6,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.6,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.96,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    421,
+    325,
+    593,
+    349
+   ],
+   "pred_type": "crack",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.56,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    487,
+    331,
+    567,
+    348
+   ],
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s041",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.32,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.37,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.21,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s042",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.12,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    650,
+    491,
+    747,
+    555
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    650,
+    490,
+    747,
+    555
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    650,
+    490,
+    747,
+    553
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    688,
+    456,
+    784,
+    518
+   ],
+   "pred_type": "print",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.39,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    703,
+    504,
+    765,
+    542
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.81,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    717,
+    512,
+    751,
+    533
+   ],
+   "pred_type": "print",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s043",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.46,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    721,
+    514,
+    749,
+    532
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    401,
+    544,
+    463,
+    593
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    542,
+    465,
+    593
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    542,
+    465,
+    595
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    364,
+    542,
+    421,
+    593
+   ],
+   "pred_type": "hole",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.85,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    413,
+    553,
+    451,
+    585
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.49,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    384,
+    558,
+    409,
+    583
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s044",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.28,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    419,
+    595,
+    442,
+    616
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    506,
+    508,
+    701,
+    542
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    506,
+    509,
+    701,
+    542
+   ],
+   "pred_type": "crack",
+   "confidence": 0.91
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    473,
+    514,
+    701,
+    580
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.34,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    404,
+    503,
+    660,
+    544
+   ],
+   "pred_type": "crack",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.8,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    510,
+    551,
+    662,
+    571
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.47,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    568,
+    552,
+    640,
+    573
+   ],
+   "pred_type": "crack",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s045",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.27,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    496,
+    609,
+    583
+   ],
+   "pred_type": "cut",
+   "confidence": 0.65
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.56,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    385,
+    490,
+    497,
+    520
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.56,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    348,
+    494,
+    460,
+    522
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.56,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.56,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.94,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    370,
+    499,
+    468,
+    519
+   ],
+   "pred_type": "cut",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.55,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s046",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.31,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.59,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    353,
+    518,
+    422,
+    566
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.59,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    315,
+    518,
+    423,
+    565
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.59,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    312,
+    517,
+    389,
+    568
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.59,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    317,
+    519,
+    385,
+    564
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.95,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    327,
+    527,
+    373,
+    558
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.56,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    336,
+    531,
+    366,
+    551
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s047",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.32,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    379,
+    535,
+    399,
+    549
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.19,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    402,
+    441,
+    508,
+    536
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.19,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    404,
+    448,
+    506,
+    534
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.19,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    366,
+    482,
+    472,
+    572
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.19,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.31,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    425,
+    460,
+    486,
+    514
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.77,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    466,
+    466,
+    509,
+    502
+   ],
+   "pred_type": "hole",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s048",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.44,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    476,
+    475,
+    503,
+    497
+   ],
+   "pred_type": "hole",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.02,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    535,
+    343,
+    703,
+    516
+   ],
+   "pred_type": "crack",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.02,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    570,
+    307,
+    704,
+    516
+   ],
+   "pred_type": "crack",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.02,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    542,
+    317,
+    716,
+    512
+   ],
+   "pred_type": "crack",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.02,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.21,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    604,
+    376,
+    675,
+    481
+   ],
+   "pred_type": "crack",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.71,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    626,
+    399,
+    688,
+    461
+   ],
+   "pred_type": "crack",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s049",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.4,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.87,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    453,
+    282,
+    578,
+    395
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.87,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.87,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.87,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.12,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    514,
+    304,
+    592,
+    372
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.65,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s050",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.37,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    327,
+    636,
+    477,
+    695
+   ],
+   "pred_type": "print",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    328,
+    602,
+    476,
+    655
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    328,
+    641,
+    475,
+    692
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    286,
+    640,
+    440,
+    691
+   ],
+   "pred_type": "print",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.27,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    350,
+    612,
+    417,
+    645
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.74,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    399,
+    616,
+    442,
+    638
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s051",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.42,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    404,
+    544,
+    435,
+    563
+   ],
+   "pred_type": "print",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.79,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    537,
+    573,
+    645,
+    670
+   ],
+   "pred_type": "hole",
+   "confidence": 0.99
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.79,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    609,
+    686,
+    701
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.79,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    540,
+    613,
+    642,
+    702
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.79,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    506,
+    609,
+    640,
+    711
+   ],
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.67,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    558,
+    628,
+    627,
+    685
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.98,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    573,
+    643,
+    610,
+    674
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s052",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.56,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    579,
+    646,
+    606,
+    669
+   ],
+   "pred_type": "hole",
+   "confidence": 0.93
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    599,
+    384,
+    732,
+    455
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    600,
+    387,
+    684,
+    450
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.95
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.11,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.27,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    622,
+    396,
+    703,
+    440
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.74,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s053",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.42,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    346,
+    310,
+    438,
+    404
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.73,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    384,
+    274,
+    472,
+    365
+   ],
+   "pred_type": "cut",
+   "confidence": 0.84
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.73,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.73,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.04,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    399,
+    327,
+    455,
+    386
+   ],
+   "pred_type": "cut",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.61,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s054",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.35,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    516,
+    589,
+    601,
+    641
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    481,
+    660,
+    563,
+    714
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    481,
+    626,
+    601,
+    677
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.89,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    517,
+    619,
+    645,
+    686
+   ],
+   "pred_type": "print",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.13,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    534,
+    672,
+    620,
+    704
+   ],
+   "pred_type": "print",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.66,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    543,
+    642,
+    574,
+    662
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s055",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.38,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    579,
+    622,
+    607,
+    643
+   ],
+   "pred_type": "print",
+   "confidence": 0.82
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    450,
+    522,
+    558,
+    619
+   ],
+   "pred_type": "hole",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    453,
+    524,
+    559,
+    619
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    454,
+    525,
+    556,
+    616
+   ],
+   "pred_type": "hole",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.69,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    496,
+    547,
+    588,
+    619
+   ],
+   "pred_type": "hole",
+   "confidence": 0.72
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.61,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    473,
+    578,
+    537,
+    636
+   ],
+   "pred_type": "hole",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.94,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    487,
+    553,
+    525,
+    587
+   ],
+   "pred_type": "hole",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s056",
+   "defect_type": "hole",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.54,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    490,
+    560,
+    518,
+    584
+   ],
+   "pred_type": "hole",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.94,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    291,
+    489,
+    578,
+    547
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.94,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    286,
+    435,
+    578,
+    481
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.94,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    311,
+    435,
+    520,
+    494
+   ],
+   "pred_type": "crack",
+   "confidence": 0.89
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.94,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.16,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    340,
+    440,
+    493,
+    470
+   ],
+   "pred_type": "crack",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.68,
+   "flagged": true,
+   "detected": false,
+   "box_px": [
+    372,
+    477,
+    464,
+    499
+   ],
+   "pred_type": "crack",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s057",
+   "defect_type": "crack",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.39,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 1.11,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    477,
+    394,
+    556,
+    486
+   ],
+   "pred_type": "cut",
+   "confidence": 0.88
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 1.11,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.9
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 1.11,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 1.11,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 0.67,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    491,
+    445,
+    547,
+    491
+   ],
+   "pred_type": "crack",
+   "confidence": 0.78
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.39,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.96
+  },
+  {
+   "sample_id": "s058",
+   "defect_type": "cut",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.22,
+   "flagged": false,
+   "detected": false,
+   "box_px": null,
+   "pred_type": "good",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 1.0,
+   "url": "",
+   "size_mm": 2.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    460,
+    332,
+    552,
+    424
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.5,
+   "url": "",
+   "size_mm": 2.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    421,
+    332,
+    517,
+    425
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.25,
+   "url": "",
+   "size_mm": 2.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    458,
+    333,
+    555,
+    425
+   ],
+   "pred_type": "print",
+   "confidence": 0.97
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "opacity",
+   "level": 0.12,
+   "url": "",
+   "size_mm": 2.41,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    424,
+    332,
+    517,
+    424
+   ],
+   "pred_type": "print",
+   "confidence": 0.85
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.6,
+   "url": "",
+   "size_mm": 1.45,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    477,
+    352,
+    535,
+    407
+   ],
+   "pred_type": "print",
+   "confidence": 0.98
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.35,
+   "url": "",
+   "size_mm": 0.84,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    488,
+    362,
+    522,
+    397
+   ],
+   "pred_type": "print",
+   "confidence": 0.92
+  },
+  {
+   "sample_id": "s059",
+   "defect_type": "print",
+   "kind": "size",
+   "level": 0.2,
+   "url": "",
+   "size_mm": 0.48,
+   "flagged": true,
+   "detected": true,
+   "box_px": [
+    491,
+    368,
+    522,
+    394
+   ],
+   "pred_type": "print",
+   "confidence": 0.9
+  }
+ ],
+ "controls": [
+  {
+   "part_id": "mvtec-hazelnut-000",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-001",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-002",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-003",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-004",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-005",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-006",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-007",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-008",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-009",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-010",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-011",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-012",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-013",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-014",
+   "flagged": false,
+   "pred_type": "good",
+   "box_px": null
+  },
+  {
+   "part_id": "mvtec-hazelnut-015",
+   "flagged": true,
+   "pred_type": "crack",
+   "box_px": [
+    651,
+    200,
+    735,
+    235
+   ]
+  }
+ ]
+}

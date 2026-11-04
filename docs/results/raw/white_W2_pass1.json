@@ -1,0 +1,344 @@
+[
+ {
+  "truth": "print",
+  "file": "000.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "001.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "002.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "003.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "004.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "print",
+  "file": "005.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "006.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "007.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "008.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "009.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "010.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "011.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "print",
+  "file": "012.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "013.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "014.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "015.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "print",
+  "file": "016.png",
+  "defect": true,
+  "type": "print"
+ },
+ {
+  "truth": "good",
+  "file": "000.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "001.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "002.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "003.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "004.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "005.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "006.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "007.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "008.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "009.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "010.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "011.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "012.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "013.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "014.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "015.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "016.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "017.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "018.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "019.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "020.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "021.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "022.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "023.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "024.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "025.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "026.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "027.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "028.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "029.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "030.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "031.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "032.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "033.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "034.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "035.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "036.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "037.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "038.png",
+  "defect": false,
+  "type": "good"
+ },
+ {
+  "truth": "good",
+  "file": "039.png",
+  "defect": false,
+  "type": "good"
+ }
+]

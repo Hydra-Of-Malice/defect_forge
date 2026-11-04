@@ -255,7 +255,7 @@ def main():
     ious = [s["sam_iou"] for s in acc if s["sam_iou"] is not None]
     attempts = sum(s["attempt"] for s in ss)
     vals = [v["passed"] for s in ss for v in s["validators"]]
-    run_cost = sum(r.get("cost_usd", 0) for r in ledger.recent(100000) if r.get("run_id") == run["id"])
+    run_cost = run["summary"]["cost_usd"]       # the original forge+stress run, before any revalidation calls
     forge_cost = sum(s["cost_usd"] for s in ss)
     labels = {"C0": "spec only", "C1": "+2 good examples", "C2": "+8 forged defects", "C3": "+4 real defects (oracle)"}
     in_ctx = []
@@ -300,6 +300,9 @@ def main():
     if rv:
         st, c0, fc = rv["stress"], rv["c0"], rv["faint"]
         report["revalidation"] = rv
+        bd = RESULTS / "box_distance.json"
+        report["box_distance"] = json.loads(bd.read_text()) if bd.exists() else None
+        reval_usd = json.loads((RAW / "spend_revalidation.json").read_text())["usd"]
         report["notes"] = [
             f"Curves: a variant counts as caught when the inspector's box overlaps the defect in at least 2 of 3 passes. All 3 passes agreed on {st['unanimous_rate']:.0%} of {st['variants']} variants.",
             f"False-alarm control: {st['controls']['flagged']}/{st['controls']['n']} inspections of unedited source parts were flagged ({st['controls']['parts']} parts, 3 passes). "
@@ -307,6 +310,9 @@ def main():
             "Real benchmark over 3 passes: recall " + ", ".join(f"{x:.1%}" for x in c0["recall_per_pass"]) + "; specificity " + ", ".join(f"{x:.1%}" for x in c0["specificity_per_pass"]) + ".",
             "Faint-defect check: spec-only passes flagged " + ", ".join(str(x["spec_only"]) for x in fc["passes"]) + f" of {fc['passes'][0]['n']}; the single forged-examples pass flagged "
             f"{fc['with_forged']} (exact McNemar p = " + ", ".join(str(x["p"]) for x in fc["passes"]) + ").",
+            "Tiny defects: for shrunken holes and prints the inspector's box often misses by 0.2-0.5 mm. It notices them but can't pinpoint them; "
+            "see the box-accuracy table (a post-hoc check, not pre-registered).",
+            f"Revalidation spend: ${reval_usd:.2f} of Meta API calls.",
             *report["notes"]]
     (RESULTS / "eval.json").write_text(json.dumps(report, indent=1))
     write_md(report)
@@ -351,6 +357,17 @@ def write_md(r: dict) -> None:
           f"- ${fs['cost_per_accepted_usd']} and {fs['seconds_per_accepted']} s per accepted, pixel-labeled sample; whole forge+stress run ${fs['run_cost_usd']}",
           ""]
     rv = r.get("revalidation")
+    if r.get("box_distance"):
+        bd = r["box_distance"]
+        L += [f"## Box accuracy on small defects (post-hoc, not pre-registered)", "",
+              f"Strict overlap can understate detection when a tiny defect and a slightly offset box don't touch. This table recounts each variant "
+              f"as noticed when the box lands within {bd['tol_mm']:g} mm of the defect in at least 2 of 3 passes.", "",
+              "| Defect | Level | Box overlaps | Box within 1 mm | Median miss when off target |", "|---|---|---|---|---|"]
+        for c in bd["cells"]:
+            if c["kind"] == "size":
+                miss = f"{c['median_miss_mm']} mm" if c["median_miss_mm"] is not None else "-"
+                L.append(f"| {c['type']} | size {c['level']:g} | {c['overlap']}/{c['n']} | {c['near']}/{c['n']} | {miss} |")
+        L.append("")
     if rv:
         L += ["## Real and forged at matched size (R4)", "",
               "Forged defects are much smaller than MVTec's, so the band where both exist is narrow. Below the smallest real defect, "
@@ -373,6 +390,8 @@ def write_md(r: dict) -> None:
           "(addendum R1, committed before those runs). The originals are kept in `eval.json` as `curves_first_pass`.",
           "- Our first white-print conclusion was confounded and is withdrawn; R2 replaces it.",
           "- The white-print experiment itself was added after seeing the real misses, so it is exploratory.",
+          "- The box-accuracy table was added after seeing the located curves, so it is post-hoc. The headline stays the pre-registered overlap measure.",
+          "- The faint-defect comparison repeats the spec-only side three times, but the forged-examples side was run once.",
           "- Part masks now come from a Muse Spark box into SAM 3.1. The evaluated forgeries used the earlier point-prompt masks."]
     (RESULTS / "eval.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 

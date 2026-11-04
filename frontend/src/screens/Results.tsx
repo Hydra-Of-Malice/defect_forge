@@ -134,7 +134,7 @@ export function ResultsScreen() {
             </Panel>
           </div>
 
-          <Panel title="Detection-threshold curves" sub="Forged defects faded and shrunk until the inspector stops seeing them">
+          <Panel title="Detection-threshold curves" sub="Forged defects faded and shrunk. Caught means the inspector's box overlaps the defect in at least 2 of 3 passes">
             {curves.length ? (
               <div className="grid gap-4">
                 <ThresholdCallouts curves={curves} />

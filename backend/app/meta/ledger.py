@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import threading
 import time
 from collections import defaultdict
@@ -19,14 +20,24 @@ class BudgetExceeded(RuntimeError):
     pass
 
 
+def _rows() -> list[dict]:
+    """All readable records. The eval and the server can append at once, so a line can arrive torn; skip it."""
+    if not LEDGER.exists():
+        return []
+    rows = []
+    for line in LEDGER.read_text(encoding="utf-8", errors="replace").splitlines():
+        try:
+            r = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(r, dict) and "model" in r:
+            rows.append(r)
+    return rows
+
+
 def _load() -> None:
     global _spent
-    if LEDGER.exists():
-        for line in LEDGER.read_text(encoding="utf-8").splitlines():
-            try:
-                _spent += json.loads(line).get("cost_usd", 0.0)
-            except json.JSONDecodeError:
-                pass
+    _spent += sum(r.get("cost_usd", 0.0) for r in _rows())
 
 
 _load()
@@ -56,8 +67,11 @@ def record(model: str, op: str, ms: float, status, cost_usd: float, run_id: str 
            "cost_usd": round(cost_usd, 6), "run_id": run_id, **extra}
     with _lock:
         _spent += cost_usd
-        with LEDGER.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(rec) + "\n")
+        fd = os.open(LEDGER, os.O_WRONLY | os.O_APPEND | os.O_CREAT | getattr(os, "O_BINARY", 0), 0o644)   # one write per record
+        try:
+            os.write(fd, (json.dumps(rec) + "\n").encode("utf-8"))
+        finally:
+            os.close(fd)
     for fn in _listeners:
         try:
             fn(rec)
@@ -67,19 +81,16 @@ def record(model: str, op: str, ms: float, status, cost_usd: float, run_id: str 
 
 
 def recent(limit: int = 200) -> list[dict]:
-    if not LEDGER.exists():
-        return []
-    lines = LEDGER.read_text(encoding="utf-8").splitlines()[-limit:]
-    return [json.loads(x) for x in lines if x.strip()]
+    return _rows()[-limit:]
+
+
+def run_cost(run_id: str) -> float:
+    return sum(r.get("cost_usd", 0.0) for r in _rows() if r.get("run_id") == run_id)
 
 
 def by_model() -> dict:
     agg: dict = defaultdict(lambda: {"calls": 0, "cost_usd": 0.0})
-    if LEDGER.exists():
-        for line in LEDGER.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            r = json.loads(line)
-            agg[r["model"]]["calls"] += 1
-            agg[r["model"]]["cost_usd"] = round(agg[r["model"]]["cost_usd"] + r.get("cost_usd", 0), 4)
+    for r in _rows():
+        agg[r["model"]]["calls"] += 1
+        agg[r["model"]]["cost_usd"] = round(agg[r["model"]]["cost_usd"] + r.get("cost_usd", 0), 4)
     return dict(agg)

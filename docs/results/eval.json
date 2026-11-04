@@ -1,5 +1,5 @@
 {
- "generated": 1793741435.4565434,
+ "generated": 1793791782.796242,
  "real_benchmark": {
   "n_good": 40,
   "n_defect": 66,
@@ -116,7 +116,499 @@
      "kind": "opacity",
      "level": 1.0,
      "n": 12,
+     "detected": 11,
+     "flagged": 12,
+     "rate": 0.917,
+     "ci_low": 0.646,
+     "ci_high": 0.985,
+     "mean_size_mm": 1.95,
+     "per_pass": [
+      10,
+      11,
+      12
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 12,
+     "detected": 11,
+     "flagged": 11,
+     "rate": 0.917,
+     "ci_low": 0.646,
+     "ci_high": 0.985,
+     "mean_size_mm": 1.95,
+     "per_pass": [
+      11,
+      11,
+      11
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 12,
+     "detected": 7,
+     "flagged": 7,
+     "rate": 0.583,
+     "ci_low": 0.32,
+     "ci_high": 0.807,
+     "mean_size_mm": 1.95,
+     "per_pass": [
+      7,
+      7,
+      7
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 12,
+     "detected": 1,
+     "flagged": 2,
+     "rate": 0.083,
+     "ci_low": 0.015,
+     "ci_high": 0.354,
+     "mean_size_mm": 1.95,
+     "per_pass": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 12,
+     "detected": 11,
+     "flagged": 11,
+     "rate": 0.917,
+     "ci_low": 0.646,
+     "ci_high": 0.985,
+     "mean_size_mm": 1.17,
+     "per_pass": [
+      11,
+      9,
+      11
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 12,
+     "detected": 7,
+     "flagged": 9,
+     "rate": 0.583,
+     "ci_low": 0.32,
+     "ci_high": 0.807,
+     "mean_size_mm": 0.68,
+     "per_pass": [
+      9,
+      7,
+      7
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 12,
+     "detected": 2,
+     "flagged": 3,
+     "rate": 0.167,
+     "ci_low": 0.047,
+     "ci_high": 0.448,
+     "mean_size_mm": 0.39,
+     "per_pass": [
+      2,
+      3,
+      3
+     ]
+    }
+   ],
+   "threshold_note": "crack: size: holds to 0.6x (~1.17 mm), missed at 0.2x (~0.39 mm) (2/12); contrast: holds to 0.5x, missed at 0.12x (1/12)"
+  },
+  {
+   "defect_type": "cut",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 15,
+     "detected": 11,
+     "flagged": 12,
+     "rate": 0.733,
+     "ci_low": 0.48,
+     "ci_high": 0.891,
+     "mean_size_mm": 1.47,
+     "per_pass": [
+      12,
+      11,
+      10
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 15,
+     "detected": 8,
+     "flagged": 9,
+     "rate": 0.533,
+     "ci_low": 0.301,
+     "ci_high": 0.752,
+     "mean_size_mm": 1.47,
+     "per_pass": [
+      9,
+      8,
+      7
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 15,
+     "detected": 3,
+     "flagged": 3,
+     "rate": 0.2,
+     "ci_low": 0.07,
+     "ci_high": 0.452,
+     "mean_size_mm": 1.47,
+     "per_pass": [
+      2,
+      2,
+      3
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 15,
+     "detected": 0,
+     "flagged": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.204,
+     "mean_size_mm": 1.47,
+     "per_pass": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 15,
+     "detected": 8,
+     "flagged": 9,
+     "rate": 0.533,
+     "ci_low": 0.301,
+     "ci_high": 0.752,
+     "mean_size_mm": 0.88,
+     "per_pass": [
+      7,
+      6,
+      9
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 15,
+     "detected": 0,
+     "flagged": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.204,
+     "mean_size_mm": 0.51,
+     "per_pass": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 15,
+     "detected": 0,
+     "flagged": 0,
+     "rate": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.204,
+     "mean_size_mm": 0.29,
+     "per_pass": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "threshold_note": "cut: size: missed at 0.35x (~0.51 mm) (0/15); contrast: missed at 0.25x (3/15)"
+  },
+  {
+   "defect_type": "hole",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 14,
+     "detected": 14,
+     "flagged": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.31,
+     "per_pass": [
+      14,
+      13,
+      14
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 14,
+     "detected": 14,
+     "flagged": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.31,
+     "per_pass": [
+      13,
+      14,
+      14
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 14,
+     "detected": 13,
+     "flagged": 13,
+     "rate": 0.929,
+     "ci_low": 0.685,
+     "ci_high": 0.987,
+     "mean_size_mm": 2.31,
+     "per_pass": [
+      13,
+      12,
+      13
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 14,
+     "detected": 6,
+     "flagged": 6,
+     "rate": 0.429,
+     "ci_low": 0.214,
+     "ci_high": 0.674,
+     "mean_size_mm": 2.31,
+     "per_pass": [
+      6,
+      6,
+      6
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 14,
+     "detected": 13,
+     "flagged": 14,
+     "rate": 0.929,
+     "ci_low": 0.685,
+     "ci_high": 0.987,
+     "mean_size_mm": 1.39,
+     "per_pass": [
+      12,
+      14,
+      13
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 14,
+     "detected": 8,
+     "flagged": 14,
+     "rate": 0.571,
+     "ci_low": 0.326,
+     "ci_high": 0.786,
+     "mean_size_mm": 0.81,
+     "per_pass": [
+      7,
+      8,
+      7
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 14,
+     "detected": 4,
+     "flagged": 14,
+     "rate": 0.286,
+     "ci_low": 0.117,
+     "ci_high": 0.546,
+     "mean_size_mm": 0.46,
+     "per_pass": [
+      2,
+      4,
+      4
+     ]
+    }
+   ],
+   "threshold_note": "hole: size: holds to 0.6x (~1.39 mm), missed at 0.2x (~0.46 mm) (4/14); contrast: holds to 0.25x, missed at 0.12x (6/14)"
+  },
+  {
+   "defect_type": "print",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 14,
+     "detected": 14,
+     "flagged": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11,
+     "per_pass": [
+      14,
+      14,
+      14
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.5,
+     "n": 14,
+     "detected": 14,
+     "flagged": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11,
+     "per_pass": [
+      14,
+      14,
+      14
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.25,
+     "n": 14,
+     "detected": 14,
+     "flagged": 14,
+     "rate": 1.0,
+     "ci_low": 0.785,
+     "ci_high": 1.0,
+     "mean_size_mm": 2.11,
+     "per_pass": [
+      14,
+      14,
+      14
+     ]
+    },
+    {
+     "kind": "opacity",
+     "level": 0.12,
+     "n": 14,
      "detected": 12,
+     "flagged": 12,
+     "rate": 0.857,
+     "ci_low": 0.601,
+     "ci_high": 0.96,
+     "mean_size_mm": 2.11,
+     "per_pass": [
+      12,
+      12,
+      12
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.6,
+     "n": 14,
+     "detected": 12,
+     "flagged": 14,
+     "rate": 0.857,
+     "ci_low": 0.601,
+     "ci_high": 0.96,
+     "mean_size_mm": 1.26,
+     "per_pass": [
+      13,
+      11,
+      11
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.35,
+     "n": 14,
+     "detected": 6,
+     "flagged": 14,
+     "rate": 0.429,
+     "ci_low": 0.214,
+     "ci_high": 0.674,
+     "mean_size_mm": 0.74,
+     "per_pass": [
+      7,
+      6,
+      7
+     ]
+    },
+    {
+     "kind": "size",
+     "level": 0.2,
+     "n": 14,
+     "detected": 2,
+     "flagged": 13,
+     "rate": 0.143,
+     "ci_low": 0.04,
+     "ci_high": 0.399,
+     "mean_size_mm": 0.42,
+     "per_pass": [
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "threshold_note": "print: size: holds to 0.6x (~1.26 mm), missed at 0.35x (~0.74 mm) (6/14); caught at every contrast tested (down to 0.12x)"
+  }
+ ],
+ "stats": {
+  "mcnemar_C2_vs_C1": 0.2188,
+  "mcnemar_faint": 0.0106
+ },
+ "notes": [
+  "Curves: a variant counts as caught when the inspector's box overlaps the defect in at least 2 of 3 passes. All 3 passes agreed on 86% of 385 variants.",
+  "False-alarm control: 3/48 inspections of unedited source parts were flagged (16 parts, 3 passes). 46 variants were flagged in the wrong place.",
+  "Real benchmark over 3 passes: recall 95.5%, 93.9%, 97.0%; specificity 100.0%, 100.0%, 100.0%.",
+  "Faint-defect check: spec-only passes flagged 70, 74, 73 of 141; the single forged-examples pass flagged 59 (exact McNemar p = 0.0347, 0.0015, 0.0066).",
+  "Tiny defects: for shrunken holes and prints the inspector's box often misses by 0.2-0.5 mm. It notices them but can't pinpoint them; see the box-accuracy table (a post-hoc check, not pre-registered).",
+  "Revalidation spend: $6.45 of Meta API calls.",
+  "Benchmark: MVTec AD hazelnut test split, 66 defective + 40 good scored (4 oracle images held out).",
+  "In-context C2 vs C1: exact McNemar p = 0.2188.",
+  "Faint-defect test (hardest 3 severity levels, 141 images): spec only 72 vs with 8 forged examples 59 detected, exact McNemar p = 0.0106: a significant drop: with forged examples in the prompt, the inspector flagged fewer faint defects. The cause is untested; one guess is that full-strength examples raise its bar.",
+  "Equivalent diameters in mm assume the spec's 20 mm nominal hazelnut width.",
+  "Total Meta API spend for this evaluation (all stages, cumulative across resumed runs): $4.85."
+ ],
+ "curves_first_pass": [
+  {
+   "defect_type": "crack",
+   "cells": [
+    {
+     "kind": "opacity",
+     "level": 1.0,
+     "n": 12,
+     "detected": 12,
+     "flagged": 12,
      "rate": 1.0,
      "ci_low": 0.757,
      "ci_high": 1.0,
@@ -127,6 +619,7 @@
      "level": 0.5,
      "n": 12,
      "detected": 11,
+     "flagged": 11,
      "rate": 0.917,
      "ci_low": 0.646,
      "ci_high": 0.985,
@@ -137,6 +630,7 @@
      "level": 0.25,
      "n": 12,
      "detected": 7,
+     "flagged": 7,
      "rate": 0.583,
      "ci_low": 0.32,
      "ci_high": 0.807,
@@ -147,6 +641,7 @@
      "level": 0.12,
      "n": 12,
      "detected": 1,
+     "flagged": 1,
      "rate": 0.083,
      "ci_low": 0.015,
      "ci_high": 0.354,
@@ -157,6 +652,7 @@
      "level": 0.6,
      "n": 12,
      "detected": 11,
+     "flagged": 11,
      "rate": 0.917,
      "ci_low": 0.646,
      "ci_high": 0.985,
@@ -167,6 +663,7 @@
      "level": 0.35,
      "n": 12,
      "detected": 9,
+     "flagged": 9,
      "rate": 0.75,
      "ci_low": 0.468,
      "ci_high": 0.911,
@@ -177,6 +674,7 @@
      "level": 0.2,
      "n": 12,
      "detected": 4,
+     "flagged": 4,
      "rate": 0.333,
      "ci_low": 0.138,
      "ci_high": 0.609,
@@ -193,6 +691,7 @@
      "level": 1.0,
      "n": 15,
      "detected": 11,
+     "flagged": 11,
      "rate": 0.733,
      "ci_low": 0.48,
      "ci_high": 0.891,
@@ -203,6 +702,7 @@
      "level": 0.5,
      "n": 15,
      "detected": 5,
+     "flagged": 5,
      "rate": 0.333,
      "ci_low": 0.152,
      "ci_high": 0.583,
@@ -213,6 +713,7 @@
      "level": 0.25,
      "n": 15,
      "detected": 3,
+     "flagged": 3,
      "rate": 0.2,
      "ci_low": 0.07,
      "ci_high": 0.452,
@@ -223,6 +724,7 @@
      "level": 0.12,
      "n": 15,
      "detected": 0,
+     "flagged": 0,
      "rate": 0.0,
      "ci_low": 0.0,
      "ci_high": 0.204,
@@ -233,6 +735,7 @@
      "level": 0.6,
      "n": 15,
      "detected": 10,
+     "flagged": 10,
      "rate": 0.667,
      "ci_low": 0.417,
      "ci_high": 0.848,
@@ -243,6 +746,7 @@
      "level": 0.35,
      "n": 15,
      "detected": 2,
+     "flagged": 2,
      "rate": 0.133,
      "ci_low": 0.037,
      "ci_high": 0.379,
@@ -253,6 +757,7 @@
      "level": 0.2,
      "n": 15,
      "detected": 0,
+     "flagged": 0,
      "rate": 0.0,
      "ci_low": 0.0,
      "ci_high": 0.204,
@@ -269,6 +774,7 @@
      "level": 1.0,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -279,6 +785,7 @@
      "level": 0.5,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -289,6 +796,7 @@
      "level": 0.25,
      "n": 14,
      "detected": 13,
+     "flagged": 13,
      "rate": 0.929,
      "ci_low": 0.685,
      "ci_high": 0.987,
@@ -299,6 +807,7 @@
      "level": 0.12,
      "n": 14,
      "detected": 4,
+     "flagged": 4,
      "rate": 0.286,
      "ci_low": 0.117,
      "ci_high": 0.546,
@@ -309,6 +818,7 @@
      "level": 0.6,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -319,6 +829,7 @@
      "level": 0.35,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -329,6 +840,7 @@
      "level": 0.2,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -345,6 +857,7 @@
      "level": 1.0,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -355,6 +868,7 @@
      "level": 0.5,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -365,6 +879,7 @@
      "level": 0.25,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -375,6 +890,7 @@
      "level": 0.12,
      "n": 14,
      "detected": 11,
+     "flagged": 11,
      "rate": 0.786,
      "ci_low": 0.524,
      "ci_high": 0.924,
@@ -385,6 +901,7 @@
      "level": 0.6,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -395,6 +912,7 @@
      "level": 0.35,
      "n": 14,
      "detected": 14,
+     "flagged": 14,
      "rate": 1.0,
      "ci_low": 0.785,
      "ci_high": 1.0,
@@ -405,6 +923,7 @@
      "level": 0.2,
      "n": 14,
      "detected": 12,
+     "flagged": 12,
      "rate": 0.857,
      "ci_low": 0.601,
      "ci_high": 0.96,
@@ -414,58 +933,1000 @@
    "threshold_note": "print: caught at every size tested (down to 0.2x (~0.42 mm)); caught at every contrast tested (down to 0.12x)"
   }
  ],
- "stats": {
-  "mcnemar_C2_vs_C1": 0.2188,
-  "mcnemar_faint": 0.0106
- },
- "notes": [
-  "Benchmark: MVTec AD hazelnut test split, 66 defective + 40 good scored (4 oracle images held out).",
-  "In-context C2 vs C1: exact McNemar p = 0.2188.",
-  "Faint-defect test (hardest 3 severity levels, 141 images): spec only 72 vs with 8 forged examples 59 detected, exact McNemar p = 0.0106: a significant DROP. Full-strength examples raised the inspector's bar, so it dismissed more faint defects. In-context exemplars are not free; measure them before deploying.",
-  "Equivalent diameters in mm assume the spec's 20 mm nominal hazelnut width.",
-  "Total Meta API spend for this evaluation (all stages, cumulative across resumed runs): $4.85."
- ],
  "blind_spot": {
-  "finding": "Exploratory (not pre-registered). On the real benchmark, every spec-only miss was WHITE print mistaken for gloss. Bold forged white print was caught 12/12, so forging alone did not reproduce the subtle real misses. But two forged white-print EXAMPLES in context fixed the real blind spot (real print 12/17 -> 17/17, paired exact p = 0.0625; 0/40 false alarms), while generic black-ink examples (C2) made it worse. A one-clause spec amendment also fixed it, with 1/40 false alarms.",
+  "finding": "Real print is the inspector's weakest real defect: white print is read as gloss. Bold forged white print was caught 12/12, so forging did not reproduce the real misses. Under the rule fixed in advance, the forged white-print examples earn no credit: forged examples alone vs spec only gave p = 1.0. This replaces our earlier claim, which was confounded because that run also contained 2 good photos.",
   "amendment": "4.5 Clarification: bright white or light-coloured characters, letters, digits or ink smudges on the shell are PRINT (4.4) and must be rejected. Do not dismiss them as gloss or specular highlights: natural gloss is a smooth soft highlight that follows the shell curvature and never forms characters or sharp-edged marks.",
   "rows": [
    {
-    "label": "Real white print, original spec",
+    "label": "Real print, spec only (3 passes pooled)",
     "tone": "signal",
-    "detected": 12,
-    "n": 17
+    "detected": 43,
+    "n": 51
    },
    {
-    "label": "Forged white print, original spec (reproduces the blind spot?)",
-    "tone": "signal",
-    "detected": 12,
-    "n": 12
-   },
-   {
-    "label": "Forged white print, amended spec",
+    "label": "Real print, + 2 good photos (3 passes pooled)",
     "tone": "pass",
+    "detected": 47,
+    "n": 51
+   },
+   {
+    "label": "Real print, + 2 forged white prints (3 passes pooled)",
+    "tone": "pass",
+    "detected": 46,
+    "n": 51
+   },
+   {
+    "label": "Real print, + 2 good photos + 2 forged white prints (3 passes pooled)",
+    "tone": "pass",
+    "detected": 50,
+    "n": 51
+   },
+   {
+    "label": "False alarms on real good parts, spec only (3 passes pooled)",
+    "tone": "signal",
+    "detected": 1,
+    "n": 120
+   },
+   {
+    "label": "False alarms on real good parts, + 2 good photos (3 passes pooled)",
+    "tone": "signal",
+    "detected": 2,
+    "n": 120
+   },
+   {
+    "label": "False alarms on real good parts, + 2 forged white prints (3 passes pooled)",
+    "tone": "signal",
+    "detected": 0,
+    "n": 120
+   },
+   {
+    "label": "False alarms on real good parts, + 2 good photos + 2 forged white prints (3 passes pooled)",
+    "tone": "signal",
+    "detected": 0,
+    "n": 120
+   },
+   {
+    "label": "Bold forged white print, spec only (single pass)",
+    "tone": "signal",
     "detected": 12,
     "n": 12
    },
    {
-    "label": "Real white print, amended spec (fix transfers to real parts?)",
+    "label": "Real print, spec with the one-clause amendment (single pass)",
     "tone": "pass",
     "detected": 17,
     "n": 17
    },
    {
-    "label": "False alarms on real good parts, amended spec",
+    "label": "False alarms on real good parts, amended spec (single pass)",
     "tone": "signal",
     "detected": 1,
     "n": 40
-   },
-   {
-    "label": "Real white print, original spec + 2 forged white-print examples",
-    "tone": "pass",
-    "detected": 17,
-    "n": 17
    }
   ],
-  "cost_usd": 0.997
+  "credit": false
+ },
+ "revalidation": {
+  "stress": {
+   "curves": [
+    {
+     "defect_type": "crack",
+     "cells": [
+      {
+       "kind": "opacity",
+       "level": 1.0,
+       "n": 12,
+       "detected": 11,
+       "flagged": 12,
+       "rate": 0.917,
+       "ci_low": 0.646,
+       "ci_high": 0.985,
+       "mean_size_mm": 1.95,
+       "per_pass": [
+        10,
+        11,
+        12
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.5,
+       "n": 12,
+       "detected": 11,
+       "flagged": 11,
+       "rate": 0.917,
+       "ci_low": 0.646,
+       "ci_high": 0.985,
+       "mean_size_mm": 1.95,
+       "per_pass": [
+        11,
+        11,
+        11
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.25,
+       "n": 12,
+       "detected": 7,
+       "flagged": 7,
+       "rate": 0.583,
+       "ci_low": 0.32,
+       "ci_high": 0.807,
+       "mean_size_mm": 1.95,
+       "per_pass": [
+        7,
+        7,
+        7
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.12,
+       "n": 12,
+       "detected": 1,
+       "flagged": 2,
+       "rate": 0.083,
+       "ci_low": 0.015,
+       "ci_high": 0.354,
+       "mean_size_mm": 1.95,
+       "per_pass": [
+        1,
+        1,
+        0
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.6,
+       "n": 12,
+       "detected": 11,
+       "flagged": 11,
+       "rate": 0.917,
+       "ci_low": 0.646,
+       "ci_high": 0.985,
+       "mean_size_mm": 1.17,
+       "per_pass": [
+        11,
+        9,
+        11
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.35,
+       "n": 12,
+       "detected": 7,
+       "flagged": 9,
+       "rate": 0.583,
+       "ci_low": 0.32,
+       "ci_high": 0.807,
+       "mean_size_mm": 0.68,
+       "per_pass": [
+        9,
+        7,
+        7
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.2,
+       "n": 12,
+       "detected": 2,
+       "flagged": 3,
+       "rate": 0.167,
+       "ci_low": 0.047,
+       "ci_high": 0.448,
+       "mean_size_mm": 0.39,
+       "per_pass": [
+        2,
+        3,
+        3
+       ]
+      }
+     ],
+     "threshold_note": "crack: size: holds to 0.6x (~1.17 mm), missed at 0.2x (~0.39 mm) (2/12); contrast: holds to 0.5x, missed at 0.12x (1/12)"
+    },
+    {
+     "defect_type": "cut",
+     "cells": [
+      {
+       "kind": "opacity",
+       "level": 1.0,
+       "n": 15,
+       "detected": 11,
+       "flagged": 12,
+       "rate": 0.733,
+       "ci_low": 0.48,
+       "ci_high": 0.891,
+       "mean_size_mm": 1.47,
+       "per_pass": [
+        12,
+        11,
+        10
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.5,
+       "n": 15,
+       "detected": 8,
+       "flagged": 9,
+       "rate": 0.533,
+       "ci_low": 0.301,
+       "ci_high": 0.752,
+       "mean_size_mm": 1.47,
+       "per_pass": [
+        9,
+        8,
+        7
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.25,
+       "n": 15,
+       "detected": 3,
+       "flagged": 3,
+       "rate": 0.2,
+       "ci_low": 0.07,
+       "ci_high": 0.452,
+       "mean_size_mm": 1.47,
+       "per_pass": [
+        2,
+        2,
+        3
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.12,
+       "n": 15,
+       "detected": 0,
+       "flagged": 0,
+       "rate": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.204,
+       "mean_size_mm": 1.47,
+       "per_pass": [
+        0,
+        0,
+        0
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.6,
+       "n": 15,
+       "detected": 8,
+       "flagged": 9,
+       "rate": 0.533,
+       "ci_low": 0.301,
+       "ci_high": 0.752,
+       "mean_size_mm": 0.88,
+       "per_pass": [
+        7,
+        6,
+        9
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.35,
+       "n": 15,
+       "detected": 0,
+       "flagged": 0,
+       "rate": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.204,
+       "mean_size_mm": 0.51,
+       "per_pass": [
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.2,
+       "n": 15,
+       "detected": 0,
+       "flagged": 0,
+       "rate": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.204,
+       "mean_size_mm": 0.29,
+       "per_pass": [
+        0,
+        0,
+        0
+       ]
+      }
+     ],
+     "threshold_note": "cut: size: missed at 0.35x (~0.51 mm) (0/15); contrast: missed at 0.25x (3/15)"
+    },
+    {
+     "defect_type": "hole",
+     "cells": [
+      {
+       "kind": "opacity",
+       "level": 1.0,
+       "n": 14,
+       "detected": 14,
+       "flagged": 14,
+       "rate": 1.0,
+       "ci_low": 0.785,
+       "ci_high": 1.0,
+       "mean_size_mm": 2.31,
+       "per_pass": [
+        14,
+        13,
+        14
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.5,
+       "n": 14,
+       "detected": 14,
+       "flagged": 14,
+       "rate": 1.0,
+       "ci_low": 0.785,
+       "ci_high": 1.0,
+       "mean_size_mm": 2.31,
+       "per_pass": [
+        13,
+        14,
+        14
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.25,
+       "n": 14,
+       "detected": 13,
+       "flagged": 13,
+       "rate": 0.929,
+       "ci_low": 0.685,
+       "ci_high": 0.987,
+       "mean_size_mm": 2.31,
+       "per_pass": [
+        13,
+        12,
+        13
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.12,
+       "n": 14,
+       "detected": 6,
+       "flagged": 6,
+       "rate": 0.429,
+       "ci_low": 0.214,
+       "ci_high": 0.674,
+       "mean_size_mm": 2.31,
+       "per_pass": [
+        6,
+        6,
+        6
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.6,
+       "n": 14,
+       "detected": 13,
+       "flagged": 14,
+       "rate": 0.929,
+       "ci_low": 0.685,
+       "ci_high": 0.987,
+       "mean_size_mm": 1.39,
+       "per_pass": [
+        12,
+        14,
+        13
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.35,
+       "n": 14,
+       "detected": 8,
+       "flagged": 14,
+       "rate": 0.571,
+       "ci_low": 0.326,
+       "ci_high": 0.786,
+       "mean_size_mm": 0.81,
+       "per_pass": [
+        7,
+        8,
+        7
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.2,
+       "n": 14,
+       "detected": 4,
+       "flagged": 14,
+       "rate": 0.286,
+       "ci_low": 0.117,
+       "ci_high": 0.546,
+       "mean_size_mm": 0.46,
+       "per_pass": [
+        2,
+        4,
+        4
+       ]
+      }
+     ],
+     "threshold_note": "hole: size: holds to 0.6x (~1.39 mm), missed at 0.2x (~0.46 mm) (4/14); contrast: holds to 0.25x, missed at 0.12x (6/14)"
+    },
+    {
+     "defect_type": "print",
+     "cells": [
+      {
+       "kind": "opacity",
+       "level": 1.0,
+       "n": 14,
+       "detected": 14,
+       "flagged": 14,
+       "rate": 1.0,
+       "ci_low": 0.785,
+       "ci_high": 1.0,
+       "mean_size_mm": 2.11,
+       "per_pass": [
+        14,
+        14,
+        14
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.5,
+       "n": 14,
+       "detected": 14,
+       "flagged": 14,
+       "rate": 1.0,
+       "ci_low": 0.785,
+       "ci_high": 1.0,
+       "mean_size_mm": 2.11,
+       "per_pass": [
+        14,
+        14,
+        14
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.25,
+       "n": 14,
+       "detected": 14,
+       "flagged": 14,
+       "rate": 1.0,
+       "ci_low": 0.785,
+       "ci_high": 1.0,
+       "mean_size_mm": 2.11,
+       "per_pass": [
+        14,
+        14,
+        14
+       ]
+      },
+      {
+       "kind": "opacity",
+       "level": 0.12,
+       "n": 14,
+       "detected": 12,
+       "flagged": 12,
+       "rate": 0.857,
+       "ci_low": 0.601,
+       "ci_high": 0.96,
+       "mean_size_mm": 2.11,
+       "per_pass": [
+        12,
+        12,
+        12
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.6,
+       "n": 14,
+       "detected": 12,
+       "flagged": 14,
+       "rate": 0.857,
+       "ci_low": 0.601,
+       "ci_high": 0.96,
+       "mean_size_mm": 1.26,
+       "per_pass": [
+        13,
+        11,
+        11
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.35,
+       "n": 14,
+       "detected": 6,
+       "flagged": 14,
+       "rate": 0.429,
+       "ci_low": 0.214,
+       "ci_high": 0.674,
+       "mean_size_mm": 0.74,
+       "per_pass": [
+        7,
+        6,
+        7
+       ]
+      },
+      {
+       "kind": "size",
+       "level": 0.2,
+       "n": 14,
+       "detected": 2,
+       "flagged": 13,
+       "rate": 0.143,
+       "ci_low": 0.04,
+       "ci_high": 0.399,
+       "mean_size_mm": 0.42,
+       "per_pass": [
+        2,
+        2,
+        2
+       ]
+      }
+     ],
+     "threshold_note": "print: size: holds to 0.6x (~1.26 mm), missed at 0.35x (~0.74 mm) (6/14); caught at every contrast tested (down to 0.12x)"
+    }
+   ],
+   "variants": 385,
+   "unanimous": 333,
+   "unanimous_rate": 0.865,
+   "controls": {
+    "n": 48,
+    "flagged": 3,
+    "parts": 16,
+    "ci": [
+     0.021,
+     0.168
+    ]
+   },
+   "flagged_elsewhere": 46
+  },
+  "white": {
+   "conditions": {
+    "W0": {
+     "print_per_pass": [
+      15,
+      14,
+      14
+     ],
+     "good_flagged_per_pass": [
+      1,
+      0,
+      0
+     ],
+     "print_majority": 15,
+     "n_print": 17,
+     "false_alarms_majority": 0,
+     "n_good": 40,
+     "missed_majority": [
+      "004.png",
+      "011.png"
+     ]
+    },
+    "W1": {
+     "print_per_pass": [
+      15,
+      16,
+      16
+     ],
+     "good_flagged_per_pass": [
+      0,
+      2,
+      0
+     ],
+     "print_majority": 15,
+     "n_print": 17,
+     "false_alarms_majority": 0,
+     "n_good": 40,
+     "missed_majority": [
+      "004.png",
+      "011.png"
+     ]
+    },
+    "W2": {
+     "print_per_pass": [
+      15,
+      16,
+      15
+     ],
+     "good_flagged_per_pass": [
+      0,
+      0,
+      0
+     ],
+     "print_majority": 15,
+     "n_print": 17,
+     "false_alarms_majority": 0,
+     "n_good": 40,
+     "missed_majority": [
+      "004.png",
+      "011.png"
+     ]
+    },
+    "W3": {
+     "print_per_pass": [
+      16,
+      17,
+      17
+     ],
+     "good_flagged_per_pass": [
+      0,
+      0,
+      0
+     ],
+     "print_majority": 17,
+     "n_print": 17,
+     "false_alarms_majority": 0,
+     "n_good": 40,
+     "missed_majority": []
+    }
+   },
+   "p_w2_vs_w0": 1.0,
+   "w2_beats_w0": false,
+   "w3_at_least_w1": true,
+   "forged_examples_get_credit": false
+  },
+  "c0": {
+   "recall_per_pass": [
+    0.955,
+    0.939,
+    0.97
+   ],
+   "specificity_per_pass": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "print_per_pass": [
+    13,
+    12,
+    14
+   ],
+   "n_print": 16
+  },
+  "size_match": [
+   {
+    "type": "crack",
+    "real_median_mm": 6.6,
+    "real_min_mm": 3.79,
+    "forged_max_mm": 2.66,
+    "band_mm": null,
+    "real_in_band": "0/0",
+    "forged_in_band": "0/0",
+    "real_all": "17/17"
+   },
+   {
+    "type": "cut",
+    "real_median_mm": 3.0,
+    "real_min_mm": 1.93,
+    "forged_max_mm": 2.51,
+    "band_mm": [
+     1.93,
+     2.51
+    ],
+    "real_in_band": "1/1",
+    "forged_in_band": "1/1",
+    "real_all": "16/16"
+   },
+   {
+    "type": "hole",
+    "real_median_mm": 3.6,
+    "real_min_mm": 1.71,
+    "forged_max_mm": 2.89,
+    "band_mm": [
+     1.71,
+     2.89
+    ],
+    "real_in_band": "5/5",
+    "forged_in_band": "13/13",
+    "real_all": "17/17"
+   },
+   {
+    "type": "print",
+    "real_median_mm": 5.1,
+    "real_min_mm": 3.89,
+    "forged_max_mm": 3.73,
+    "band_mm": null,
+    "real_in_band": "0/0",
+    "forged_in_band": "0/0",
+    "real_all": "13/16"
+   }
+  ],
+  "faint": {
+   "passes": [
+    {
+     "spec_only": 70,
+     "with_forged": 59,
+     "n": 141,
+     "p": 0.0347
+    },
+    {
+     "spec_only": 74,
+     "with_forged": 59,
+     "n": 141,
+     "p": 0.0015
+    },
+    {
+     "spec_only": 73,
+     "with_forged": 59,
+     "n": 141,
+     "p": 0.0066
+    }
+   ],
+   "original_spec_only": 72,
+   "with_forged": 59
+  }
+ },
+ "box_distance": {
+  "tol_mm": 1.0,
+  "cells": [
+   {
+    "type": "crack",
+    "kind": "opacity",
+    "level": 1.0,
+    "n": 12,
+    "overlap": 11,
+    "near": 12,
+    "median_miss_mm": 0.38
+   },
+   {
+    "type": "crack",
+    "kind": "opacity",
+    "level": 0.5,
+    "n": 12,
+    "overlap": 11,
+    "near": 11,
+    "median_miss_mm": null
+   },
+   {
+    "type": "crack",
+    "kind": "opacity",
+    "level": 0.25,
+    "n": 12,
+    "overlap": 7,
+    "near": 7,
+    "median_miss_mm": 10.61
+   },
+   {
+    "type": "crack",
+    "kind": "opacity",
+    "level": 0.12,
+    "n": 12,
+    "overlap": 1,
+    "near": 1,
+    "median_miss_mm": 6.8
+   },
+   {
+    "type": "crack",
+    "kind": "size",
+    "level": 0.6,
+    "n": 12,
+    "overlap": 11,
+    "near": 11,
+    "median_miss_mm": 0.67
+   },
+   {
+    "type": "crack",
+    "kind": "size",
+    "level": 0.35,
+    "n": 12,
+    "overlap": 7,
+    "near": 9,
+    "median_miss_mm": 0.64
+   },
+   {
+    "type": "crack",
+    "kind": "size",
+    "level": 0.2,
+    "n": 12,
+    "overlap": 2,
+    "near": 3,
+    "median_miss_mm": 0.09
+   },
+   {
+    "type": "cut",
+    "kind": "opacity",
+    "level": 1.0,
+    "n": 15,
+    "overlap": 11,
+    "near": 12,
+    "median_miss_mm": 0.51
+   },
+   {
+    "type": "cut",
+    "kind": "opacity",
+    "level": 0.5,
+    "n": 15,
+    "overlap": 8,
+    "near": 9,
+    "median_miss_mm": 0.13
+   },
+   {
+    "type": "cut",
+    "kind": "opacity",
+    "level": 0.25,
+    "n": 15,
+    "overlap": 3,
+    "near": 3,
+    "median_miss_mm": null
+   },
+   {
+    "type": "cut",
+    "kind": "opacity",
+    "level": 0.12,
+    "n": 15,
+    "overlap": 0,
+    "near": 0,
+    "median_miss_mm": null
+   },
+   {
+    "type": "cut",
+    "kind": "size",
+    "level": 0.6,
+    "n": 15,
+    "overlap": 8,
+    "near": 9,
+    "median_miss_mm": 0.64
+   },
+   {
+    "type": "cut",
+    "kind": "size",
+    "level": 0.35,
+    "n": 15,
+    "overlap": 0,
+    "near": 0,
+    "median_miss_mm": null
+   },
+   {
+    "type": "cut",
+    "kind": "size",
+    "level": 0.2,
+    "n": 15,
+    "overlap": 0,
+    "near": 0,
+    "median_miss_mm": null
+   },
+   {
+    "type": "hole",
+    "kind": "opacity",
+    "level": 1.0,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": 0.4
+   },
+   {
+    "type": "hole",
+    "kind": "opacity",
+    "level": 0.5,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": 0.43
+   },
+   {
+    "type": "hole",
+    "kind": "opacity",
+    "level": 0.25,
+    "n": 14,
+    "overlap": 13,
+    "near": 13,
+    "median_miss_mm": 0.71
+   },
+   {
+    "type": "hole",
+    "kind": "opacity",
+    "level": 0.12,
+    "n": 14,
+    "overlap": 6,
+    "near": 6,
+    "median_miss_mm": 4.67
+   },
+   {
+    "type": "hole",
+    "kind": "size",
+    "level": 0.6,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": 0.08
+   },
+   {
+    "type": "hole",
+    "kind": "size",
+    "level": 0.35,
+    "n": 14,
+    "overlap": 8,
+    "near": 14,
+    "median_miss_mm": 0.19
+   },
+   {
+    "type": "hole",
+    "kind": "size",
+    "level": 0.2,
+    "n": 14,
+    "overlap": 4,
+    "near": 14,
+    "median_miss_mm": 0.46
+   },
+   {
+    "type": "print",
+    "kind": "opacity",
+    "level": 1.0,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": null
+   },
+   {
+    "type": "print",
+    "kind": "opacity",
+    "level": 0.5,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": null
+   },
+   {
+    "type": "print",
+    "kind": "opacity",
+    "level": 0.25,
+    "n": 14,
+    "overlap": 14,
+    "near": 14,
+    "median_miss_mm": null
+   },
+   {
+    "type": "print",
+    "kind": "opacity",
+    "level": 0.12,
+    "n": 14,
+    "overlap": 12,
+    "near": 12,
+    "median_miss_mm": null
+   },
+   {
+    "type": "print",
+    "kind": "size",
+    "level": 0.6,
+    "n": 14,
+    "overlap": 12,
+    "near": 14,
+    "median_miss_mm": 0.15
+   },
+   {
+    "type": "print",
+    "kind": "size",
+    "level": 0.35,
+    "n": 14,
+    "overlap": 6,
+    "near": 13,
+    "median_miss_mm": 0.32
+   },
+   {
+    "type": "print",
+    "kind": "size",
+    "level": 0.2,
+    "n": 14,
+    "overlap": 2,
+    "near": 12,
+    "median_miss_mm": 0.5
+   }
+  ]
  }
 }

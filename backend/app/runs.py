@@ -160,7 +160,7 @@ class Manager:
             ious = [s["sam_iou"] for s in ss if s["status"] == "accepted" and s["sam_iou"] is not None]
             summary = {"accepted": sum(s["status"] == "accepted" for s in ss), "rejected": sum(s["status"] == "rejected" for s in ss),
                        "failed": sum(s["status"] == "failed" for s in ss),
-                       "cost_usd": round(sum(r.get("cost_usd", 0) for r in ledger.recent(5000) if r.get("run_id") == run.id), 4),
+                       "cost_usd": round(ledger.run_cost(run.id), 4),
                        "seconds": round(time.time() - t0, 1), "mean_sam_iou": round(float(np.mean(ious)), 3) if ious else None}
             run.emit("run_completed", {"summary": summary})
         except Exception as e:

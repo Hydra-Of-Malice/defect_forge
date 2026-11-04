@@ -10,10 +10,10 @@
 |---|---|---|
 | Backend (FastAPI): Meta client, forge pipeline, 8 validators, critic retries, severity ladder, curves, inspector, COCO export, SSE, cost ledger, budget guard, demo replay | `backend/app/` | ✅ live-tested |
 | Frontend (React): Forge, Stress test, Inspect, Results, call-log drawer, demo badge | `frontend/` (built into `frontend/dist`, served by the backend at :8765) | ✅ live-tested in a browser |
-| Evaluation (pre-registered in `EVAL.md`) | `eval/run_eval.py` → `docs/results/eval.md` and `eval.json` | ✅ run |
-| Blind-spot experiment (white print) | `eval/blind_spot.py` → `docs/results/blind_spot.json` | ✅ run |
+| Evaluation (pre-registered in `EVAL.md`, including the revalidation addendum) | `eval/run_eval.py`, `eval/revalidate.py`, `eval/box_distance.py` → `docs/results/eval.md` and `eval.json` | ✅ run |
+| White-print experiment | `eval/blind_spot.py`, then the controlled re-run in `eval/revalidate.py` | ✅ run. Our first conclusion was confounded and is withdrawn |
 | Physical check on real damaged parts | `eval/home_check.py` + `eval/home_set/` | ⏳ needs your photos |
-| Offline tests (fake Meta transport) | `tests/` (`python -m pytest -q tests`) | ✅ 12 passing |
+| Offline tests (fake Meta transport) | `tests/` (`python -m pytest -q tests`) | ✅ 21 passing |
 | Demo replay fixture (Muse-Image-generated parts, no MVTec) | `fixtures/demo_run/`, `fixtures/demo_inspect/` | ✅ |
 | Docs | `README.md`, `EVAL.md`, `THIRD_PARTY.md`, `docs/friction-log.md`, `docs/api-contract.md`, `docs/video-script.md`, `docs/submission.md`, `docs/gate-results.md` | ✅ |
 
@@ -33,7 +33,7 @@ On macOS or Linux, use `./scripts/setup.sh` and `./scripts/dev.sh`.
 ## Human-only tasks, in order
 
 1. **Accept the GitHub invite** (Pallav, `PDGamerSG`) and confirm Pallav is listed as a teammate on the Cerebral Valley submission.
-2. **Real-part check (about 45 min):**
+2. **Real-part check (about 45 min). This is no longer optional:** it's the only real-world check of the curves below 1.7 mm, the smallest real defect in MVTec.
    - Buy hazelnuts and damage them: drill 0.5, 1 and 2 mm holes (or use a heated needle); make one faint and one strong ink mark, including **white** ink (white print is the real blind spot); crack one with pliers; keep some good.
    - Shoot top-down on matte black paper under a desk lamp, one folder per condition in `eval/home_set/` (see `eval/home_check.py`).
    - Run `python eval/home_check.py`, and add its table to `docs/results/eval.md` and the video.
@@ -54,6 +54,7 @@ On macOS or Linux, use `./scripts/setup.sh` and `./scripts/dev.sh`.
 
 - **Port 8000** is taken by another app on the original dev machine, which is why everything uses **8765**. Override the frontend's target with `VITE_API_TARGET`.
 - **The Model API intermittently returns 404 "model not found"** for valid models. The client retries it (`backend/app/meta/client.py`).
+- **Phone tunnel:** it exposes your live app with no login. Set `BUDGET_USD` just above your current spend while it's open.
 - **Budget guard:** the backend refuses new calls once `var/ledger.jsonl` passes `BUDGET_USD` (default 100).
 
 ## History

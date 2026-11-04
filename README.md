@@ -1,6 +1,6 @@
 # Defect Forge
 
-**Know what your visual inspector will miss before your line makes a single defect.**
+**Measure where your visual inspector stops seeing defects, before your line makes one.**
 
 Defect Forge reads your QA spec, forges realistic defects onto photos of **good** parts with **Muse Image**, labels them to the pixel with **SAM 3.1**, and then stress-tests a **Muse Spark** inspector on a deterministic severity ladder. It reports the smallest and faintest defect the inspector still catches.
 
@@ -13,22 +13,27 @@ Defect Forge reads your QA spec, forges realistic defects onto photos of **good*
 
 ## Results
 
-These come from the evaluation protocol written in [EVAL.md](EVAL.md) before the run. Full tables are in [docs/results/eval.md](docs/results/eval.md).
+The protocol in [EVAL.md](EVAL.md) was committed before each run. An audit of our own first results then found problems, so we re-ran the evaluation with location checks, unedited controls and 3 passes. This section reports the corrected numbers. Full tables are in [docs/results/eval.md](docs/results/eval.md).
 
-**Where the Muse Spark inspector goes blind.** Detection rate on forged hazelnut defects as we shrink them (the inspector sees only the spec):
+**Where the Muse Spark inspector stops.** Forged hazelnut defects, shrunk step by step, with the inspector seeing only the spec. A defect counts as caught when the inspector's box overlaps it in at least 2 of 3 passes:
 
-| Defect | Full size | 60% | 35% | 20% | Threshold |
+| Defect | Full size | 60% | 35% | 20% | Box within 1 mm at 35% / 20%* |
 |---|---|---|---|---|---|
-| Hole | 14/14 | 14/14 | 14/14 | 14/14 | caught down to ≈0.46 mm; missed when faded to 12% contrast (4/14) |
-| Crack | 12/12 | 11/12 | 9/12 | 4/12 | drops to 75% at ≈0.7 mm and 33% at ≈0.4 mm |
-| Cut | 11/15 | 10/15 | 2/15 | 0/15 | **weakest**: only 73% at full size, mostly missed below ≈0.5 mm |
-| Print (dark ink) | 14/14 | 14/14 | 14/14 | 12/14 | robust down to ≈0.4 mm |
+| Hole | 14/14 | 13/14 (≈1.4 mm) | 8/14 (≈0.8 mm) | 4/14 (≈0.46 mm) | 14/14, 14/14 |
+| Print (dark ink) | 14/14 | 12/14 (≈1.3 mm) | 6/14 (≈0.74 mm) | 2/14 (≈0.42 mm) | 13/14, 12/14 |
+| Crack | 11/12 | 11/12 (≈1.2 mm) | 7/12 (≈0.68 mm) | 2/12 (≈0.39 mm) | 9/12, 3/12 |
+| Cut | 11/15 | 8/15 (≈0.88 mm) | 0/15 (≈0.51 mm) | 0/15 (≈0.29 mm) | 0/15, 0/15 |
 
-- **Real benchmark** (MVTec AD hazelnut test split, spec-only inspector): **95.5% recall** (95% CI 87.5–98.4) on 66 defective images and **100% specificity** (CI 91.2–100) on 40 good ones. All 3 misses were **white print** read as "specular gloss".
-- **The blind spot, fixed** (exploratory, `eval/blind_spot.py`): two forged **white-print** examples in context took real print recall from **12/17 to 17/17**, with **0 errors** on all 110 real test images and 0/40 false alarms. A one-clause spec amendment also fixed it, with 1/40 false alarms.
-- **The trap, measured:** *generic* forged examples made the inspector **worse** on faint defects (72 → 59 of 141 detected, exact McNemar p = 0.011). In-context examples are not free; Defect Forge lets you measure their effect before deploying.
+*Post-hoc check, not pre-registered.
+
+- **Two different limits.** Sub-millimetre holes and prints are *noticed* but not *pinpointed*: the box misses by a median of 0.2–0.5 mm. Cuts are the weakest type: 73% caught at full size and none at about 0.5 mm.
+- **Controls:** 3 of 48 inspections of unedited parts were flagged (6%, 95% CI 2–17%). All 3 passes agreed on 87% of the 385 variants.
+- **Real benchmark** (MVTec AD hazelnut test split, spec-only inspector, 3 passes): **93.9–97.0% recall** on 66 defective images and **100% specificity** on 40 good ones. Print is the weak spot, at 12–14 of 16, because white print is read as "specular gloss".
+- **A claim we withdrew.** We first reported that two forged white-print examples fixed that blind spot. That run also contained 2 good photos, so it was confounded. In the controlled re-run, forged examples alone earned no credit under a rule fixed in advance (real print pooled over 3 passes: spec only 43/51, good photos 47/51, forged 46/51, both 50/51). Both together scored best, but the difference from good photos alone is 2 images and not significant. Forging also did not reproduce the blind spot: bold forged white print was caught 12/12.
+- **Examples can hurt.** With 8 generic forged examples in the prompt, the inspector flagged 59 of 141 faint variants, against 70–74 in three spec-only passes (exact McNemar p = 0.0015–0.035). The forged-examples side was run once, and the cause is untested.
+- **What this does not prove yet.** Forged defects are much smaller than MVTec's, so real and forged barely overlap. Only holes have a usable shared range (1.7–2.9 mm), where they agree: real 5/5, forged 13/13. Below 1.7 mm, the curves have no real-world check until the physical test in `eval/home_check.py` is run.
 - **Labels:** SAM 3.1 tight-box masks reach a median IoU of **0.84** against ground truth on 70 real defects. Forged masks agree with SAM at a mean IoU of 0.82.
-- **Cost:** 55/60 forgeries accepted (92%) after critic-driven retries, at **$0.020 and 25 s per pixel-labeled defect**. The whole evaluation cost $4.85 of Meta API spend.
+- **Cost:** 55/60 forgeries accepted (92%) after critic-driven retries, at **$0.020 and 25 s per pixel-labeled defect**. The evaluation cost $4.85 and the revalidation $6.45 of Meta API spend.
 <!-- RESULTS:END -->
 
 ## Why
@@ -97,6 +102,7 @@ powershell -ExecutionPolicy Bypass -File scripts\dev.ps1    # http://localhost:8
 python eval/download_mvtec.py      # MVTec AD hazelnut (CC BY-NC-SA) into data/ (gitignored, ~190 MB)
 python eval/run_eval.py            # pre-registered protocol in EVAL.md; resumable; about $5 of API spend
 python eval/revalidate.py          # addendum: 3 located passes, controls, attribution; about $7
+python eval/box_distance.py        # post-hoc box accuracy on small defects; no API calls
 python -m pytest -q tests          # offline: fake Meta transport, no key needed
 ```
 
@@ -123,7 +129,8 @@ docs/          results/, gate-results.md, friction-log.md, api-contract.md, vide
 - **MVTec AD** (CC BY-NC-SA 4.0) is downloaded locally for evaluation only and never committed.
 - Forged images are used for **evaluation, benchmarking and in-context inspection by Meta models**, consistent with the Meta Model API Terms (§10.1(ix) evaluation safe harbor). Defect Forge does not train models on Muse Image outputs. The COCO export is labeled as an evaluation suite.
 - **Limitations:**
-  - Severity is synthetic: OpenCV fades and shrinks of a forged defect. Physical validation with real drilled or marked parts is a smaller, separate check.
+  - Severity is synthetic: OpenCV fades and shrinks of a forged defect. Below the smallest real defect in MVTec (1.7 mm), the curves are unvalidated until the physical check with real drilled or marked parts is done.
+  - Forged defects are not a stand-in for every real defect: bold forged white print was caught 12/12 while real white print was missed.
   - The critic and the inspector are both Muse Spark, but the headline curves don't depend on the critic.
   - Results are for hazelnuts on a dark background; other parts need their own spec and photos.
 
