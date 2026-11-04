@@ -135,7 +135,8 @@ def image_edit(png: bytes, prompt: str, *, strength: str = "low", tools: bool = 
     payload = {
         "model": MODELS["image"], "prompt": prompt, "n": 1,
         "images": [{"image_url": data_url(png, "image/png")}],
-        "output_format": "png", "response_format": "b64_json", "reasoning_strength": strength,
+        # JPEG: 1.3 MB instead of 5.5 MB per response, which stalled on slow links; it's downscaled 3x before compositing
+        "output_format": "jpeg", "response_format": "b64_json", "reasoning_strength": strength,
         "tool_enablement": {"enable_image_search": tools, "enable_web_search": tools, "enable_shell": tools},
     }
     return _image_post("/images/edits", payload, "edit", run_id)

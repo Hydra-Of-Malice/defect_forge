@@ -18,6 +18,7 @@ The numbers below are filled in from `docs/results/eval.md` (eval of Nov 4).
 ## Shot checklist
 - [ ] Clean browser profile, no bookmarks bar, dark OS theme
 - [ ] Start backend: `.\scripts\dev.ps1` (live, key in `.env`). Do **not** use DEMO_MODE for the main take
+- [ ] Run `python scripts/system_check.py` first. Muse Image latency swings from about 11 s to over 2 minutes, so film when a small forge takes under a minute, and use your fastest connection
 - [ ] Pre-warm: run one small forge first so part masks are cached and the live run starts immediately
 - [ ] Take 1: full live run with per-type = 3 on 3 sample parts (about 2–3 min real time; speed up 2–3× in editing, and say so on screen: "sped up ×2")
 - [ ] Inspect: prepare 1 drilled hazelnut, 1 ink-marked, 1 good, on black paper under a desk lamp

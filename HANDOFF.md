@@ -52,6 +52,9 @@ On macOS or Linux, use `./scripts/setup.sh` and `./scripts/dev.sh`.
 
 ## If something breaks
 
+- **Check the whole system:** `python scripts/system_check.py` runs every live path and prints PASS or FAIL for each (about $0.30).
+- **A run looks stuck:** it's usually network or API latency, not a hang. Muse Image edits ranged from 11 s to over 2 minutes on Nov 4. The call-log drawer shows each call's latency.
+
 - **Port 8000** is taken by another app on the original dev machine, which is why everything uses **8765**. Override the frontend's target with `VITE_API_TARGET`.
 - **The Model API intermittently returns 404 "model not found"** for valid models. The client retries it (`backend/app/meta/client.py`).
 - **Phone tunnel:** it exposes your live app with no login. Set `BUDGET_USD` just above your current spend while it's open.

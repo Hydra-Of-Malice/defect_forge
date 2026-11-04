@@ -9,7 +9,7 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
 - Tests: `.venv\Scripts\python -m pytest -q tests`. They run offline on a fake Meta transport and must stay green.
 - Frontend: `cd frontend; npm run build` (needs zero TS errors). Mock UI: `$env:VITE_MOCK='1'; npm run dev`.
 - Eval: `python eval/run_eval.py` is resumable and cached in `docs/results/raw/`; re-running it costs $0 unless you delete raw files.
-- Live smoke test: `python scripts/smoke_run.py --per-type 1` (about $0.20). Every call lands in `var/ledger.jsonl`; `BUDGET_USD` is a hard stop.
+- Live checks: `python scripts/system_check.py` exercises every live path with PASS/FAIL (about $0.30); `python scripts/smoke_run.py --per-type 1` is a quick forge (about $0.20). Every call lands in `var/ledger.jsonl`; `BUDGET_USD` is a hard stop.
 - The HTTP contract between backend and frontend is `docs/api-contract.md`. Keep both sides in sync.
 
 ## Hard rules
