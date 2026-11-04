@@ -118,6 +118,8 @@ def post_stress(rid: str):
         manager.stress(rid)
     except KeyError:
         raise HTTPException(404, "run not found")
+    except RuntimeError as e:
+        raise HTTPException(409, str(e))
     return {"ok": True}
 
 
@@ -128,7 +130,7 @@ async def run_events(rid: str):
         raise HTTPException(404, "run not found")
 
     async def gen():
-        i = 0
+        i, stop = r.stream_window()
         idle = 0
         while True:
             evs = r.events
@@ -136,7 +138,7 @@ async def run_events(rid: str):
                 ev = evs[i]
                 i += 1
                 yield {"event": ev["event"], "data": json.dumps(ev["data"])}
-                if ev["event"] in ("run_completed", "error"):
+                if ev["event"] in stop:
                     return
             if r.data.get("status") in ("completed", "failed") and i >= len(r.events):
                 idle += 1

@@ -40,6 +40,14 @@ def variant(orig_crop: np.ndarray, comp_crop: np.ndarray, mask: np.ndarray, kind
     return np.clip(out, 0, 255).astype(np.uint8), vm
 
 
+def box_hits(box: list | None, mask: np.ndarray) -> bool:
+    """True when the inspector's pixel box overlaps the defect mask."""
+    if not box:
+        return False
+    x0, y0, x1, y1 = box
+    return bool(mask[y0:y1, x0:x1].any())
+
+
 def equiv_diameter_mm(area_px: float, part_width_px: float, part_width_mm: float) -> float | None:
     if not part_width_mm or not part_width_px or area_px <= 0:
         return None
@@ -67,7 +75,8 @@ def curves(points: list[dict]) -> list[dict]:
             k = sum(p["detected"] for p in ps)
             lo, hi = wilson(k, len(ps))
             sizes = [p["size_mm"] for p in ps if p.get("size_mm")]
-            cells.append({"kind": kind, "level": level, "n": len(ps), "detected": k, "rate": round(k / len(ps), 3),
+            cells.append({"kind": kind, "level": level, "n": len(ps), "detected": k,
+                          "flagged": sum(p.get("flagged", p["detected"]) for p in ps), "rate": round(k / len(ps), 3),
                           "ci_low": lo, "ci_high": hi, "mean_size_mm": round(float(np.mean(sizes)), 2) if sizes else None})
         out.append({"defect_type": t, "cells": cells, "threshold_note": threshold_note(t, cells)})
     return out

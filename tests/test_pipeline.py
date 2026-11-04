@@ -103,3 +103,72 @@ def test_demo_mode_api_routes():
     assert c.get("/api/runs/does-not-exist").status_code == 404
     ev = c.get("/api/eval").json()
     assert "curves" in ev
+
+
+def _finished_run(monkeypatch):
+    monkeypatch.setattr(runs, "image_edit", fake_edit)
+    monkeypatch.setattr(runs, "sam_segment", fake_sam)
+    monkeypatch.setattr(runs, "critic", fake_critic)
+    monkeypatch.setattr(locate, "sam_segment", fake_sam)
+    monkeypatch.setattr(inspector, "spark_json", fake_spark)
+    monkeypatch.setattr(runs, "DEMO_MODE", False)
+    rid = runs.manager.create(DEFAULT_SPEC, TAX, ["sample-hazelnut_gen_02"], per_type=1, stress=True)
+    run = runs.manager.get(rid)
+    for _ in range(300):
+        if run.data["status"] != "running":
+            break
+        time.sleep(0.1)
+    assert run.data["status"] == "completed", run.events[-3:]
+    return rid, run
+
+
+def test_stress_rerun_streams_only_its_own_events(monkeypatch):
+    rid, run = _finished_run(monkeypatch)
+    assert run.stream_window() == (0, {"run_completed", "error"})
+    n_before = len(run.events)
+    runs.manager.stress(rid)
+    start, stop = run.stream_window()
+    assert start == n_before and "stress_completed" in stop and "run_completed" not in stop
+    for _ in range(300):
+        if run.data["status"] != "running":
+            break
+        time.sleep(0.1)
+    assert run.data["status"] == "completed"
+    new = [e["event"] for e in run.events[start:]]
+    assert "severity" in new and new[-1] == "stress_completed" and "run_completed" not in new
+
+
+def test_stress_rerun_is_refused_while_busy(monkeypatch):
+    rid, run = _finished_run(monkeypatch)
+    run.data["status"] = "running"
+    try:
+        runs.manager.stress(rid)
+        raised = False
+    except RuntimeError:
+        raised = True
+    run.data["status"] = "completed"
+    assert raised
+
+
+def test_stress_records_location_and_unedited_controls(monkeypatch):
+    _, run = _finished_run(monkeypatch)
+    assert run.data["controls"]["n"] == 1
+    pts = run.data["severity"]
+    assert all({"flagged", "detected", "box_px"} <= set(p) for p in pts)
+    assert all(p["flagged"] or not p["detected"] for p in pts)   # located implies flagged
+
+
+def test_part_mask_rejects_a_background_mask(monkeypatch):
+    img = Image.new("RGB", (400, 400), (205, 195, 180))
+    a = np.array(img)
+    cv2.circle(a, (200, 200), 80, (110, 60, 30), -1)
+    img = Image.fromarray(a)
+
+    def background_sam(image, **kw):
+        m = np.ones((400, 400), bool)
+        m[120:280, 120:280] = False
+        return {"objects": [{"mask": m}], "cost_usd": 0.0}
+
+    monkeypatch.setattr(locate, "sam_segment", background_sam)
+    m, how = locate.part_mask(img)
+    assert how == "otsu fallback" and 0.1 < m.mean() < 0.2 and m[200, 200] and not m[5, 5]

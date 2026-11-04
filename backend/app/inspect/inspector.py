@@ -1,6 +1,8 @@
 """Muse Spark visual inspector + SAM 3.1 mask behind every claimed defect (sanitizer: no mask -> 'uncertain')."""
 from __future__ import annotations
 
+import hashlib
+
 import numpy as np
 from PIL import Image
 
@@ -36,7 +38,7 @@ def inspect(img: Image.Image, spec_text: str, types: list[str], *, exemplars: li
     content += [{"type": "text", "text": "Inspect this part."}, _img_part(img)]
     msgs = [{"role": "system", "content": system_prompt(spec_text)}, {"role": "user", "content": content}]
     r = spark_json(msgs, inspect_schema(types), "inspect", effort="low", run_id=run_id,
-                   cache_key=cache_key or f"inspect-{hash(spec_text) & 0xffffffff:x}-{len(exemplars or [])}")
+                   cache_key=cache_key or f"inspect-{hashlib.sha256(spec_text.encode()).hexdigest()[:8]}-{len(exemplars or [])}")
     out = r["data"]
     W, H = img.size
     box = None

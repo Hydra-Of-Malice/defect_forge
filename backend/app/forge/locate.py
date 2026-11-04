@@ -16,15 +16,25 @@ def load_image(path) -> Image.Image:
     return img
 
 
+def border_frac(mask: np.ndarray) -> float:
+    return float(np.concatenate([mask[0], mask[-1], mask[:, 0], mask[:, -1]]).mean())
+
+
 def otsu_mask(img: Image.Image) -> np.ndarray:
     g = cv2.GaussianBlur(cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY), (5, 5), 0)
     _, o = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-    # keep the largest component: the part on a darker background
-    n, lab, stats, _ = cv2.connectedComponentsWithStats(o)
+    bright = o > 0
+    # the background owns the frame border, so the part is whichever class touches it least:
+    # this handles a bright part on black paper and a dark part on a light desk
+    fg = bright if border_frac(bright) <= border_frac(~bright) else ~bright
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(fg.astype(np.uint8))
     if n <= 1:
         return np.ones(o.shape, bool)
     i = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
-    return lab == i
+    filled = np.zeros(o.shape, np.uint8)   # fill highlights inside the part
+    contours, _ = cv2.findContours((lab == i).astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    cv2.drawContours(filled, contours, -1, 1, thickness=cv2.FILLED)
+    return filled > 0
 
 
 def part_mask(img: Image.Image, run_id: str | None = None) -> tuple[np.ndarray, str]:
@@ -35,7 +45,8 @@ def part_mask(img: Image.Image, run_id: str | None = None) -> tuple[np.ndarray, 
     try:
         r = sam_segment(img, points=[[(cx, cy)]], run_id=run_id, op="part_mask")
         masks = [ob["mask"] for ob in r["objects"] if ob["mask"] is not None]
-        if masks and masks[0].mean() > 0.02:
+        # a mask that owns the frame border is the background, not the part
+        if masks and masks[0].mean() > 0.02 and border_frac(masks[0]) < 0.5:
             return masks[0], "sam-3.1 point prompt"
     except Exception:
         pass

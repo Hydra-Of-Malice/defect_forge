@@ -28,7 +28,6 @@ from .meta import ledger
 from .meta.client import image_edit, sam_segment, to_png
 
 RUNS = VAR / "runs"
-TERMINAL = {"run_completed", "error"}
 
 
 def _save_jpg(arr_or_img, path: Path, q: int = 90) -> None:
@@ -47,9 +46,17 @@ class Run:
         self.lock = threading.Lock()
         self.demo = demo
         self.accepted_hashes: list[int] = []
+        self.stress_from: int | None = None      # event index where a separate stress re-run began
 
     def url(self, path: Path) -> str:
         return parts_mod.url_for(path)
+
+    def stream_window(self) -> tuple[int, set[str]]:
+        """Where an SSE stream starts and which events end it. A stress re-run streams only its own events,
+        otherwise the replay would stop at the original run_completed and never reach the new results."""
+        if self.stress_from is not None:
+            return self.stress_from, {"stress_completed", "error"}
+        return 0, {"run_completed", "error"}
 
     def emit(self, event: str, data: dict) -> None:
         with self.lock:
@@ -69,6 +76,10 @@ class Run:
                 self.data["severity"].append(data)
             elif event == "curves":
                 self.data["curves"] = data["curves"]
+            elif event == "controls":
+                self.data["controls"] = data
+            elif event == "stress_completed" and self.stress_from is not None:
+                self.data["status"] = "completed"
             elif event == "run_completed":
                 self.data["status"] = "completed"
                 self.data["summary"] = data["summary"]
@@ -122,7 +133,7 @@ class Manager:
             return self.replay()
         rid = time.strftime("%Y%m%d-%H%M%S-") + uuid.uuid4().hex[:4]
         data = {"id": rid, "created": time.time(), "status": "running", "spec_text": spec_text, "taxonomy": taxonomy,
-                "part_ids": part_ids, "per_type": per_type, "samples": [], "severity": [], "curves": [],
+                "part_ids": part_ids, "per_type": per_type, "samples": [], "severity": [], "curves": [], "controls": None,
                 "summary": None, "demo": False}
         run = Run(rid, data)
         run.save()
@@ -159,7 +170,7 @@ class Manager:
     def _plan(self, run: Run) -> list[tuple]:
         tax = run.data["taxonomy"]
         pids = run.data["part_ids"]
-        rng = np.random.default_rng(abs(hash(run.id)) % (2 ** 32))
+        rng = np.random.default_rng(int(hashlib.sha256(run.id.encode()).hexdigest()[:8], 16))
         jobs = []
         n_total = len(tax["defects"]) * run.data["per_type"]
         per_part = int(np.ceil(n_total / len(pids)))
@@ -294,6 +305,11 @@ class Manager:
         run = self.get(rid)
         if run is None:
             raise KeyError(rid)
+        with run.lock:
+            if run.data["status"] == "running":
+                raise RuntimeError("run is busy")
+            run.stress_from = len(run.events)
+            run.data["status"] = "running"
         threading.Thread(target=self._stress_and_finish, args=(run,), daemon=True).start()
 
     def _stress_and_finish(self, run: Run) -> None:
@@ -302,49 +318,72 @@ class Manager:
         except Exception as e:
             traceback.print_exc()
             run.emit("error", {"message": str(e)[:300]})
+            run.data["status"] = "completed"     # the forged samples are still valid
+            run.save()
+
+    def stress_point(self, run: Run, s: dict, kind: str, level: float, *, save: bool = True, cache_key: str | None = None) -> dict:
+        """Render one severity variant and inspect it. 'detected' needs the inspector's box to overlap the defect;
+        'flagged' is any defect claim, including one in the wrong place."""
+        types = [d["defect_type"] for d in run.data["taxonomy"]["defects"]]
+        sd = run.dir / "samples"
+        prov = json.loads((sd / f"{s['id']}_provenance.json").read_text())
+        x0, y0, x1, y1 = prov["crop_box"]
+        full = Image.open(sd / f"{s['id']}_composite.png").convert("RGB")
+        fmask = np.array(Image.open(sd / f"{s['id']}_mask.png")) > 0
+        comp_crop = np.array(full.crop((x0, y0, x1, y1)))
+        base = load_image(parts_mod.all_parts()[s["part_id"]]["path"])
+        orig = np.array(base.crop((x0, y0, x1, y1)))     # exact (lossless) original crop
+        vcrop, vmask = sev.variant(orig, comp_crop, fmask[y0:y1, x0:x1], kind, level)
+        vimg = base.copy()
+        vimg.paste(Image.fromarray(vcrop), (x0, y0))
+        vfull = np.zeros(fmask.shape, bool)
+        vfull[y0:y1, x0:x1] = vmask
+        url = ""
+        if save:
+            p = run.dir / "severity" / f"{s['id']}_{kind}_{level}.jpg"
+            _save_jpg(vimg, p, 92)
+            url = run.url(p)
+        res = inspect(vimg, run.data["spec_text"], types, run_id=run.id, with_mask=False, cache_key=cache_key or f"stress-{run.id}")
+        size_mm = s["size_mm"] * level if (s["size_mm"] and kind == "size") else s["size_mm"]
+        flagged = bool(res["defect"])
+        return {"sample_id": s["id"], "defect_type": s["defect_type"], "kind": kind, "level": level, "url": url,
+                "size_mm": round(size_mm, 2) if size_mm else None, "flagged": flagged,
+                "detected": flagged and sev.box_hits(res["box_px"], vfull), "box_px": res["box_px"],
+                "pred_type": res["type"], "confidence": res["confidence"]}
+
+    def control_point(self, run: Run, pid: str, *, cache_key: str | None = None) -> dict:
+        """Inspect a part with no forged defect: the false-alarm baseline for the severity ladder."""
+        types = [d["defect_type"] for d in run.data["taxonomy"]["defects"]]
+        base = load_image(parts_mod.all_parts()[pid]["path"])
+        res = inspect(base, run.data["spec_text"], types, run_id=run.id, with_mask=False, cache_key=cache_key or f"stress-{run.id}")
+        return {"part_id": pid, "flagged": bool(res["defect"]), "pred_type": res["type"], "box_px": res["box_px"]}
 
     def _stress(self, run: Run) -> None:
-        tax = run.data["taxonomy"]
-        types = [d["defect_type"] for d in tax["defects"]]
         acc = [s for s in run.data["samples"] if s["status"] == "accepted"]
         run.data["severity"] = []
         run.emit("stage", {"stage": "stress", "status": "start", "detail": f"{len(acc)} samples x {len(sev.LEVELS)} levels"})
         jobs = [(s, k, lv) for s in acc for k, lv in sev.LEVELS]
 
-        def one(job):
-            s, kind, level = job
-            sd = run.dir / "samples"
-            prov = json.loads((sd / f"{s['id']}_provenance.json").read_text())
-            x0, y0, x1, y1 = prov["crop_box"]
-            full = Image.open(sd / f"{s['id']}_composite.png").convert("RGB")
-            fmask = np.array(Image.open(sd / f"{s['id']}_mask.png")) > 0
-            comp_crop = np.array(full.crop((x0, y0, x1, y1)))
-            base = load_image(parts_mod.all_parts()[s["part_id"]]["path"])
-            orig = np.array(base.crop((x0, y0, x1, y1)))     # exact (lossless) original crop
-            vcrop, vmask = sev.variant(orig, comp_crop, fmask[y0:y1, x0:x1], kind, level)
-            vimg = base.copy()
-            vimg.paste(Image.fromarray(vcrop), (x0, y0))
-            p = run.dir / "severity" / f"{s['id']}_{kind}_{level}.jpg"
-            _save_jpg(vimg, p, 92)
-            res = inspect(vimg, run.data["spec_text"], types, run_id=run.id, with_mask=False, cache_key=f"stress-{run.id}")
-            size_mm = s["size_mm"] * level if (s["size_mm"] and kind == "size") else s["size_mm"]
-            pt = {"sample_id": s["id"], "defect_type": s["defect_type"], "kind": kind, "level": level, "url": run.url(p),
-                  "size_mm": round(size_mm, 2) if size_mm else None, "detected": bool(res["defect"]),
-                  "pred_type": res["type"], "confidence": res["confidence"]}
-            run.emit("severity", pt)
-            return pt
-
-        def safe(job):
+        def safe(fn):
             try:
-                return one(job)
+                return fn()
             except ledger.BudgetExceeded:
                 raise
             except Exception:
                 traceback.print_exc()
                 return None
 
+        def one(job):
+            pt = safe(lambda: self.stress_point(run, *job))
+            if pt is not None:
+                run.emit("severity", pt)
+            return pt
+
         with ThreadPoolExecutor(8) as ex:
-            pts = [p for p in ex.map(safe, jobs) if p is not None]
+            pts = [p for p in ex.map(one, jobs) if p is not None]
+            parts = sorted({s["part_id"] for s in acc})
+            ctrl = [c for c in ex.map(lambda pid: safe(lambda: self.control_point(run, pid)), parts) if c is not None]
+        run.emit("controls", {"n": len(ctrl), "flagged": sum(c["flagged"] for c in ctrl)})
         cv = sev.curves(pts)
         run.emit("curves", {"curves": cv})
         run.emit("stage", {"stage": "stress", "status": "done"})
@@ -358,7 +397,7 @@ class Manager:
         events = [json.loads(x) for x in (src / "events.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
         rid = "demo-" + uuid.uuid4().hex[:6]
         data = {**rec, "id": rid, "created": time.time(), "status": "running", "samples": [], "severity": [], "curves": [],
-                "summary": None, "demo": True}
+                "controls": None, "summary": None, "demo": True}
         run = Run(rid, data, demo=True)
         self.runs[rid] = run
 

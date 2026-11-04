@@ -134,3 +134,23 @@ def test_spark_cost_uses_cached_price():
     full = spark_cost("muse-spark-1.3", 1_000_000, 0, 0)
     cached = spark_cost("muse-spark-1.3", 1_000_000, 0, 1_000_000)
     assert full == pytest.approx(1.25) and cached == pytest.approx(0.15)
+
+
+def test_otsu_finds_a_dark_part_on_a_light_desk_and_a_bright_part_on_black():
+    from PIL import Image
+    from app.forge.locate import otsu_mask
+    for bg, fg in (((205, 195, 180), (110, 60, 30)), ((12, 12, 14), (170, 100, 50))):
+        a = np.full((300, 400, 3), bg, np.uint8)
+        cv2.circle(a, (200, 150), 80, fg, -1)
+        cv2.circle(a, (180, 130), 12, (235, 225, 210), -1)      # specular highlight inside the part
+        m = otsu_mask(Image.fromarray(a))
+        assert m[150, 200] and m[130, 180] and not m[5, 5]
+        assert 0.14 < m.mean() < 0.18
+
+
+def test_box_hits_needs_overlap_with_the_defect():
+    m = np.zeros((100, 100), bool)
+    m[40:50, 40:50] = True
+    assert sev.box_hits([35, 35, 45, 45], m)
+    assert not sev.box_hits([60, 60, 90, 90], m)
+    assert not sev.box_hits(None, m)
