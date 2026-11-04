@@ -20,8 +20,8 @@
 ## Run it
 
 ```powershell
-.\scripts\setup.ps1          # once: venv, deps, frontend build, .env
-.\scripts\dev.ps1            # http://localhost:8765  (live if MODEL_API_KEY is set in .env)
+powershell -ExecutionPolicy Bypass -File scripts\setup.ps1    # once: venv, deps, frontend build, .env
+powershell -ExecutionPolicy Bypass -File scripts\dev.ps1      # http://localhost:8765  (live if MODEL_API_KEY is set in .env)
 ```
 
 On macOS or Linux, use `./scripts/setup.sh` and `./scripts/dev.sh`.

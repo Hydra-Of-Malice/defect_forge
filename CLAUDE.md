@@ -31,7 +31,7 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
 - **Muse Image edits:**
   - Send a raw JSON POST to `/v1/images/edits` with `httpx` (`images: [{image_url: data_url}]`, `response_format: "b64_json"`). The SDK sends multipart and gets a 415.
   - `mask`, `seed`, `input_fidelity` and `partial_images` return 400.
-  - Edits shift the image 16–40 px and change pixels they weren't asked to, so always resize → ECC-align → colour-match → diff → composite only the changed region.
+  - Edits move and recolour pixels they weren't asked to (other teams saw 16–40 px shifts on whole pages; we measured at most 3.4 px on 512 px crops), so always resize → ECC-align → colour-match → diff → composite only the changed region.
   - Limited to 150 requests per minute per team; use a semaphore.
 - **SAM 3.1:**
   - Call it non-streaming via `responses.create(model="sam-3.1", ...)` and decode with the `meta-sam-parser` package.
@@ -41,11 +41,11 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
   - An empty result is valid and still billed.
 - **Measured in the gate tests (`docs/gate-results.md`):**
   - Muse Image edits at `reasoning_strength="low"` with tools off take about 11 s, always return 1600×1600, and shift at most 3.4 px after ECC alignment.
-  - SAM concept prompts ("hazelnut", "nut") come back **empty** on MVTec scans, so get part masks from a **point prompt** at the Otsu centroid.
+  - SAM concept prompts ("hazelnut", "nut") come back **empty** on MVTec scans. Part masks come from a **Muse Spark box into SAM 3.1** (`forge/locate.py`), with a point prompt at the Otsu centroid and then Otsu as fallbacks. Thresholding alone fails on paper and grid mats.
   - SAM box prompts must be **tight**: padding by 20% drops the median IoU from 0.87 to 0.48.
   - Spark inspector calls take 5–6 s (p50), and `prompt_cache_key` caching works.
   - Working reference code is in `spikes/metaapi.py` and `spikes/forge_lib.py`.
-- **Retries:** retry 429, 5xx, timeouts and connection errors with exponential backoff plus jitter, and honour `Retry-After`. Never retry 400, 401 or 404.
+- **Retries:** retry 429, 5xx, timeouts and connection errors with exponential backoff plus jitter, and honour `Retry-After`. Never retry 400 or 401. The Model API intermittently answers 404 "model not found" for valid models, so `meta/client.py` retries 404 too (3 attempts).
 - **Logging:** log every call (model, latency, cost, cached flag) to a JSONL ledger; the UI's call-log drawer reads it.
 
 ## Working conventions
@@ -53,4 +53,5 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
 - Commit small and often, with clear messages; the commit history is evidence of in-event work.
 - Judges clone on macOS and Linux, so use `pathlib`, ship both `setup.ps1` and `setup.sh`, and keep line endings normalized (`.gitattributes`).
 - Prefer copying from the official Meta cookbook (MIT). Record any copied MIT/Apache code in `THIRD_PARTY.md` with its license. Code from repos with no license is a pattern to re-implement, never something to copy.
+- A stress variant counts as **caught** only if the inspector's box overlaps the defect; any other defect claim is `flagged`. Report repeated passes, because the inspector varies between runs.
 - Deterministic code verifies and models perceive and judge. Validators (pixel identity outside the mask, inside the part, size, SAM-vs-diff IoU, provenance complete) must not call a model.

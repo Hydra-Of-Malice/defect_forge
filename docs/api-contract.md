@@ -73,12 +73,14 @@ interface SeverityPoint {            // one severity-ladder variant inspected by
   level: number;                     // opacity 1.0/0.5/0.25/0.12 ; size 0.6/0.35/0.2
   url: string;                       // full image variant
   size_mm: number | null;
-  detected: boolean;
+  detected: boolean;                 // the inspector's box overlaps the defect
+  flagged: boolean;                  // any defect claim, including one in the wrong place
+  box_px: [number, number, number, number] | null;
   pred_type: string;
   confidence: number;
 }
 
-interface CurveCell { kind: "opacity" | "size"; level: number; n: number; detected: number; rate: number; ci_low: number; ci_high: number; mean_size_mm: number | null }
+interface CurveCell { kind: "opacity" | "size"; level: number; n: number; detected: number; flagged: number; rate: number; ci_low: number; ci_high: number; mean_size_mm: number | null }
 interface Curve { defect_type: DefectType; cells: CurveCell[]; threshold_note: string }  // e.g. "detection breaks below 0.25 opacity"
 
 interface Run {
@@ -92,6 +94,7 @@ interface Run {
   samples: Sample[];
   severity: SeverityPoint[];
   curves: Curve[];
+  controls: { n: number; flagged: number } | null;   // unedited parts inspected as a false-alarm control
   summary: { accepted: number; rejected: number; failed: number; cost_usd: number; seconds: number; mean_sam_iou: number | null } | null;
   demo: boolean;                     // true if this run is a recorded replay
 }
@@ -111,7 +114,7 @@ interface Run {
 | GET | `/api/runs` | | `{ runs: {id, created, status, per_type, accepted, demo}[] }` |
 | GET | `/api/runs/{id}` | | `Run` |
 | GET | `/api/runs/{id}/events` | | **SSE** stream (below) |
-| POST | `/api/runs/{id}/stress` | `{}` | `{ ok: true }` (runs the severity ladder on accepted samples; streams events) |
+| POST | `/api/runs/{id}/stress` | `{}` | `{ ok: true }` (runs the severity ladder on accepted samples; streams events; 409 if the run is busy) |
 | GET | `/api/runs/{id}/export` | | `application/zip` (COCO JSON + images + masks + provenance) |
 | POST | `/api/inspect` | multipart `file` + optional `spec_text`, `use_examples_run_id` | `Inspection` |
 | GET | `/api/eval` | | `EvalReport` (precomputed benchmark results, see below) |
@@ -140,7 +143,7 @@ interface EvalReport {
 
 ## SSE events (`/api/runs/{id}/events`)
 
-Each message is `event: <name>` + `data: <json>`. The stream replays all past events for the run first, then live ones, and ends after `run_completed` (or `stress_completed` when stress was started separately).
+Each message is `event: <name>` + `data: <json>`. The stream replays all past events for the run first, then live ones, and ends after `run_completed`. After `POST /stress`, it instead streams only that re-run's events and ends after `stress_completed`.
 
 | event | data |
 |---|---|
@@ -150,6 +153,7 @@ Each message is `event: <name>` + `data: <json>`. The stream replays all past ev
 | `sample` | `Sample` (sent on every status change; the same `id` updates in place) |
 | `severity` | `SeverityPoint` |
 | `curves` | `{ curves: Curve[] }` |
+| `controls` | `{ n, flagged }` |
 | `run_completed` | `{ summary }` |
 | `stress_completed` | `{ curves: Curve[] }` |
 | `error` | `{ message }` |

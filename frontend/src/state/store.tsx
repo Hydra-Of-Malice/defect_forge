@@ -16,7 +16,7 @@ import type {
 
 export const PIPELINE: { stage: StageName; label: string; by: string }[] = [
   { stage: 'taxonomy', label: 'Taxonomy', by: 'Muse Spark' },
-  { stage: 'locate', label: 'Locate', by: 'SAM 3.1' },
+  { stage: 'locate', label: 'Locate', by: 'Spark + SAM' },
   { stage: 'forge', label: 'Forge', by: 'Muse Image' },
   { stage: 'composite', label: 'Composite', by: 'OpenCV' },
   { stage: 'label', label: 'Label', by: 'SAM 3.1' },
@@ -193,6 +193,9 @@ function applyEvents(s: State, events: RunEvent[]): State {
         else run.severity.push(e.data)
         break
       }
+      case 'controls':
+        if (run) run.controls = e.data
+        break
       case 'curves':
       case 'stress_completed':
         if (run) run.curves = e.data.curves
@@ -464,7 +467,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       dispatch({
         type: 'patch',
         patch: {
-          run: { ...s.run, severity: [], curves: [] },
+          run: { ...s.run, severity: [], curves: [], controls: null },
           stages: { ...s.stages, stress: { active: ['_run'], done: [] } },
         },
       })

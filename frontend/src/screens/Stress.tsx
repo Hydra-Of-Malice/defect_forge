@@ -37,22 +37,24 @@ export function RunPicker() {
 }
 
 function Variant({ p, kind, lv, sample, size }: { p?: SeverityPoint; kind: SeverityKind; lv: number; sample: Sample; size: [number, number] | null }) {
+  // caught = the inspector's box overlaps the defect; elsewhere = it claimed a defect, but somewhere else
+  const elsewhere = !!p && !p.detected && !!p.flagged
   return (
     <figure className="min-w-0">
-      <div className={cx('relative aspect-square rounded-[2px] overflow-hidden bg-well', p ? (p.detected ? 'ring-1 ring-pass/60' : 'ring-1 ring-miss/70') : 'ring-1 ring-rule')}>
+      <div className={cx('relative aspect-square rounded-[2px] overflow-hidden bg-well', p ? (p.detected ? 'ring-1 ring-pass/60' : elsewhere ? 'ring-1 ring-signal/70' : 'ring-1 ring-miss/70') : 'ring-1 ring-rule')}>
         {p ? <ZoomWindow src={p.url} bbox={sample.bbox} size={size} pad={2.6} minSide={120} className="absolute inset-0" alt={`${kind} ${level(lv)}`} /> : null}
         {p && (
-          <span className={cx('absolute inset-x-0 bottom-0 h-[3px]', p.detected ? 'bg-pass' : 'bg-miss')} aria-hidden />
+          <span className={cx('absolute inset-x-0 bottom-0 h-[3px]', p.detected ? 'bg-pass' : elsewhere ? 'bg-signal' : 'bg-miss')} aria-hidden />
         )}
       </div>
       <figcaption className="mt-1 flex items-center justify-between gap-1 text-[10.5px] leading-tight">
         <span className="num text-fg-3">{level(lv)}</span>
         {p ? (
-          <span className={cx('inline-flex items-center gap-0.5 font-semibold', p.detected ? 'text-pass' : 'text-miss')} title={`predicted ${p.pred_type}, confidence ${p.confidence.toFixed(2)}`}>
+          <span className={cx('inline-flex items-center gap-0.5 font-semibold', p.detected ? 'text-pass' : elsewhere ? 'text-signal' : 'text-miss')} title={`predicted ${p.pred_type}, confidence ${p.confidence.toFixed(2)}`}>
             <svg viewBox="0 0 12 12" className="size-2.5" aria-hidden>
               {p.detected ? <path d="M2.5 6.2l2.2 2.2L9.5 3.6" fill="none" stroke="currentColor" strokeWidth="1.8" /> : <path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" strokeWidth="1.8" />}
             </svg>
-            <span className="max-sm:sr-only">{p.detected ? 'caught' : 'missed'}</span>
+            <span className="max-sm:sr-only">{p.detected ? 'caught' : elsewhere ? 'wrong spot' : 'missed'}</span>
           </span>
         ) : (
           <span className="text-fg-3/60">…</span>
@@ -207,7 +209,12 @@ export function StressScreen() {
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
                 <h2 className="text-[15px] font-bold">Every variant the inspector saw</h2>
                 <span className="text-[12px] text-fg-3">
-                  <span className="num text-fg-2">{done}</span> of <span className="num text-fg-2">{expected}</span> inspected, <span className="num text-pass">{(run.severity ?? []).filter((p) => p.detected).length}</span> caught, <span className="num text-miss">{(run.severity ?? []).filter((p) => !p.detected).length}</span> missed
+                  <span className="num text-fg-2">{done}</span> of <span className="num text-fg-2">{expected}</span> inspected, <span className="num text-pass">{(run.severity ?? []).filter((p) => p.detected).length}</span> caught, <span className="num text-signal">{(run.severity ?? []).filter((p) => !p.detected && p.flagged).length}</span> flagged in the wrong spot, <span className="num text-miss">{(run.severity ?? []).filter((p) => !p.detected && !p.flagged).length}</span> missed
+                  {run.controls ? (
+                    <>
+                      . False alarms on unedited parts: <span className="num text-fg-2">{run.controls.flagged}/{run.controls.n}</span>
+                    </>
+                  ) : null}
                 </span>
               </div>
               <ul>

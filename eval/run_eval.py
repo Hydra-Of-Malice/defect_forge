@@ -194,43 +194,39 @@ def direction(before: int, after: int, p: float) -> str:
     if p >= 0.05:
         return "no significant change."
     if after < before:
-        return ("a significant DROP. Full-strength examples raised the inspector's bar, so it dismissed more faint defects. "
-                "In-context exemplars are not free; measure them before deploying.")
+        return ("a significant drop: with forged examples in the prompt, the inspector flagged fewer faint defects. "
+                "The cause is untested; one guess is that full-strength examples raise its bar.")
     return "a significant lift."
 
 
-def blind_spot_summary():
+def revalidation() -> dict | None:
+    p = RESULTS / "revalidation.json"
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def blind_spot_summary(rv: dict | None):
     p = RESULTS / "blind_spot.json"
-    if not p.exists():
+    if not p.exists() or not rv:
         return None
     b = json.loads(p.read_text())
     o, a = b["original_spec"], b["amended_spec"]
-    rows = [
-        {"label": "Real white print, original spec", "tone": "signal", **{k: o["real_print"][k] for k in ("detected", "n")}},
-        {"label": "Forged white print, original spec (reproduces the blind spot?)", "tone": "signal",
-         **{k: o["forged_white_print"][k] for k in ("detected", "n")}},
-        {"label": "Forged white print, amended spec", "tone": "pass", **{k: a["forged_white_print"][k] for k in ("detected", "n")}},
-        {"label": "Real white print, amended spec (fix transfers to real parts?)", "tone": "pass", **{k: a["real_print"][k] for k in ("detected", "n")}},
-        {"label": "False alarms on real good parts, amended spec", "tone": "signal",
-         **{k: a["real_good_false_alarms"][k] for k in ("detected", "n")}},
-    ]
-    if b.get("forged_white_exemplars"):
-        fx = b["forged_white_exemplars"]
-        rows.append({"label": "Real white print, original spec + 2 forged white-print examples", "tone": "pass",
-                     **{k: fx["real_print"][k] for k in ("detected", "n")}})
-    from math import comb
-    miss = len(o["misses_real"])
-    fx_err = [e for e in (b.get("forged_white_exemplars") or {}).get("errors", []) if e[0] == "print"]
-    p_fx = round(min(1.0, 2 * sum(comb(miss, i) for i in range(len(fx_err) + 1)) / 2 ** miss), 4) if miss else 1.0
-    return {"finding": ("Exploratory (not pre-registered). On the real benchmark, every spec-only miss was WHITE print mistaken for "
-                        "gloss. Bold forged white print was caught 12/12, so forging alone did not reproduce the subtle real misses. "
-                        "But two forged white-print EXAMPLES in context fixed the real blind spot "
-                        f"(real print {o['real_print']['detected']}/{o['real_print']['n']} -> "
-                        f"{b['forged_white_exemplars']['real_print']['detected']}/{b['forged_white_exemplars']['real_print']['n']}, "
-                        f"paired exact p = {p_fx}; 0/40 false alarms), while generic black-ink examples (C2) made it worse. "
-                        "A one-clause spec amendment also fixed it, with 1/40 false alarms.") if b.get("forged_white_exemplars") else
-                       "Exploratory: white print was the real blind spot; a one-clause spec amendment fixed it on real parts.",
-            "amendment": b["amendment"], "rows": rows, "cost_usd": b.get("cost_usd")}
+    w = rv["white"]["conditions"]
+    names = {"W0": "spec only", "W1": "+ 2 good photos", "W2": "+ 2 forged white prints", "W3": "+ 2 good photos + 2 forged white prints"}
+    rows = [{"label": f"Real print, {names[c]} (3 passes pooled)", "tone": "signal" if c == "W0" else "pass",
+             "detected": sum(w[c]["print_per_pass"]), "n": w[c]["n_print"] * len(w[c]["print_per_pass"])} for c in names]
+    rows += [{"label": f"False alarms on real good parts, {names[c]} (3 passes pooled)", "tone": "signal",
+              "detected": sum(w[c]["good_flagged_per_pass"]), "n": w[c]["n_good"] * len(w[c]["good_flagged_per_pass"])} for c in names]
+    rows += [{"label": "Bold forged white print, spec only (single pass)", "tone": "signal", **{k: o["forged_white_print"][k] for k in ("detected", "n")}},
+             {"label": "Real print, spec with the one-clause amendment (single pass)", "tone": "pass", **{k: a["real_print"][k] for k in ("detected", "n")}},
+             {"label": "False alarms on real good parts, amended spec (single pass)", "tone": "signal", **{k: a["real_good_false_alarms"][k] for k in ("detected", "n")}}]
+    credit = rv["white"]["forged_examples_get_credit"]
+    verdict = ("Under the rule fixed in advance, the forged white-print examples earn credit." if credit else
+               "Under the rule fixed in advance, the forged white-print examples earn no credit: "
+               f"forged examples alone vs spec only gave p = {rv['white']['p_w2_vs_w0']}.")
+    return {"finding": ("Real print is the inspector's weakest real defect: white print is read as gloss. Bold forged white print was caught 12/12, "
+                        f"so forging did not reproduce the real misses. {verdict} This replaces our earlier claim, which was confounded "
+                        "because that run also contained 2 good photos."),
+            "amendment": b["amendment"], "rows": rows, "credit": credit}
 
 
 # ---------------------------------------------------------------- report
@@ -272,7 +268,9 @@ def main():
     fw = sum(r["with_forged"] for r in faint)
     p_faint = mcnemar_exact([r["zero_shot"] for r in faint], [r["with_forged"] for r in faint])
     by_type_iou = {t: round(float(np.median([r["iou"] for r in sam if r["type"] == t])), 3) for t in TYPES}
-    curves = sev.curves(run["severity"])
+    first_pass = sev.curves(run["severity"])
+    rv = revalidation()
+    curves = rv["stress"]["curves"] if rv else first_pass
     report = {
         "generated": time.time(),
         "real_benchmark": score(conds["C0"]),
@@ -297,7 +295,19 @@ def main():
             f"Total Meta API spend for this evaluation (all stages, cumulative across resumed runs): ${total_spend(ledger.spent() - spend0):.2f}.",
         ],
     }
-    report["blind_spot"] = blind_spot_summary()
+    report["curves_first_pass"] = first_pass
+    report["blind_spot"] = blind_spot_summary(rv)
+    if rv:
+        st, c0, fc = rv["stress"], rv["c0"], rv["faint"]
+        report["revalidation"] = rv
+        report["notes"] = [
+            f"Curves: a variant counts as caught when the inspector's box overlaps the defect in at least 2 of 3 passes. All 3 passes agreed on {st['unanimous_rate']:.0%} of {st['variants']} variants.",
+            f"False-alarm control: {st['controls']['flagged']}/{st['controls']['n']} inspections of unedited source parts were flagged ({st['controls']['parts']} parts, 3 passes). "
+            f"{st['flagged_elsewhere']} variants were flagged in the wrong place.",
+            "Real benchmark over 3 passes: recall " + ", ".join(f"{x:.1%}" for x in c0["recall_per_pass"]) + "; specificity " + ", ".join(f"{x:.1%}" for x in c0["specificity_per_pass"]) + ".",
+            "Faint-defect check: spec-only passes flagged " + ", ".join(str(x["spec_only"]) for x in fc["passes"]) + f" of {fc['passes'][0]['n']}; the single forged-examples pass flagged "
+            f"{fc['with_forged']} (exact McNemar p = " + ", ".join(str(x["p"]) for x in fc["passes"]) + ").",
+            *report["notes"]]
     (RESULTS / "eval.json").write_text(json.dumps(report, indent=1))
     write_md(report)
     print(json.dumps({k: report[k] for k in ("real_benchmark", "in_context", "faint_lift", "sam_real", "forge_stats", "stats")}, indent=1))
@@ -309,6 +319,7 @@ def write_md(r: dict) -> None:
     rb = r["real_benchmark"]
     L = ["# Evaluation results", "", "Generated by `python eval/run_eval.py` under the protocol in [`EVAL.md`](../../EVAL.md).", "",
          "## Headline: detection-threshold curves (Muse Spark inspector, forged hazelnut defects)", "",
+         "Caught means the inspector's box overlaps the defect in at least 2 of 3 passes (EVAL.md addendum, R1).", "",
          "| Defect | " + " | ".join(f"{k} {l:g}" for k, l in sev.LEVELS) + " |", "|---|" + "---|" * len(sev.LEVELS)]
     for c in r["curves"]:
         cells = {(x["kind"], x["level"]): x for x in c["cells"]}
@@ -339,14 +350,30 @@ def write_md(r: dict) -> None:
           f"- Mean SAM-vs-diff IoU {fs['mean_sam_iou']}; validator pass rate {fs['validator_pass_rate']:.0%}",
           f"- ${fs['cost_per_accepted_usd']} and {fs['seconds_per_accepted']} s per accepted, pixel-labeled sample; whole forge+stress run ${fs['run_cost_usd']}",
           ""]
+    rv = r.get("revalidation")
+    if rv:
+        L += ["## Real and forged at matched size (R4)", "",
+              "Forged defects are much smaller than MVTec's, so the band where both exist is narrow. Below the smallest real defect, "
+              "the curves have no real-world check until the physical test in `eval/home_check.py` is done.", "",
+              "| Defect | Real median | Smallest real | Largest forged | Overlap band | Real caught in band | Forged caught in band | Real caught overall |",
+              "|---|---|---|---|---|---|---|---|"]
+        for x in rv["size_match"]:
+            band = f"{x['band_mm'][0]:.1f}-{x['band_mm'][1]:.1f} mm" if x["band_mm"] else "none"
+            L.append(f"| {x['type']} | {x['real_median_mm']} mm | {x['real_min_mm']} mm | {x['forged_max_mm']} mm | {band} | {x['real_in_band']} | {x['forged_in_band']} | {x['real_all']} |")
+        L.append("")
     if r.get("blind_spot"):
         b = r["blind_spot"]
-        L += ["## Blind spot found and fixed: white print (eval/blind_spot.py, not pre-registered)", "", b["finding"], "",
-              "| Measurement | Detected |", "|---|---|"] + [f"| {x['label']} | {x['detected']}/{x['n']} |" for x in b["rows"]] + [
-              "", f"Spec amendment tested: \"{b['amendment']}\"", ""]
+        L += ["## White-print blind spot (R2)", "", b["finding"], "",
+              "| Measurement | Result |", "|---|---|"] + [f"| {x['label']} | {x['detected']}/{x['n']} |" for x in b["rows"]] + [
+              "", f"Spec amendment tested (exploratory, single pass): \"{b['amendment']}\"", ""]
     L += ["## Notes", ""] + [f"- {n}" for n in r["notes"]] + ["", "## Deviations from EVAL.md", "",
-          "- None for measurements 1-6. The blind-spot experiment was added after seeing the real-benchmark misses and is "
-          "reported separately as exploratory."]
+          "- 2 of the 60 forgeries failed on the API's transient 404 before the retry fix landed, and the critic rejected 3 cracks, "
+          "leaving 12-15 accepted per type against a target of 15.",
+          "- The single-pass curves, which counted any defect claim as caught, were replaced as the headline by the located 3-pass curves "
+          "(addendum R1, committed before those runs). The originals are kept in `eval.json` as `curves_first_pass`.",
+          "- Our first white-print conclusion was confounded and is withdrawn; R2 replaces it.",
+          "- The white-print experiment itself was added after seeing the real misses, so it is exploratory.",
+          "- Part masks now come from a Muse Spark box into SAM 3.1. The evaluated forgeries used the earlier point-prompt masks."]
     (RESULTS / "eval.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
 

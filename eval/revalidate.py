@@ -191,6 +191,20 @@ def size_match(real: list[dict], stress: list[dict]) -> list[dict]:
     return rows
 
 
+def faint_check(stress: list[dict]) -> dict:
+    """The first faint-defect drop compared one spec-only pass with one forged-examples pass. Re-score it against each new
+    spec-only pass, on the same images. 'flagged' matches how the original comparison counted."""
+    faint = json.loads((RAW / "faint_lift.json").read_text())
+    keys = [(r["sample_id"], r["kind"], r["level"]) for r in faint]
+    rows = []
+    for p in stress:
+        by = {(x["sample_id"], x["kind"], x["level"]): x["flagged"] for x in p["points"]}
+        z = [by[k] for k in keys if k in by]
+        w = [r["with_forged"] for r, k in zip(faint, keys) if k in by]
+        rows.append({"spec_only": sum(z), "with_forged": sum(w), "n": len(z), "p": E.mcnemar_exact(z, w)})
+    return {"passes": rows, "original_spec_only": sum(r["zero_shot"] for r in faint), "with_forged": sum(r["with_forged"] for r in faint)}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage", default="all", choices=["all", "stress", "white", "c0", "report"])
@@ -217,13 +231,14 @@ def main():
     white = {c: [json.loads((RAW / f"white_{c}_pass{n}.json").read_text()) for n in range(1, PASSES + 1)] for c in ("W0", "W1", "W2", "W3")}
     c0 = c0_passes()
     out = {"stress": summarize_stress(stress), "white": summarize_white(white), "c0": summarize_c0(c0),
-           "size_match": size_match(real_sizes(c0), stress)}
+           "size_match": size_match(real_sizes(c0), stress), "faint": faint_check(stress)}
     (RESULTS / "revalidation.json").write_text(json.dumps(out, indent=1))
     print(json.dumps({k: v for k, v in out["stress"].items() if k != "curves"}, indent=1))
     for c in out["stress"]["curves"]:
         print(c["threshold_note"], [(x["kind"][:3], x["level"], x["detected"], x["n"], x["per_pass"]) for x in c["cells"]])
     print(json.dumps(out["white"], indent=1))
     print(json.dumps(out["c0"]))
+    print(json.dumps(out["faint"]))
     for r in out["size_match"]:
         print(r)
 

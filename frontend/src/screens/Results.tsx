@@ -225,7 +225,7 @@ export function ResultsScreen() {
           </div>
 
           {data.blind_spot ? (
-            <Panel title="Blind spot found and fixed: white print" sub={data.blind_spot.finding}>
+            <Panel title="White-print blind spot" sub={data.blind_spot.finding}>
               <ul className="grid gap-3 max-w-[90ch]">
                 {data.blind_spot.rows.map((r) => (
                   <li key={r.label}>

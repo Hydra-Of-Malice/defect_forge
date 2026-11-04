@@ -87,7 +87,11 @@ export interface SeverityPoint {
   level: number
   url: string
   size_mm: number | null
+  /** The inspector's box overlaps the defect. */
   detected: boolean
+  /** Any defect claim, including one in the wrong place. Missing on runs recorded before location checks. */
+  flagged?: boolean
+  box_px?: [number, number, number, number] | null
   pred_type: string
   confidence: number
 }
@@ -97,6 +101,7 @@ export interface CurveCell {
   level: number
   n: number
   detected: number
+  flagged?: number
   rate: number
   ci_low: number
   ci_high: number
@@ -129,6 +134,8 @@ export interface Run {
   samples: Sample[]
   severity: SeverityPoint[]
   curves: Curve[]
+  /** Unedited parts inspected as a false-alarm control. */
+  controls?: { n: number; flagged: number } | null
   summary: RunSummary | null
   demo: boolean
 }
@@ -240,6 +247,7 @@ export type RunEvent =
   | { type: 'sample'; data: Sample }
   | { type: 'severity'; data: SeverityPoint }
   | { type: 'curves'; data: { curves: Curve[] } }
+  | { type: 'controls'; data: { n: number; flagged: number } }
   | { type: 'run_completed'; data: { summary: RunSummary } }
   | { type: 'stress_completed'; data: { curves: Curve[] } }
   | { type: 'error'; data: { message: string } }
@@ -253,6 +261,7 @@ export const RUN_EVENT_NAMES: RunEventName[] = [
   'sample',
   'severity',
   'curves',
+  'controls',
   'run_completed',
   'stress_completed',
   'error',
