@@ -25,4 +25,4 @@ Pop-Location
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 Write-Host ""
 Write-Host "Setup done. Put your Meta Model API key in .env (MODEL_API_KEY=...), or leave it empty for DEMO_MODE replay."
-Write-Host "Then run: .\scripts\dev.ps1   and open http://localhost:8765"
+Write-Host "Then run: powershell -ExecutionPolicy Bypass -File scripts\dev.ps1   and open http://localhost:8765"
