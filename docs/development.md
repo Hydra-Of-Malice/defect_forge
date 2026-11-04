@@ -1,4 +1,4 @@
-# Instructions for coding agents
+# Development notes
 
 This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Developer Hackathon. The deadline is Thu Nov 5 2026, 07:30 IST (02:00 UTC). The product is built. Read [`HANDOFF.md`](HANDOFF.md) for its status and the remaining human tasks, and [`README.md`](README.md) for the architecture.
 
@@ -14,7 +14,7 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
 
 ## Hard rules
 
-- **Only Meta models at runtime:** `muse-spark-1.3`, `muse-image-1.0` and `sam-3.1` through the Meta Model API. Never add a call to, or a dependency on, any other learned model: OpenAI, Anthropic, Gemini, Llama, Whisper, any TTS, embeddings, CLIP, LPIPS, rembg, MediaPipe, YOLO or torchvision models. OpenCV, NumPy, SciPy and Pillow are fine.
+- **Only Meta models at runtime:** `muse-spark-1.3`, `muse-image-1.0` and `sam-3.1` through the Meta Model API. Never add a call to, or a dependency on, any other learned model: OpenAI, Gemini, Llama, Whisper, any TTS, embeddings, CLIP, LPIPS, rembg, MediaPipe, YOLO or torchvision models. OpenCV, NumPy, SciPy and Pillow are fine.
 - **Never train a model on Muse Image outputs.** Forged images are evaluation data and in-context examples only (Model API Terms §10.1(ix)).
 - **Never commit `.env`, API keys, or MVTec AD images** (CC BY-NC-SA). Fixtures come only from the team's own photos or Muse Image generations (`fixtures/parts/`). `scripts/record_demo.py` refuses runs that use non-fixture parts.
 - **No Streamlit.** The frontend is Vite + React + TypeScript + Tailwind; the backend is FastAPI + asyncio. State lives on disk as JSON: no database, no auth.

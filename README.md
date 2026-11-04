@@ -72,7 +72,7 @@ flowchart LR
 | `muse-image-1.0` | Meta Model API (Meta-hosted) | Forges each defect (`/v1/images/edits`); generated the sample good parts in `fixtures/parts/` (`/v1/images/generations`) |
 | `sam-3.1` | Meta Model API (Meta-hosted) | Part masks (from Spark's box); tight-box masks that cross-check every forgery; the mask behind every live inspection claim |
 
-**No other model runs at runtime**: no TTS, embeddings or local neural networks. OpenCV, NumPy and Pillow are classical code. Coding assistants were used to write code.
+**No other model runs at runtime**: no TTS, embeddings or local neural networks. OpenCV, NumPy and Pillow are classical code.
 
 ## Quickstart
 
