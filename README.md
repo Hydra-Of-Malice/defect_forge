@@ -6,6 +6,8 @@ Defect Forge reads your QA spec, forges realistic defects onto photos of **good*
 
 *Meta Global AI Developer Hackathon: Indie track, Push the Frontier.*
 
+**Hosted demo: https://defect-forge-kappa.vercel.app**. This replays a recorded live run from static files, with no backend and no API key, so it makes no Meta calls and shows a DEMO REPLAY badge. For live forging and inspection, run the app locally (below).
+
 <!-- RESULTS:START -->
 ![Forged defects with masks](docs/assets/forged_grid.jpg)
 

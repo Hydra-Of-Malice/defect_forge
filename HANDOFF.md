@@ -17,6 +17,10 @@
 | Demo replay fixture (Muse-Image-generated parts, no MVTec) | `fixtures/demo_run/`, `fixtures/demo_inspect/` | ✅ |
 | Docs | `README.md`, `EVAL.md`, `THIRD_PARTY.md`, `docs/friction-log.md`, `docs/api-contract.md`, `docs/video-script.md`, `docs/submission.md`, `docs/gate-results.md` | ✅ |
 
+## Hosted demo
+
+**https://defect-forge-kappa.vercel.app** is a static replay of a recorded live run. It has no backend and no key, so it can't spend Meta credits. Vercel project `defect-forge` is connected to this repo with `frontend/` as its root, and every push to `main` redeploys it. Live forging and inspection only work locally, so film the video on the local app.
+
 ## Run it
 
 ```powershell

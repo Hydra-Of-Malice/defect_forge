@@ -19,6 +19,9 @@ On the real MVTec hazelnut benchmark, the spec-only inspector scores 94–97% re
 
 Each labeled defect costs $0.02. The evaluation was pre-registered, and we publish our null results and a claim we withdrew.
 
+## Hosted demo link
+https://defect-forge-kappa.vercel.app (a replay of a recorded live run; live mode runs locally from the repo)
+
 ## Use of Meta products
 - **muse-image-1.0** (`/v1/images/edits`): forges each defect on a 512 px crop. It also generated the license-clean sample good parts and the demo fixtures (`/v1/images/generations`).
 - **sam-3.1**:

@@ -10,6 +10,7 @@ This repo is **Defect Forge**, an Indie-track entry in the Meta Global AI Develo
 - Frontend: `cd frontend; npm run build` (needs zero TS errors). Mock UI: `$env:VITE_MOCK='1'; npm run dev`.
 - Eval: `python eval/run_eval.py` is resumable and cached in `docs/results/raw/`; re-running it costs $0 unless you delete raw files.
 - Live checks: `python scripts/system_check.py` exercises every live path with PASS/FAIL (about $0.30); `python scripts/smoke_run.py --per-type 1` is a quick forge (about $0.20). Every call lands in `var/ledger.jsonl`; `BUDGET_USD` is a hard stop.
+- Hosted demo: `cd frontend; npm run build:static` builds `dist-static`, a replay of `fixtures/demo_run` with no backend. Vercel builds this on every push to `main`. After re-recording the demo, regenerate `fixtures/demo_export.zip`.
 - The HTTP contract between backend and frontend is `docs/api-contract.md`. Keep both sides in sync.
 
 ## Hard rules
